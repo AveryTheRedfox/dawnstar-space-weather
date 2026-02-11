@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+
+import TitleAndTime from "./title_bar_elements/titleandtime";
+import KpCalculation from "./fetching-service/kp-index-fetching";
+import WindSpeedCalculation from "./fetching-service/solar_wind_fetching";
+import ImfCalculation from "./fetching-service/imf-fetching";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    return(
+<div className='Content' style= {{
+    "display": "flex",
+    "flexDirection": "row"
+}}>
+    <div className='TitleAndData' style={{
+    "height": "1080px",
+    "width": "200px",
+    "marginLeft": "0px",
+    "marginRight": "0px"
+    }}>
+        <TitleAndTime/>
+        <WindSpeedCalculation/>
+        <div className='magnetometer'/>
+        <KpCalculation/>
+        <ImfCalculation/>
+        <div className='solar_flares'/>
     </div>
-  );
+    <div className='inner_content'>
+        <div className='alertsandadvisorybar'/>
+        <div className='cmeandsun'>
+            <div className='CME AdvisoryArrival'/> 
+            <div className='SunspotsandSolarImages'/>
+        </div>  
+    </div>
+</div>
+)
 }
 
 export default App;
