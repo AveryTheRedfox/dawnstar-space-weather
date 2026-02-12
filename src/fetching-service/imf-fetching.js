@@ -7,14 +7,20 @@ const [IMFBz, setIMFBz] = useState(null);
 useEffect(() => {
 
 async function fetchData() {
-    const response = await fetch('https://services.swpc.noaa.gov/products/solar-wind/mag-5-minute.json');
+    const response = await fetch('https://services.swpc.noaa.gov/json/dscovr/dscovr_mag_1s.json');
     const result = await response.json();
-    setIMFBt([result[1][6]]);
-    setIMFBz([result[1][2]]);
-    console.log(IMFBt, IMFBz);
+    if (result == undefined && result == null) {
+       setIMFBt("No Data")
+        setIMFBz("No Data")
+   } else {
+    setIMFBt([result[0].bt])
+    setIMFBz([result[0].bz_gse])
+    console.log(IMFBt, IMFBz)
+}
+
 
 }
-setTimeout(function() { fetchData(); }, 6000);
+setTimeout(function() { fetchData(); }, 60000);
 });
 
 return ( 

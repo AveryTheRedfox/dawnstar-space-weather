@@ -17,7 +17,7 @@ async function fetchData() {
     console.log(Density, WindSpeed, Temperature);
 
 }
-setTimeout(function() { fetchData(); }, 6000);
+setTimeout(function() { fetchData(); }, 60000);
 });
 
 return ( 

@@ -14,7 +14,7 @@ function KpCalculation() {
       setKpIndex([result[350].kp_index]); //Speichert Kp-Index
       console.log(KpIndex);
     } 
-    setTimeout(function() { fetchData(); }, 500);
+    setTimeout(function() { fetchData(); }, 60000);
   });
 
 
@@ -72,9 +72,7 @@ function KpCalculation() {
   //Dynamisches Display der Messwerte, mit Error Handling 
 }
 
-/*
-dahduihd
-*/
+
 
 export default KpCalculation; //Export der Komponente 
 
