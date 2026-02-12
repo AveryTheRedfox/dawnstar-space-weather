@@ -9,15 +9,20 @@ const [Temperature, setTemperature] = useState(null);
 useEffect(() => {
 
 async function fetchData() {
-    const response = await fetch('https://services.swpc.noaa.gov/products/solar-wind/plasma-5-minute.json');
+    const response = await fetch('https://services.swpc.noaa.gov/json/rtsw/rtsw_wind_1m.json');
     const result = await response.json();
-    setDensity([result[1][1]]);
-    setWindSpeed([result[1][2]]);
-    setTemperature([result[1][3]]);
+        if (result == undefined || result == null) {
+       setDensity("No Data");
+       setWindSpeed("No Data");
+       setTemperature("No Data");
+        } else {
+    setDensity([result[0].proton_density]);
+    setWindSpeed([result[0].proton_speed]);
+    setTemperature([result[0].proton_temperature]);
     console.log(Density, WindSpeed, Temperature);
-
+        }
 }
-setTimeout(function() { fetchData(); }, 60000);
+setTimeout(function() { fetchData(); }, 6000);
 });
 
 return ( 

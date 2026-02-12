@@ -10,8 +10,12 @@ function App() {
     "display": "flex",
     "flexDirection": "row",
     "widht": "100vw",
-    "height": "98vh",
-    "border": "3px, solid, pink"
+    "height": "99vh",
+    "border": "3px, solid, pink",
+    "backgroundColor": "rgba(46, 46, 61, 0.74)",
+    "marginLeft": "-8px",
+    "marginTop": "-11px",
+    "marginRight": "-20px",
 }}>
     <div className='TitleAndData' style={{
     "height": "97vh",
@@ -21,15 +25,26 @@ function App() {
     "marginRight": "0px",
     "display": "flex",
     "flexDirection": "column",
-    "alignItems": "flex-start",
+    "alignContent": "space-evenly",
     "border": "3px, solid, black",
+
     }}>
-        <TitleAndTime/>
-        <WindSpeedCalculation/>
-        <div className='magnetometer'/>
-        <KpCalculation/>
-        <ImfCalculation/>
-        <div className='solar_flares'/>
+        <TitleAndTime style={{
+            "size": "20%",
+            "height": "20vh"
+        }}/>
+        <WindSpeedCalculation style={{
+            "height": "20%"
+        }}/>
+        <KpCalculation style={{
+            "height": "20%"
+        }}/>
+        <ImfCalculation style={{
+            "height": "20%"
+        }}/>
+        <div className='solar_flares'style={{
+            "height": "20%"
+        }}/>
     </div>
     <div className='inner_content' style={{
         "float": "right",

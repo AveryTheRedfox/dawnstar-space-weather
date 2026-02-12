@@ -20,7 +20,7 @@ async function fetchData() {
 
 
 }
-setTimeout(function() { fetchData(); }, 60000);
+setTimeout(function() { fetchData(); }, 6000);
 });
 
 return ( 

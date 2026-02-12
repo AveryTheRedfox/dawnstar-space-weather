@@ -13,8 +13,9 @@ function KpCalculation() {
       const result = await response.json();
       setKpIndex([result[350].kp_index]); //Speichert Kp-Index
       console.log(KpIndex);
+          
     } 
-    setTimeout(function() { fetchData(); }, 60000);
+    setTimeout(function() { fetchData(); }, 6000);
   });
 
 
