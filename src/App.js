@@ -42,7 +42,7 @@ function App() {
         <ImfCalculation style={{
             "height": "20%"
         }}/>
-        <div className='solar_flares'style={{
+        <div className="solarflares" style={{
             "height": "20%"
         }}/>
     </div>

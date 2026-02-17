@@ -1,6 +1,8 @@
 
 import {useState, useEffect} from 'react';
 
+
+
 function WindSpeedCalculation() {
 
 const [Density, setDensity] = useState(null);
@@ -24,6 +26,7 @@ async function fetchData() {
 }
 setTimeout(function() { fetchData(); }, 6000);
 });
+
 
 return ( 
     <div>
