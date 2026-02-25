@@ -3,6 +3,10 @@ import TitleAndTime from "./title_bar_elements/titleandtime";
 import KpCalculation from "./fetching-service/kp-index-fetching";
 import WindSpeedCalculation from "./fetching-service/solar_wind_fetching";
 import TestObject from "./fetching-service/ImfDisplay";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 function App() {
     return(
@@ -16,6 +20,7 @@ function App() {
     "marginLeft": "-8px",
     "marginTop": "-11px",
     "marginRight": "-20px",
+    "fontFamily": 'Roboto',
 }}>
     <div className='TitleAndData' style={{
     "height": "97vh",
@@ -27,19 +32,25 @@ function App() {
     "flexDirection": "column",
     "alignContent": "space-evenly",
     "border": "3px, solid, black",
+    "fontFamily": 'Roboto',
 
     }}>
         <TitleAndTime style={{
             "size": "20%",
+            "fontFamily": 'Roboto',
             "height": "20vh"
+
         }}/>
         <WindSpeedCalculation style={{
+            "fontFamily": 'Roboto',
             "height": "20%"
         }}/>
         <KpCalculation style={{
+            "fontFamily": 'Roboto',
             "height": "20%"
         }}/>
         <TestObject style={{
+            "fontFamily": 'Roboto',
             "height": "20%"
         }}/>
     </div>

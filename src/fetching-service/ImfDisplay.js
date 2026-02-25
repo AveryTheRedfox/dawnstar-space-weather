@@ -10,7 +10,7 @@ console.log(IMFBt);
 
 return(
     <div>
-        <div>ziuziu {}</div>
+        <div>{}</div>
     </div>
 )
 }

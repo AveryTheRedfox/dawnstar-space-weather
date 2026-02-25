@@ -1,81 +1,50 @@
 
-/*
-Fetching des Kp-Index vom Server des SWPC 
-Speichert den aktuellen Kp-Index und von wann die Daten sind
-*/
-import { useState, useEffect } from 'react';
+import { Gauge, gaugeClasses} from '@mui/x-charts';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import FetchingApi from './FetchingFunction';
+
+
 
 function KpCalculation() {
-  const [KpIndex, setKpIndex] = useState(); //Variable für den Kp-Index
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch('https://services.swpc.noaa.gov/json/planetary_k_index_1m.json'); // Fetch data from an API route
-      const result = await response.json();
-      setKpIndex([result[350].kp_index]); //Speichert Kp-Index
-      console.log(KpIndex);
-          
-    } 
-    setTimeout(function() { fetchData(); }, 6000);
-  });
-
-
-
-
-
   
-  if (!KpIndex) {
-    return <div>Loading...</div>
-  } else if (KpIndex <= 4) {
-    return (
-       <div>
-            <div>Current Kp-Index: {KpIndex} (Quiet Conditions)</div>  
-          </div>
-    )
-  } else if (KpIndex >= 4 && KpIndex < 5) {
-    return(
-       <div>
-            <div>Current Kp-Index: {KpIndex} (Active Conditions)</div>
-          </div>
-    )
-  } else if (KpIndex[0] >= 5 && KpIndex[0] < 6) {
-    return(
-       <div>
-            <div>Current Kp-Index: {KpIndex} | Minor Storm</div>
-         
-          </div>
-    )
-  } else if (KpIndex[0] >= 6 && KpIndex[0] < 7) {
-    return(
-       <div>
-            <div>Current Kp-Index: {KpIndex} | Moderate Storm</div>
-          
-          </div>
-    )
-  }else if (KpIndex[0] >= 7 && KpIndex[0] < 8) {
-    return(
-       <div>
-            <div>Current Kp-Index: {KpIndex} | Strong Storm</div>
-          </div>
-    ) 
-  }else if (KpIndex[0] > 8 && KpIndex[0] < 9) {
-    return(
-       <div>
-            <div>Current Kp-Index: {KpIndex} | Severe Storm</div>
-          </div>
-    )
-  } else if (KpIndex[0] >= 9) {
-    return(
-       <div>
-            <div>Current Kp-Index: {KpIndex} | Extreme Storm</div>
-          </div>
-    )
-  }
+const [SolarWind, IntMag, KpIndex] = FetchingApi();
+const currentvalue = KpIndex?.[357]?.kp_index ?? null;
+const currentime = KpIndex?.[357]?.time_tag ?? null;
+console.log(currentvalue);
+
+let KpAngle = 100/currentvalue;
+
+
+
+return(
+  <div style={{"position": "relative", "display": "flex", "flexDirection": "column", "alignItems": "center", fontFamily: 'Roboto', "color": "white"}}>
+    <div>Kp-Index: {currentvalue ?? 'loading...'}</div>
+    <div>Time: {currentime ?? 'loading...'}</div>
+  <Gauge
+  value={KpAngle}
+  startAngle={-90}
+  endAngle={90}
+  innerRadius={"70%"}
+  outerRadius={"100%"}
+  sx={{
+    [`& .${gaugeClasses.valueText}`]: {
+      fontSize: 30,
+      fontFamily: 'Roboto',
+      transform: 'translate(0px, -30px)',
+    },
+  }}
+  text={({KpAngle}) => `${currentvalue}`}
+/>
+  </div>
+)
   //Dynamisches Display der Messwerte, mit Error Handling 
 }
 
 
-
-export default KpCalculation; //Export der Komponente 
+export default KpCalculation; //Export der Komponente
 
 
 

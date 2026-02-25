@@ -1,32 +1,13 @@
-
+import FetchingApi from './FetchingFunction';
 import {useState, useEffect} from 'react';
 
 
 
 function WindSpeedCalculation() {
-
-const [Density, setDensity] = useState(null);
-const [WindSpeed, setWindSpeed] = useState(null);
-const [Temperature, setTemperature] = useState(null);
-useEffect(() => {
-
-async function fetchData() {
-    const response = await fetch('https://services.swpc.noaa.gov/json/rtsw/rtsw_wind_1m.json');
-    const result = await response.json();
-        if (result == undefined || result == null) {
-       setDensity("No Data");
-       setWindSpeed("No Data");
-       setTemperature("No Data");
-        } else {
-    setDensity([result[0].proton_density]);
-    setWindSpeed([result[0].proton_speed]);
-    setTemperature([result[0].proton_temperature]);
-    console.log(Density, WindSpeed, Temperature);
-        }
-}
-setTimeout(function() { fetchData(); }, 6000);
-});
-
+const [SolarWind, IntMag, KpIndex] = FetchingApi(); //Dekonstruktion der Werte aus der FetchingApi Funktion
+const WindSpeed = SolarWind?.wind_speed ?? null;
+const Density = SolarWind?.density ?? null;
+const Temperature = SolarWind?.temperature ?? null; 
 
 return ( 
     <div>
