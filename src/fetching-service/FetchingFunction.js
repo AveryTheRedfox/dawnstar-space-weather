@@ -1,36 +1,37 @@
-import {useEffect, useState} from 'react';
 
+import { useState } from "react";
+import { useEffect } from "react";
 
+function FetchingApi() {
 
-
-function SolarDataFetching() {
-
-const [IMFBt, setIMFBt] = useState();
-const [IMFBz, setIMFBz] = useState();
-const [Density, setDensity] = useState();
-const [WindSpeed, setWindSpeed] = useState();
-const [Temperature, setTemperature] = useState();
+const [SolarWind, setSolarWind] = useState();
+const [IntMag, setIntMag] = useState();
 const [KpIndex, setKpIndex] = useState();
 
-async function fetchdata() {
-const imffetch = await fetch('https://services.swpc.noaa.gov/json/dscovr/dscovr_mag_1s.json');
-const speedfetch = await fetch('https://services.swpc.noaa.gov/json/rtsw/rtsw_wind_1m.json');
-const kpfetch = await fetch('https://services.swpc.noaa.gov/json/planetary_k_index_1m.json');
-const imfresult = await imffetch.json();
-const speedresult = await speedfetch.json();
-const kpresult = await kpfetch.json(); 
+useEffect(() => {
+async function WindFetching() {
 
-    setIMFBt([imfresult[0].bt])
-    setIMFBz([imfresult[0].bz_gse])
-    setDensity([speedresult[0].proton_density])
-    setWindSpeed([speedresult[0].proton_speed])
-    setTemperature([speedresult[0].proton_temperature])
-    setKpIndex([kpresult[350].kp_index])
-        
-    } setTimeout(function() { fetchdata(); }, 6000);
- 
+    const response = await fetch('https://services.swpc.noaa.gov/json/rtsw/rtsw_wind_1m.json');
+    const result = await response.json();
+    setSolarWind(result[0]);
+}setTimeout(function() { WindFetching(); }, 6000);
+
+async function ImfFetching() {
+
+    const response = await fetch('https://services.swpc.noaa.gov/json/ace/mag/ace_mag_1h.json');
+    const result = await response.json();
+    setIntMag(result[0]);
+}setTimeout(function() { ImfFetching(); }, 6000);
+
+async function KpFetching() {
+
+    const response = await fetch('https://services.swpc.noaa.gov/json/planetary_k_index_1m.json');
+    const result = await response.json();
+    setKpIndex(result[0]);
+}setTimeout(function() { KpFetching(); }, 6000);
+})
+
+return([SolarWind, IntMag, KpIndex])
 }
 
-export default SolarDataFetching; 
-
- 
+export default FetchingApi;

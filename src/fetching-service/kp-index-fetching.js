@@ -6,7 +6,7 @@ Speichert den aktuellen Kp-Index und von wann die Daten sind
 import { useState, useEffect } from 'react';
 
 function KpCalculation() {
-  const [KpIndex, setKpIndex] = useState(null); //Variable für den Kp-Index
+  const [KpIndex, setKpIndex] = useState(); //Variable für den Kp-Index
   useEffect(() => {
     async function fetchData() {
       const response = await fetch('https://services.swpc.noaa.gov/json/planetary_k_index_1m.json'); // Fetch data from an API route

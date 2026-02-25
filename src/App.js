@@ -2,7 +2,7 @@
 import TitleAndTime from "./title_bar_elements/titleandtime";
 import KpCalculation from "./fetching-service/kp-index-fetching";
 import WindSpeedCalculation from "./fetching-service/solar_wind_fetching";
-import ImfCalculation from "./fetching-service/imf-fetching";
+import TestObject from "./fetching-service/ImfDisplay";
 
 function App() {
     return(
@@ -39,10 +39,7 @@ function App() {
         <KpCalculation style={{
             "height": "20%"
         }}/>
-        <ImfCalculation style={{
-            "height": "20%"
-        }}/>
-        <div className="solarflares" style={{
+        <TestObject style={{
             "height": "20%"
         }}/>
     </div>
