@@ -41,11 +41,11 @@ function App() {
             "height": "20vh"
 
         }}/>
-        <WindSpeedCalculation style={{
+        <KpCalculation className='KpIndex' style={{
             "fontFamily": 'Roboto',
-            "height": "20%"
+            "height": "20%",
         }}/>
-        <KpCalculation style={{
+        <WindSpeedCalculation style={{
             "fontFamily": 'Roboto',
             "height": "20%"
         }}/>
