@@ -1,5 +1,4 @@
 
-import TitleAndTime from "./title_bar_elements/titleandtime";
 import KpCalculation from "./fetching-service/kp-index-fetching";
 import WindSpeedCalculation from "./fetching-service/solar_wind_fetching";
 import TestObject from "./fetching-service/ImfDisplay";
@@ -16,7 +15,7 @@ function App() {
     "widht": "100vw",
     "height": "99vh",
     "border": "3px, solid, pink",
-    "backgroundColor": "rgba(46, 46, 61, 0.74)",
+    "backgroundColor": "rgb(19, 19, 26)",
     "marginLeft": "-8px",
     "marginTop": "-11px",
     "marginRight": "-20px",
@@ -33,21 +32,17 @@ function App() {
     "alignContent": "space-evenly",
     "border": "3px, solid, black",
     "fontFamily": 'Roboto',
+    "color": "#ccc9dc"
 
     }}>
-        <TitleAndTime style={{
-            "size": "20%",
-            "fontFamily": 'Roboto',
-            "height": "20vh"
-
-        }}/>
         <KpCalculation className='KpIndex' style={{
             "fontFamily": 'Roboto',
             "height": "20%",
         }}/>
         <WindSpeedCalculation style={{
             "fontFamily": 'Roboto',
-            "height": "20%"
+            "height": "20%",
+  
         }}/>
         <TestObject style={{
             "fontFamily": 'Roboto',

@@ -67,10 +67,11 @@ return(
     "flexDirection": "column", 
     "alignItems": "center", 
     "fontFamily": 'Roboto', 
-    "color": "black", 
+    "color": "#ccc9dc",
     "padding": "10px",
-    "border": "2px solid gray",}}>
-    <div style={{"fontSize": "20px",}}>Kp-Index: {currentvalue ?? 'loading...'}</div>
+    "border": "2px solid gray",
+    "borderRadius": "10px",}}>
+    <div style={{"fontSize": "20px",}}>Kp-Index:</div>
     <div style={{"fontSize": "14px",}}>Time: {currentime ?? 'loading...'}</div>
   <Gauge
   value={KpAngle}
@@ -83,11 +84,10 @@ return(
       fontSize: 30,
       fontFamily: 'Roboto',
       transform: 'translate(0px, -20px)',
+      color: "#ccc9dc"
     },
         [`& .${gaugeClasses.valueArc}`]: {
       fill: StormColor,
-      borderColor: '#000000',
-      borderWidth: 2,
     },
   }}
   text={() => `${currentvalue}`}
