@@ -5,6 +5,7 @@ function AlertsDisplay() {
 
 const [SolarWind, IntMag, KpIndex, Alerts] = FetchingApi();  
 let AlertTitle = Alerts?.message ?? null;
+let AlertTime = Alerts?.issue_datetime ?? null;
 
 function line() {
     if (AlertTitle === null) {
