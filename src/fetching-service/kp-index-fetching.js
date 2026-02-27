@@ -13,11 +13,9 @@ function KpCalculation() {
 const [SolarWind, IntMag, KpIndex] = FetchingApi();
 const currentvalue = KpIndex?.[350]?.kp_index;
 const currentime = KpIndex?.[350]?.time_tag;
-console.log(currentvalue);
 
 //Array mit den Kp-Index Werten und den entsprechenden Winkelpositionen für die Gauge
 let AnglePosition = [[0, 0], [0.33, 3.33], [0.66, 6.66], [1, 10], [1.33, 13.33], [1.66, 16.66], [2, 20], [2.33, 23.33], [2.66, 26.66], [3, 30], [3.33, 33.33], [3.66, 36.66], [4, 40], [4.33, 43.33], [4.66, 46.66], [5, 50], [5.33, 53.33], [5.66, 56.66], [6, 60], [6.33, 63.33], [6.66, 66.66], [7, 70], [7.33, 73.33], [7.66, 76.66], [8, 80], [8.33, 83.33], [8.66, 86.66], [9, 100]];
-console.log(AnglePosition);
 //Bestimmung der Winkelposition für die aktuelle Kp-Index Wert, um die Gauge entsprechend zu positionieren
 let KpAngle = 0;
 for (let i = 0; i < AnglePosition.length; i++) {

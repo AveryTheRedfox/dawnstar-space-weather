@@ -9,6 +9,16 @@ const WindSpeed = SolarWind?.proton_speed ?? null;
 const Density = SolarWind?.proton_density ?? null;
 const Temperature = SolarWind?.proton_temperature ?? null; 
 
+let WindSpeedColor = ''; 
+if (WindSpeed < 400) {
+    WindSpeedColor = '#00fd15';
+}   else if (WindSpeed >= 400 && WindSpeed < 500) {
+    WindSpeedColor = '#eeff00';
+} else if (WindSpeed >= 500 && WindSpeed < 700) {
+    WindSpeedColor = '#ff8c00';
+} else if (WindSpeed >= 700) {
+    WindSpeedColor = '#c05904';
+}
 
 return ( 
     <div>
@@ -20,12 +30,12 @@ return (
             "borderRadius": "10px",
             
         }}>
-            <img src={require('./air_36dp_000000_FILL0_wght300_GRAD0_opsz40.png')}            
+            <img src={require('./rcs/air_36dp_000000_FILL0_wght300_GRAD0_opsz40.png')}            
             style={{
                 "marginRight": "5px",
             }}
             />
-            <div style={{"alignContent": "center",}}>Wind Speed:<br></br> {WindSpeed} km/s</div>
+            <div style={{"alignContent": "center",}}>Wind Speed:<br></br> <div style={{"color": WindSpeedColor}}>{WindSpeed} km/s</div></div>
             
         </div>
         <div style={{
@@ -35,7 +45,7 @@ return (
             "border": "2px solid gray",
             "borderRadius": "10px",
         }}>
-                <img src={require('./rainy_snow_36dp_000000_FILL0_wght400_GRAD0_opsz40.png')}       
+                <img src={require('./rcs/rainy_snow_36dp_000000_FILL0_wght400_GRAD0_opsz40.png')}       
                 style={{
                     "marginRight": "5px",
             }}
@@ -50,7 +60,7 @@ return (
             "border": "2px solid gray",
             "borderRadius": "10px",
         }}>
-            <img src={require('./device_thermostat_36dp_000000_FILL0_wght400_GRAD0_opsz48.png')}
+            <img src={require('./rcs/device_thermostat_36dp_000000_FILL0_wght400_GRAD0_opsz48.png')}
             style={{
                 "marginRight": "5px",
             }}

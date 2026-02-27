@@ -1,7 +1,9 @@
 
 import KpCalculation from "./fetching-service/kp-index-fetching";
 import WindSpeedCalculation from "./fetching-service/solar_wind_fetching";
-import TestObject from "./fetching-service/ImfDisplay";
+import IntMagDisplay from "./fetching-service/ImfDisplay";
+import AlertsDisplay from "./fetching-service/AlertsDisplay";
+import FlareDisplay from "./fetching-service/FlareDisplay";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -15,7 +17,7 @@ function App() {
     "widht": "100vw",
     "height": "99vh",
     "border": "3px, solid, pink",
-    "backgroundColor": "rgb(19, 19, 26)",
+    "backgroundColor": "rgb(35, 35, 39)",
     "marginLeft": "-8px",
     "marginTop": "-11px",
     "marginRight": "-20px",
@@ -44,7 +46,11 @@ function App() {
             "height": "20%",
   
         }}/>
-        <TestObject style={{
+        <IntMagDisplay style={{
+            "fontFamily": 'Roboto',
+            "height": "20%"
+        }}/>
+        <FlareDisplay style={{
             "fontFamily": 'Roboto',
             "height": "20%"
         }}/>
@@ -60,7 +66,7 @@ function App() {
         "alignSelf": "auto",
         "border": "3px, solid, black",
     }}>
-        <div className='alertsandadvisorybar'style={{
+        <AlertsDisplay className='alertsandadvisorybar'style={{
             "minHeight": "50px",
             "border": "2px, solid, black",
         }}/>
