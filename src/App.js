@@ -4,6 +4,8 @@ import WindSpeedCalculation from "./fetching-service/solar_wind_fetching";
 import IntMagDisplay from "./fetching-service/ImfDisplay";
 import AlertsDisplay from "./fetching-service/AlertsDisplay";
 import FlareDisplay from "./fetching-service/FlareDisplay";
+import SolarImages from "./inner_content/solar_images";
+import CMEPredictions from "./inner_content/CME_Predictions/predictions";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -71,12 +73,12 @@ function App() {
             "border": "2px, solid, black",
         }}/>
         <div className='cmeandsun' style={{
-            "alignContent": "space-evenly",
             "minHeight": "450px",
             "border": "3px, solid, black",
         }}>
-            <div className='CME AdvisoryArrival'/> 
-            <div className='SunspotsandSolarImages'/>
+            <SolarImages/>
+            <CMEPredictions/> 
+
         </div>  
     </div>
 </div>

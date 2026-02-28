@@ -1,11 +1,16 @@
 import FetchingApi from "./FetchingFunction";
 import Marquee from "react-fast-marquee";
+import { useCMEPredictions } from "../inner_content/CME_Predictions/useCMEPredictions";
 
 function AlertsDisplay() {
 
-const [SolarWind, IntMag, KpIndex, Alerts] = FetchingApi();  
+const [SolarWind, IntMag, KpIndex, Alerts, LatestFlare] = FetchingApi();  
 let AlertTitle = Alerts?.message ?? null;
-let AlertTime = Alerts?.issue_datetime ?? null;
+
+
+    const {impacts} = useCMEPredictions();
+    let nextArrival = impacts[0]?.time ?? "N/A";
+
 
 function line() {
     if (AlertTitle === null) {
@@ -14,6 +19,7 @@ function line() {
     return AlertTitle.split('\n');
     }
 }
+
 
 
 return(
@@ -25,9 +31,9 @@ return(
         "fontFamily": 'Roboto',
         "color": "#ccc9dc",
     }}>
-        <marquee direction="left" gradient="true">
-        <div>*** {line(AlertTitle)[4]} | {line(AlertTitle)[6]} | {line(AlertTitle)[7]} ***</div>
-        </marquee>
+        <Marquee direction="left">
+        <div>*** {line(AlertTitle)[4]} | {line(AlertTitle)[6]} | {line(AlertTitle)[7]} *** Coronal Mass Ejection detected | Estimated Arrival: {nextArrival}</div>
+        </Marquee>
     </div>
 )
 }
