@@ -37,15 +37,15 @@ let StormLevel = '';
 if (currentvalue >= 4 && currentvalue < 5) {
   StormLevel = 'Active Conditions';
 } else if (currentvalue >= 5 && currentvalue < 6) {
-  StormLevel = 'Minor Storm';
+  StormLevel = 'G1 Minor Storm';
 } else if (currentvalue >= 6 && currentvalue < 7) {
-  StormLevel = 'Moderate Storm';
+  StormLevel = 'G2 Moderate Storm';
 } else if (currentvalue >= 7 && currentvalue < 8) {
-  StormLevel = 'Strong Storm';
+  StormLevel = 'G3 Strong Storm';
 } else if (currentvalue >= 8 && currentvalue < 9) {
-  StormLevel = 'Severe Storm';
+  StormLevel = 'G4 Severe Storm';
 } else if (currentvalue >= 9) {
-  StormLevel = 'Extreme Storm';
+  StormLevel = 'G5 Extreme Storm';
 }
 //Bestimmung der aktuellen geomagnetischen Sturmstärke und entsprechende Farbcodierung für die Gauge
 let StormColor = '';
@@ -73,11 +73,11 @@ return(
     "alignItems": "center", 
     "fontFamily": 'Roboto', 
     "color": "#ccc9dc",
-    "padding": "10px",
     "border": "2px solid gray",
+    "height": "33%",
     "borderRadius": "10px",}}>
-    <div style={{"fontSize": "20px",}}>Kp-Index:</div>
-    <div style={{"fontSize": "14px",}}>Time: {currentime ?? 'loading...'}</div>
+    <div style={{"fontSize": "36px",}}>Kp-Index:</div>
+    <div style={{"fontSize": "12px",}}>Time: {currentime ?? 'loading...'}</div>
   <Gauge
   value={KpAngle}
   startAngle={-90}
@@ -86,19 +86,19 @@ return(
   outerRadius={"100%"}
   sx={{
     [`& .${gaugeClasses.valueText}`]: {
-      fontSize: 30,
+      fontSize: 54,
       fontFamily: 'Roboto',
-      transform: 'translate(0px, -20px)',
-      color: "#ccc9dc"
+      transform: 'translate(0px, -33px)',
+      fill: '#8B008B#',
     },
         [`& .${gaugeClasses.valueArc}`]: {
       fill: StormColor,
     },
   }}
-  text={() => `${currentvalue}`}
+  text={() => "Kp" + `${currentvalue}`}
 />
-  <div style={{"position": "relative", "paddingBottom": "10px","marginTop": "-20px"}}>{StormLevel}</div>
-  <div style={{"position": "absolute", "bottom": "10px", "fontSize": "8px", "color": "darkgray"}}>Data Source: NOAA SWPC</div>
+  <div style={{"position": "relative", "paddingBottom": "10px"}}>{StormLevel}</div>
+  <div style={{"position": "relative", "bottom": "10px", "fontSize": "16px", "color": "darkgray"}}>Data Source: NOAA SWPC</div>
 </div>
 )
   //Dynamisches Display der Messwerte, mit Error Handling 

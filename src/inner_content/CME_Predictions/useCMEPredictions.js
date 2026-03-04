@@ -24,9 +24,12 @@ export function useCMEPredictions() {
       })
       .slice(0, -1);
 
+      let CMEThreshold = 1;
+
+
     const events = [];
     for (let i = 1; i < diffs.length - 1; i++) {
-      if (diffs[i].diff > 1 && diffs[i].diff > diffs[i - 1].diff && diffs[i].diff > diffs[i + 1].diff) {
+      if (diffs[i].diff > CMEThreshold && diffs[i].diff > diffs[i - 1].diff && diffs[i].diff > diffs[i + 1].diff) {
         events.push(diffs[i]);
       }
     }

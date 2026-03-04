@@ -14,11 +14,13 @@
     "@testing-library/user-event": "^13.5.0",
     "chart.js": "^4.5.1",
     "install": "^0.13.0",
+    "lightbox.js-react": "^1.7.0",
     "npm": "^11.10.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-fast-marquee": "^1.6.5",
     "react-scripts": "5.0.1",
+    "reactjs-popup": "^2.0.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

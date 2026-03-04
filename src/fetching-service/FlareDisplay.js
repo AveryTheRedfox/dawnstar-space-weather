@@ -17,7 +17,10 @@ if (LatestFlareClass === null) {
 }
 
 function FlarevalueToGoesClass(FlareFlux) {
-    if (FlareFlux < 1e-7) {
+    
+    if (FlareFlux < 2e-8) {
+        return (<div style={{"color": "#0f7718", "paddingLeft": "5px"}}>GOES Eclipse</div>);
+    } else if (FlareFlux < 1e-7) {
         return (<div style={{"color": "#0f7718", "paddingLeft": "5px"}}>{  'A' + (FlareFlux / 1e-8).toFixed(2)}</div>);
     }
     else if (FlareFlux < 1e-6) {
@@ -39,12 +42,12 @@ console.log(FlareFlux, LatestFlareClass, NewestFlare);
 return(
     <div style={{"display": "flex","paddingTop": "10px","border": "2px solid gray","borderRadius": "10px","fontFamily": 'Roboto', "flexDirection": "column"}}>
         <div className="FlareTitle" style={{"display": "flex", "flexDirection": "row", "paddingLeft": "10px"}}>
-            <img src={require('./rcs/bolt_36dp_EFEFEF_FILL0_wght400_GRAD0_opsz40.png')} style={{"marginRight": "5px", "width": "36px", "height": "36px"}}/> 
+            <img src={require('./rcs/electric_bolt_72dp_EFEFEF_FILL1_wght400_GRAD0_opsz48.png')} style={{"marginRight": "5px", "width": "72px", "height": "72px", "alignContent": "center"}}/> 
             <div style={{"alignContent": "center"}}> Solar Flares:</div>
         </div>
         <div className="FlareData" style={{"display": "flex", "flexDirection": "column", "paddingLeft": "10px", "marginTop": "5px"}}>
-            <div style={{"alignContent": "flex-start","display": "flex"}}>Current Flux:  {FlarevalueToGoesClass(FlareFlux)}</div>
-            <div style={{"alignContent": "flex-start","display": "flex"}}>Latest Flare:  {LatestFlareClassToDisplay(NewestFlare)}</div>
+            <div style={{"alignContent": "flex-start","display": "flex", }}>Current Flux:  {FlarevalueToGoesClass(FlareFlux)}</div>
+            <div style={{"alignContent": "flex-start","display": "flex", }}>Latest Flare:  {LatestFlareClassToDisplay(NewestFlare)}</div>
         </div>
     </div>
 )

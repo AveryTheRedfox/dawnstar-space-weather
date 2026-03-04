@@ -6,6 +6,7 @@ import AlertsDisplay from "./fetching-service/AlertsDisplay";
 import FlareDisplay from "./fetching-service/FlareDisplay";
 import SolarImages from "./inner_content/solar_images";
 import CMEPredictions from "./inner_content/CME_Predictions/predictions";
+//import KpIndexChart from "./inner_content/Charts.js"
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -18,30 +19,26 @@ function App() {
     "flexDirection": "row",
     "widht": "100vw",
     "height": "99vh",
-    "border": "3px, solid, pink",
     "backgroundColor": "rgb(35, 35, 39)",
     "marginLeft": "-8px",
-    "marginTop": "-11px",
+    "marginTop": "-8px",
     "marginRight": "-20px",
     "fontFamily": 'Roboto',
 }}>
     <div className='TitleAndData' style={{
     "height": "97vh",
-    "width": "200px",
-    "minWidth": "200px",
+    "width": "80vw",
     "marginLeft": "0px",
     "marginRight": "0px",
     "display": "flex",
     "flexDirection": "column",
     "alignContent": "space-evenly",
-    "border": "3px, solid, black",
     "fontFamily": 'Roboto',
-    "color": "#ccc9dc"
-
+    "color": "#ccc9dc",
+    "fontSize": "36px",
     }}>
         <KpCalculation className='KpIndex' style={{
             "fontFamily": 'Roboto',
-            "height": "20%",
         }}/>
         <WindSpeedCalculation style={{
             "fontFamily": 'Roboto',
@@ -59,26 +56,23 @@ function App() {
     </div>
     <div className='inner_content' style={{
         "float": "right",
-        "minWidth": "78vw",
-        "width": "auto",
+        "minWidth": "50vw",
         "marginRight": "0px",
         "display": "flex",
         "alignContent": "flex-start",
         "flexDirection": "column",
         "alignSelf": "auto",
-        "border": "3px, solid, black",
+        "fontSize": "32px"
     }}>
         <AlertsDisplay className='alertsandadvisorybar'style={{
             "minHeight": "50px",
-            "border": "2px, solid, black",
         }}/>
         <div className='cmeandsun' style={{
             "minHeight": "450px",
-            "border": "3px, solid, black",
+            "color": "white", 
         }}>
             <SolarImages/>
             <CMEPredictions/> 
-
         </div>  
     </div>
 </div>
