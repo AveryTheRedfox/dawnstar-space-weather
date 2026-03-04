@@ -1,0 +1,1254 @@
+[2025-12-16T21:24:19.380Z] setupWatcher called: debounceSeconds=30, workspace=e:\Dawnstar\dawnstar-space-weather
+[2025-12-16T21:24:19.381Z] Watcher created for: e:\Dawnstar\dawnstar-space-weather
+[2025-12-16T21:24:19.612Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T21:24:19.613Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T21:24:19.613Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T21:24:19.613Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T21:24:20.743Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T21:24:20.744Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T21:24:20.744Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T21:24:20.897Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T21:24:21.456Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T21:24:21.457Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T21:24:21.457Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T21:24:21.457Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T21:24:22.572Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T21:24:22.572Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T21:24:22.573Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T21:24:22.573Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:05:12.181Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:05:12.181Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:05:12.181Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:05:12.182Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:05:13.293Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:05:13.293Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:05:13.294Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:05:13.294Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:05:13.294Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:05:13.294Z]   Relative path: \src\App.js.git
+[2025-12-16T23:05:13.294Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:05:13.294Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:05:13.310Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:05:13.310Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:05:13.310Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:05:13.310Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:05:14.419Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:05:14.419Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:05:14.420Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:05:14.420Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:05:14.420Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:05:14.420Z]   Relative path: \src\App.js.git
+[2025-12-16T23:05:14.420Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:05:14.421Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:08:13.484Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:08:13.484Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:08:13.484Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:08:13.484Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:08:14.587Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:08:14.587Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:08:14.588Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:08:14.588Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:08:14.588Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:08:14.588Z]   Relative path: \src\App.js.git
+[2025-12-16T23:08:14.589Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:08:14.589Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:08:14.609Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:08:14.609Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:08:14.609Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:08:14.610Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:08:15.721Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:08:15.722Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:08:15.722Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:08:15.722Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:08:15.722Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:08:15.722Z]   Relative path: \src\App.js.git
+[2025-12-16T23:08:15.722Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:08:15.723Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:11:15.370Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:11:15.370Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:11:15.370Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:11:15.370Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:11:16.484Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:11:16.484Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:11:16.484Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:11:16.484Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:11:16.484Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:11:16.484Z]   Relative path: \src\App.js.git
+[2025-12-16T23:11:16.485Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:11:16.485Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:11:16.514Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:11:16.515Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:11:16.515Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:11:16.515Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:11:17.100Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:11:17.100Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:11:17.101Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:11:17.101Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:11:17.626Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:11:17.626Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:11:17.627Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:11:17.627Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:11:17.627Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:11:17.627Z]   Relative path: \src\App.js.git
+[2025-12-16T23:11:17.627Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:11:17.627Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:11:31.043Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js
+[2025-12-16T23:11:31.043Z]   Relative path: \src\App.js
+[2025-12-16T23:11:31.044Z]   Path parts (2): ["src","App.js"]
+[2025-12-16T23:11:31.044Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:13:06.114Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:13:06.114Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:13:09.339Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\4.pack_
+[2025-12-16T23:13:09.339Z]   Relative path: \node_modules\.cache\default-development\4.pack_
+[2025-12-16T23:13:09.340Z]   Path parts (4): ["node_modules",".cache","default-development","4.pack_"]
+[2025-12-16T23:13:09.340Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:13:09.340Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:13:09.340Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:13:09.479Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:13:09.479Z]   Relative path: \node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:13:09.479Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack.old"]
+[2025-12-16T23:13:09.480Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:13:09.480Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:13:09.480Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:13:09.619Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\10.pack
+[2025-12-16T23:13:09.619Z]   Relative path: \node_modules\.cache\default-development\10.pack
+[2025-12-16T23:13:09.619Z]   Path parts (4): ["node_modules",".cache","default-development","10.pack"]
+[2025-12-16T23:13:09.619Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:13:09.619Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:13:09.620Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:13:09.620Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\3.pack
+[2025-12-16T23:13:09.620Z]   Relative path: \node_modules\.cache\default-development\3.pack
+[2025-12-16T23:13:09.620Z]   Path parts (4): ["node_modules",".cache","default-development","3.pack"]
+[2025-12-16T23:13:09.620Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:13:09.620Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:13:09.621Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:13:09.621Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\4.pack
+[2025-12-16T23:13:09.621Z]   Relative path: \node_modules\.cache\default-development\4.pack
+[2025-12-16T23:13:09.621Z]   Path parts (4): ["node_modules",".cache","default-development","4.pack"]
+[2025-12-16T23:13:09.621Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:13:09.622Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:13:09.622Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:14:13.053Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:14:13.054Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:14:13.054Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:14:13.054Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:14:13.625Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:14:13.625Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:14:13.625Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:14:13.625Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:14:13.764Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:14:13.764Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:14:16.680Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:14:16.680Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:14:16.680Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:14:16.681Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:14:17.777Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:14:17.777Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:14:17.777Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:14:17.777Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:14:18.885Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:14:18.885Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:14:18.885Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:14:18.885Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:14:18.886Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:14:18.886Z]   Relative path: \src\App.js.git
+[2025-12-16T23:14:18.886Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:14:18.886Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:15:13.955Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\4.pack
+[2025-12-16T23:15:13.955Z]   Relative path: \node_modules\.cache\default-development\4.pack
+[2025-12-16T23:15:13.956Z]   Path parts (4): ["node_modules",".cache","default-development","4.pack"]
+[2025-12-16T23:15:13.956Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:15:13.956Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:15:13.957Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:15:13.957Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\6.pack
+[2025-12-16T23:15:13.957Z]   Relative path: \node_modules\.cache\default-development\6.pack
+[2025-12-16T23:15:13.957Z]   Path parts (4): ["node_modules",".cache","default-development","6.pack"]
+[2025-12-16T23:15:13.958Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:15:13.958Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:15:13.958Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:15:13.958Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack
+[2025-12-16T23:15:13.958Z]   Relative path: \node_modules\.cache\default-development\index.pack
+[2025-12-16T23:15:13.958Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack"]
+[2025-12-16T23:15:13.959Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:15:13.959Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:15:13.959Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:15:13.959Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:15:13.960Z]   Relative path: \node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:15:13.960Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack.old"]
+[2025-12-16T23:15:13.960Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:15:13.960Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:15:13.961Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:16:15.335Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:16:15.335Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:16:15.335Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:16:15.335Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:16:15.922Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:16:15.922Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:16:15.923Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:16:15.923Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:16:16.062Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:16:16.062Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:16:30.220Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:16:30.220Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:16:30.220Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:16:30.220Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:16:30.359Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:16:30.359Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:16:30.360Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:16:30.360Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:16:30.360Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:16:30.361Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:17:31.049Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\6.pack
+[2025-12-16T23:17:31.049Z]   Relative path: \node_modules\.cache\default-development\6.pack
+[2025-12-16T23:17:31.050Z]   Path parts (4): ["node_modules",".cache","default-development","6.pack"]
+[2025-12-16T23:17:31.050Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:17:31.051Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:17:31.051Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:17:31.051Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\7.pack
+[2025-12-16T23:17:31.052Z]   Relative path: \node_modules\.cache\default-development\7.pack
+[2025-12-16T23:17:31.052Z]   Path parts (4): ["node_modules",".cache","default-development","7.pack"]
+[2025-12-16T23:17:31.052Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:17:31.052Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:17:31.052Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:17:31.053Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack
+[2025-12-16T23:17:31.053Z]   Relative path: \node_modules\.cache\default-development\index.pack
+[2025-12-16T23:17:31.053Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack"]
+[2025-12-16T23:17:31.054Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:17:31.054Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:17:31.054Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:17:31.055Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:17:31.055Z]   Relative path: \node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:17:31.055Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack.old"]
+[2025-12-16T23:17:31.055Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:17:31.056Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:17:31.056Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:17:34.698Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:17:34.698Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:17:34.698Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:17:34.698Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:17:35.810Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:17:35.810Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:17:35.810Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:17:35.810Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:17:35.811Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:17:35.811Z]   Relative path: \src\App.js.git
+[2025-12-16T23:17:35.811Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:17:35.811Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:17:35.826Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:17:35.826Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:17:35.827Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:17:35.827Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:17:36.935Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:17:36.936Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:17:36.936Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:17:36.936Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:17:36.936Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:17:36.936Z]   Relative path: \src\App.js.git
+[2025-12-16T23:17:36.936Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:17:36.937Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:20:36.000Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:20:36.000Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:20:36.001Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:20:36.001Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:20:37.088Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:20:37.088Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:20:37.089Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:20:37.089Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:20:38.193Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:20:38.193Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:20:38.193Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:20:38.193Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:20:38.194Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:20:38.194Z]   Relative path: \src\App.js.git
+[2025-12-16T23:20:38.195Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:20:38.195Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:22:30.524Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:22:30.525Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:22:30.525Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:22:30.525Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:22:31.152Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:22:31.152Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:22:31.152Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:22:31.152Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:22:31.291Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:22:31.292Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:22:42.565Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js
+[2025-12-16T23:22:42.565Z]   Relative path: \src\App.js
+[2025-12-16T23:22:42.565Z]   Path parts (2): ["src","App.js"]
+[2025-12-16T23:22:42.565Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:22:42.719Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:22:42.720Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:23:09.155Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:23:09.156Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:23:09.156Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:23:09.156Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:23:09.295Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:23:09.295Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:23:09.295Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:23:09.296Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:23:09.296Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:23:09.296Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:23:30.135Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:23:30.135Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:23:30.136Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:23:30.136Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:23:30.275Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:23:30.275Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:24:08.097Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:24:08.097Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:24:08.097Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:24:08.097Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:24:09.210Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:24:09.477Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:24:09.477Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:24:09.478Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:24:09.478Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:24:09.478Z]   Relative path: \src\App.js.git
+[2025-12-16T23:24:09.478Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:24:09.478Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:24:09.564Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:24:09.564Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:24:09.565Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:24:09.565Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:24:10.674Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:24:10.674Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:24:10.675Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:24:10.675Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:24:10.675Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:24:10.675Z]   Relative path: \src\App.js.git
+[2025-12-16T23:24:10.675Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:24:10.676Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:24:22.784Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:24:22.784Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:24:22.784Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:24:22.785Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:24:22.924Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:24:22.924Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:24:22.924Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:24:22.924Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:24:22.925Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:24:22.925Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:24:25.032Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:24:25.033Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:24:25.033Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:24:25.033Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:24:25.172Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:24:25.172Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:24:56.795Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:24:56.795Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:24:56.795Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:24:56.796Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:24:57.428Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:24:57.428Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:24:57.429Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:24:57.429Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:24:57.568Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:24:57.568Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:25:30.177Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:25:30.177Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:25:30.178Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:25:30.178Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:25:30.748Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:25:30.748Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:25:30.749Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:25:30.749Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:25:30.888Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:25:30.888Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:25:45.442Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:25:45.443Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:25:45.443Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:25:45.443Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:25:45.587Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:25:45.588Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:25:45.591Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:25:45.593Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:25:45.593Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:25:45.594Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:26:04.286Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:26:04.287Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:26:04.287Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:26:04.287Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:26:05.072Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:26:05.072Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:26:05.072Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:26:05.073Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:26:05.211Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:26:05.211Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:26:23.024Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:26:23.025Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:26:23.025Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:26:23.025Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:26:23.164Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:26:23.164Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:26:23.164Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:26:23.165Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:26:23.165Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:26:23.165Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:27:09.738Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:27:09.738Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:27:09.738Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:27:09.738Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:27:10.842Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:27:10.843Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:27:10.843Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:27:10.843Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:27:10.843Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:27:10.843Z]   Relative path: \src\App.js.git
+[2025-12-16T23:27:10.844Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:27:10.844Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:27:10.848Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:27:10.848Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:27:10.849Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:27:10.849Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:27:11.956Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:27:11.956Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:27:11.957Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:27:11.957Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:27:11.957Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:27:11.957Z]   Relative path: \src\App.js.git
+[2025-12-16T23:27:11.957Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:27:11.957Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:27:23.327Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\4.pack
+[2025-12-16T23:27:23.328Z]   Relative path: \node_modules\.cache\default-development\4.pack
+[2025-12-16T23:27:23.328Z]   Path parts (4): ["node_modules",".cache","default-development","4.pack"]
+[2025-12-16T23:27:23.328Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:27:23.328Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:27:23.329Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:27:23.329Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\7.pack
+[2025-12-16T23:27:23.329Z]   Relative path: \node_modules\.cache\default-development\7.pack
+[2025-12-16T23:27:23.330Z]   Path parts (4): ["node_modules",".cache","default-development","7.pack"]
+[2025-12-16T23:27:23.331Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:27:23.331Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:27:23.331Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:27:23.331Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack
+[2025-12-16T23:27:23.332Z]   Relative path: \node_modules\.cache\default-development\index.pack
+[2025-12-16T23:27:23.332Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack"]
+[2025-12-16T23:27:23.332Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:27:23.332Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:27:23.333Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:27:23.333Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:27:23.333Z]   Relative path: \node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:27:23.333Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack.old"]
+[2025-12-16T23:27:23.334Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:27:23.334Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:27:23.334Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:27:39.389Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:27:39.390Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:27:39.390Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:27:39.390Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:27:39.542Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:27:39.543Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:27:39.543Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:27:39.543Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:27:39.543Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:27:39.544Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:27:57.495Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:27:57.496Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:27:57.496Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:27:57.496Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:27:57.650Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:27:57.650Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:27:57.651Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:27:57.651Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:27:57.651Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:27:57.651Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:28:16.931Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:28:16.931Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:28:16.931Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:28:16.932Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:28:17.070Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:28:17.070Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:28:32.024Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:28:32.024Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:28:32.025Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:28:32.025Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:28:32.163Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:28:32.164Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:28:59.992Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:28:59.992Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:28:59.993Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:28:59.993Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:29:00.177Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:29:00.177Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:29:13.003Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:29:13.004Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:29:13.004Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:29:13.004Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:29:13.147Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:29:13.147Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:29:13.147Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:29:13.148Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:29:13.148Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:29:13.148Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:29:22.205Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:29:22.205Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:29:22.205Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:29:22.205Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:29:22.344Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:29:22.344Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:29:31.034Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:29:31.034Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:29:31.034Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:29:31.034Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:29:31.173Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:29:31.174Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:29:31.174Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:29:31.174Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:29:31.174Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:29:31.175Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:29:44.765Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:29:44.765Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:29:44.765Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:29:44.766Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:29:44.903Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:29:44.903Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:29:44.904Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:29:44.904Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:29:44.904Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:29:44.904Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:30:11.157Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:30:11.157Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:30:11.157Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:30:11.157Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:30:12.270Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:30:12.270Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:30:12.271Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:30:12.271Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:30:12.271Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:30:12.272Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:30:12.272Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:30:12.272Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:30:12.272Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:30:12.273Z]   Relative path: \src\App.js.git
+[2025-12-16T23:30:12.273Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:30:12.273Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:30:13.377Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:30:13.378Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:30:13.378Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:30:13.378Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:30:13.378Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:30:13.378Z]   Relative path: \src\App.js.git
+[2025-12-16T23:30:13.378Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:30:13.379Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:30:24.820Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:30:24.820Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:30:24.820Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:30:24.820Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:30:24.975Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:30:24.975Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:30:24.975Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:30:24.975Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:30:24.975Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:30:24.976Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:31:09.948Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:31:09.948Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:31:09.949Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:31:09.949Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:31:10.535Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:31:10.535Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:31:10.535Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:31:10.535Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:31:10.674Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:31:10.675Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:31:29.325Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:31:29.325Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:31:29.325Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:31:29.325Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:31:29.464Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:31:29.464Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:31:52.268Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:31:52.269Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:31:52.269Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:31:52.269Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:31:52.423Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:31:52.423Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:32:12.862Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:32:12.862Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:32:12.862Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:32:12.862Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:32:13.002Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:32:13.002Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:32:13.002Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:32:13.003Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:32:13.003Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:32:13.003Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:32:14.527Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:32:14.527Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:32:14.527Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:32:14.527Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:32:14.666Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:32:14.666Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:32:14.666Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:32:14.667Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:32:14.667Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:32:14.667Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:32:26.135Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:32:26.135Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:32:26.135Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:32:26.135Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:32:26.274Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:32:26.274Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:32:26.274Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:32:26.275Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:32:26.275Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:32:26.275Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:33:12.463Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:33:12.463Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:33:12.464Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:33:12.464Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:33:13.566Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:33:13.567Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:33:13.567Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:33:13.567Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:33:13.567Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:33:13.567Z]   Relative path: \src\App.js.git
+[2025-12-16T23:33:13.568Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:33:13.568Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:33:13.576Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:33:13.577Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:33:13.577Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:33:13.577Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:33:14.687Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:33:14.688Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:33:14.688Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:33:14.688Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:33:14.688Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:33:14.689Z]   Relative path: \src\App.js.git
+[2025-12-16T23:33:14.689Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:33:14.689Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:33:21.776Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:33:21.777Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:33:21.777Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:33:21.777Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:33:21.916Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:33:21.916Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:33:21.916Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:33:21.916Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:33:21.916Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:33:21.916Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:33:30.224Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:33:30.225Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:33:30.225Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:33:30.225Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:33:30.364Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:33:30.364Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:33:30.365Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:33:30.365Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:33:30.365Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:33:30.365Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:34:18.765Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:34:18.765Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:34:18.765Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:34:18.765Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:34:19.322Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:34:19.323Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:34:19.323Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:34:19.323Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:34:19.323Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:34:19.323Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:34:33.703Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:34:33.704Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:34:33.704Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:34:33.704Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:34:33.874Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:34:33.874Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:35:34.419Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\4.pack
+[2025-12-16T23:35:34.420Z]   Relative path: \node_modules\.cache\default-development\4.pack
+[2025-12-16T23:35:34.420Z]   Path parts (4): ["node_modules",".cache","default-development","4.pack"]
+[2025-12-16T23:35:34.420Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:35:34.420Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:35:34.421Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:35:34.421Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\8.pack
+[2025-12-16T23:35:34.421Z]   Relative path: \node_modules\.cache\default-development\8.pack
+[2025-12-16T23:35:34.422Z]   Path parts (4): ["node_modules",".cache","default-development","8.pack"]
+[2025-12-16T23:35:34.422Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:35:34.423Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:35:34.423Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:35:34.423Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack
+[2025-12-16T23:35:34.423Z]   Relative path: \node_modules\.cache\default-development\index.pack
+[2025-12-16T23:35:34.423Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack"]
+[2025-12-16T23:35:34.424Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:35:34.424Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:35:34.424Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:35:34.424Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:35:34.424Z]   Relative path: \node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:35:34.424Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack.old"]
+[2025-12-16T23:35:34.425Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:35:34.425Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:35:34.425Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:36:32.160Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:36:32.160Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:36:32.161Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:36:32.161Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:36:33.262Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:36:33.262Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:36:33.262Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:36:33.263Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:36:33.263Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:36:33.263Z]   Relative path: \src\App.js.git
+[2025-12-16T23:36:33.263Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:36:33.263Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:36:33.277Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:36:33.277Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:36:33.277Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:36:33.278Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:36:34.383Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:36:34.383Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:36:34.384Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:36:34.384Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:36:34.384Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:36:34.384Z]   Relative path: \src\App.js.git
+[2025-12-16T23:36:34.384Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:36:34.385Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:36:36.275Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:36:36.275Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:36:36.276Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:36:36.276Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:36:36.414Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:36:36.415Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:36:36.415Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:36:36.415Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:36:36.416Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:36:36.416Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:36:55.454Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:36:55.454Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:36:55.454Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:36:55.454Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:36:55.593Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:36:55.593Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:36:55.594Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:36:55.594Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:36:55.594Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:36:55.594Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:37:04.516Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:37:04.516Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:37:04.517Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:37:04.517Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:37:04.655Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:37:04.656Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:38:05.288Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\8.pack
+[2025-12-16T23:38:05.288Z]   Relative path: \node_modules\.cache\default-development\8.pack
+[2025-12-16T23:38:05.288Z]   Path parts (4): ["node_modules",".cache","default-development","8.pack"]
+[2025-12-16T23:38:05.289Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:38:05.289Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:38:05.290Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:38:05.290Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\9.pack
+[2025-12-16T23:38:05.290Z]   Relative path: \node_modules\.cache\default-development\9.pack
+[2025-12-16T23:38:05.291Z]   Path parts (4): ["node_modules",".cache","default-development","9.pack"]
+[2025-12-16T23:38:05.291Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:38:05.291Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:38:05.291Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:38:05.292Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack
+[2025-12-16T23:38:05.292Z]   Relative path: \node_modules\.cache\default-development\index.pack
+[2025-12-16T23:38:05.292Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack"]
+[2025-12-16T23:38:05.293Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:38:05.293Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:38:05.293Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:38:05.293Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:38:05.294Z]   Relative path: \node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:38:05.294Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack.old"]
+[2025-12-16T23:38:05.294Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:38:05.295Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:38:05.295Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:43:17.328Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:43:17.329Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:43:17.329Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:43:17.329Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:43:18.441Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:43:18.441Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:43:18.441Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:43:18.441Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:43:18.442Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:43:18.442Z]   Relative path: \src\App.js.git
+[2025-12-16T23:43:18.442Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:43:18.442Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:43:18.447Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-16T23:43:18.448Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-16T23:43:18.448Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-16T23:43:18.448Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:43:19.550Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-16T23:43:19.550Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-16T23:43:19.550Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-16T23:43:19.551Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:43:19.551Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-16T23:43:19.551Z]   Relative path: \src\App.js.git
+[2025-12-16T23:43:19.551Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-16T23:43:19.552Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:44:20.910Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:44:20.910Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:44:20.910Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:44:20.910Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:44:21.561Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:44:21.561Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:44:21.561Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:44:21.561Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:44:21.562Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:44:21.562Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:44:40.916Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:44:40.916Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:44:40.922Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:44:40.922Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:44:41.055Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-16T23:44:41.055Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-16T23:44:41.056Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-16T23:44:41.056Z]   Relative path: \src\fetching-service.jsx
+[2025-12-16T23:44:41.056Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-16T23:44:41.056Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-16T23:45:41.195Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\11.pack_
+[2025-12-16T23:45:41.196Z]   Relative path: \node_modules\.cache\default-development\11.pack_
+[2025-12-16T23:45:41.196Z]   Path parts (4): ["node_modules",".cache","default-development","11.pack_"]
+[2025-12-16T23:45:41.196Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:45:41.196Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:45:41.197Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:45:41.335Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\0.pack
+[2025-12-16T23:45:41.335Z]   Relative path: \node_modules\.cache\default-development\0.pack
+[2025-12-16T23:45:41.335Z]   Path parts (4): ["node_modules",".cache","default-development","0.pack"]
+[2025-12-16T23:45:41.335Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:45:41.336Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:45:41.336Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:45:41.336Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\11.pack
+[2025-12-16T23:45:41.337Z]   Relative path: \node_modules\.cache\default-development\11.pack
+[2025-12-16T23:45:41.337Z]   Path parts (4): ["node_modules",".cache","default-development","11.pack"]
+[2025-12-16T23:45:41.338Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:45:41.338Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:45:41.338Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:45:41.338Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\9.pack
+[2025-12-16T23:45:41.338Z]   Relative path: \node_modules\.cache\default-development\9.pack
+[2025-12-16T23:45:41.339Z]   Path parts (4): ["node_modules",".cache","default-development","9.pack"]
+[2025-12-16T23:45:41.339Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:45:41.339Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:45:41.340Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:45:41.340Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack
+[2025-12-16T23:45:41.340Z]   Relative path: \node_modules\.cache\default-development\index.pack
+[2025-12-16T23:45:41.340Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack"]
+[2025-12-16T23:45:41.340Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:45:41.341Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:45:41.341Z]   EXCLUDED: no settings file in instance folder
+[2025-12-16T23:45:41.341Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:45:41.341Z]   Relative path: \node_modules\.cache\default-development\index.pack.old
+[2025-12-16T23:45:41.341Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack.old"]
+[2025-12-16T23:45:41.341Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-16T23:45:41.342Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-16T23:45:41.342Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:04:34.196Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:04:34.196Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:04:34.196Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:04:34.197Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:04:35.312Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-17T00:04:35.312Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-17T00:04:35.312Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-17T00:04:35.313Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:04:35.313Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-17T00:04:35.313Z]   Relative path: \src\App.js.git
+[2025-12-17T00:04:35.313Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-17T00:04:35.313Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:04:35.340Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:04:35.341Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:04:35.341Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:04:35.341Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:04:36.448Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-17T00:04:36.448Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-17T00:04:36.449Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-17T00:04:36.449Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:04:36.449Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-17T00:04:36.449Z]   Relative path: \src\App.js.git
+[2025-12-17T00:04:36.449Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-17T00:04:36.450Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:05:14.842Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:05:14.842Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:05:14.842Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:05:14.842Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:05:14.981Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:05:14.981Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:05:14.982Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:05:14.982Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:05:14.982Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:05:14.982Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:05:23.909Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:05:23.910Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:05:23.910Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:05:23.910Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:05:24.048Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:05:24.049Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:05:24.049Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:05:24.049Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:05:24.049Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:05:24.049Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:05:37.363Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:05:37.363Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:05:37.364Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:05:37.364Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:05:37.503Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:05:37.503Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:05:37.503Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:05:37.503Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:05:37.504Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:05:37.504Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:06:03.130Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:06:03.130Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:06:03.130Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:06:03.130Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:06:03.269Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:06:03.269Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:06:03.270Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:06:03.270Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:06:03.270Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:06:03.270Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:06:21.876Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:06:21.876Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:06:21.876Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:06:21.877Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:06:22.540Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:06:22.540Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:06:22.540Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:06:22.540Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:06:22.541Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:06:22.541Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:07:23.123Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\1.pack
+[2025-12-17T00:07:23.123Z]   Relative path: \node_modules\.cache\default-development\1.pack
+[2025-12-17T00:07:23.124Z]   Path parts (4): ["node_modules",".cache","default-development","1.pack"]
+[2025-12-17T00:07:23.124Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:07:23.124Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:07:23.124Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:07:23.124Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\11.pack
+[2025-12-17T00:07:23.125Z]   Relative path: \node_modules\.cache\default-development\11.pack
+[2025-12-17T00:07:23.125Z]   Path parts (4): ["node_modules",".cache","default-development","11.pack"]
+[2025-12-17T00:07:23.125Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:07:23.125Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:07:23.125Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:07:23.125Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack
+[2025-12-17T00:07:23.125Z]   Relative path: \node_modules\.cache\default-development\index.pack
+[2025-12-17T00:07:23.126Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack"]
+[2025-12-17T00:07:23.126Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:07:23.126Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:07:23.126Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:07:23.126Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack.old
+[2025-12-17T00:07:23.126Z]   Relative path: \node_modules\.cache\default-development\index.pack.old
+[2025-12-17T00:07:23.127Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack.old"]
+[2025-12-17T00:07:23.127Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:07:23.127Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:07:23.127Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:07:35.521Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:07:35.521Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:07:35.521Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:07:35.521Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:07:36.617Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:07:36.618Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:07:36.618Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:07:36.618Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:07:37.726Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-17T00:07:37.726Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-17T00:07:37.726Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-17T00:07:37.727Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:07:37.727Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-17T00:07:37.727Z]   Relative path: \src\App.js.git
+[2025-12-17T00:07:37.728Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-17T00:07:37.728Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:07:43.921Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:07:43.921Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:07:43.921Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:07:43.922Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:07:44.060Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:07:44.061Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:08:09.871Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:08:09.872Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:08:09.872Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:08:09.872Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:08:10.535Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:08:10.536Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:08:10.536Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:08:10.536Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:08:10.537Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:08:10.537Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:08:22.785Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:08:22.785Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:08:22.786Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:08:22.786Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:08:22.940Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:08:22.940Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:08:22.940Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:08:22.941Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:08:22.941Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:08:22.941Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:09:05.521Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:09:05.521Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:09:05.521Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:09:05.522Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:09:06.155Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:09:06.155Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:09:06.155Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:09:06.155Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:09:06.155Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:09:06.156Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:09:29.224Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:09:29.224Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:09:29.224Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:09:29.225Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:09:29.363Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:09:29.363Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:10:30.083Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\0.pack
+[2025-12-17T00:10:30.083Z]   Relative path: \node_modules\.cache\default-development\0.pack
+[2025-12-17T00:10:30.083Z]   Path parts (4): ["node_modules",".cache","default-development","0.pack"]
+[2025-12-17T00:10:30.083Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:10:30.084Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:10:30.084Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:10:30.084Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\1.pack
+[2025-12-17T00:10:30.084Z]   Relative path: \node_modules\.cache\default-development\1.pack
+[2025-12-17T00:10:30.084Z]   Path parts (4): ["node_modules",".cache","default-development","1.pack"]
+[2025-12-17T00:10:30.085Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:10:30.085Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:10:30.085Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:10:30.085Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\2.pack
+[2025-12-17T00:10:30.085Z]   Relative path: \node_modules\.cache\default-development\2.pack
+[2025-12-17T00:10:30.086Z]   Path parts (4): ["node_modules",".cache","default-development","2.pack"]
+[2025-12-17T00:10:30.086Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:10:30.086Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:10:30.087Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:10:30.087Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack
+[2025-12-17T00:10:30.087Z]   Relative path: \node_modules\.cache\default-development\index.pack
+[2025-12-17T00:10:30.087Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack"]
+[2025-12-17T00:10:30.087Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:10:30.087Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:10:30.088Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:10:30.088Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack.old
+[2025-12-17T00:10:30.088Z]   Relative path: \node_modules\.cache\default-development\index.pack.old
+[2025-12-17T00:10:30.088Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack.old"]
+[2025-12-17T00:10:30.088Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:10:30.088Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:10:30.089Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:10:36.782Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:10:36.782Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:10:36.782Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:10:36.782Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:10:37.888Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-17T00:10:37.888Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-17T00:10:37.889Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-17T00:10:37.889Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:10:37.889Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-17T00:10:37.889Z]   Relative path: \src\App.js.git
+[2025-12-17T00:10:37.889Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-17T00:10:37.890Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:10:37.895Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:10:37.895Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:10:37.896Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:10:37.896Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:10:39.004Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-17T00:10:39.005Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-17T00:10:39.005Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-17T00:10:39.005Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:10:39.005Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-17T00:10:39.005Z]   Relative path: \src\App.js.git
+[2025-12-17T00:10:39.006Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-17T00:10:39.006Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:10:39.345Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:10:39.345Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:10:39.346Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:10:39.346Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:10:39.346Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:10:39.346Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:11:38.406Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:11:38.407Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:11:38.407Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:11:38.407Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:11:39.072Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:11:39.073Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:11:39.073Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:11:39.073Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:11:39.073Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:11:39.073Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:11:51.179Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:11:51.179Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:11:51.179Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:11:51.180Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:11:51.318Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:11:51.318Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:11:51.318Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:11:51.319Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:11:51.319Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:11:51.319Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:11:59.830Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:11:59.830Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:11:59.830Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:11:59.831Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:11:59.970Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:11:59.970Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:11:59.970Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:11:59.971Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:11:59.971Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:11:59.971Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:13:00.105Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\2.pack
+[2025-12-17T00:13:00.105Z]   Relative path: \node_modules\.cache\default-development\2.pack
+[2025-12-17T00:13:00.106Z]   Path parts (4): ["node_modules",".cache","default-development","2.pack"]
+[2025-12-17T00:13:00.106Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:13:00.106Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:13:00.107Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:13:00.107Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\3.pack
+[2025-12-17T00:13:00.107Z]   Relative path: \node_modules\.cache\default-development\3.pack
+[2025-12-17T00:13:00.107Z]   Path parts (4): ["node_modules",".cache","default-development","3.pack"]
+[2025-12-17T00:13:00.108Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:13:00.108Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:13:00.108Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:13:00.108Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack
+[2025-12-17T00:13:00.109Z]   Relative path: \node_modules\.cache\default-development\index.pack
+[2025-12-17T00:13:00.109Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack"]
+[2025-12-17T00:13:00.109Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:13:00.109Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:13:00.109Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:13:00.110Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack.old
+[2025-12-17T00:13:00.110Z]   Relative path: \node_modules\.cache\default-development\index.pack.old
+[2025-12-17T00:13:00.110Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack.old"]
+[2025-12-17T00:13:00.110Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:13:00.110Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:13:00.111Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:13:26.148Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:13:26.148Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:13:26.148Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:13:26.148Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:13:26.302Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:13:26.302Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:13:46.197Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:13:46.197Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:13:46.197Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:13:46.197Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:13:47.309Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-17T00:13:47.310Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-17T00:13:47.310Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-17T00:13:47.310Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:13:47.311Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-17T00:13:47.311Z]   Relative path: \src\App.js.git
+[2025-12-17T00:13:47.311Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-17T00:13:47.312Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:13:47.341Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:13:47.342Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:13:47.342Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:13:47.342Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:13:48.443Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-17T00:13:48.444Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-17T00:13:48.444Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-17T00:13:48.444Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:13:48.444Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-17T00:13:48.445Z]   Relative path: \src\App.js.git
+[2025-12-17T00:13:48.445Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-17T00:13:48.445Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:14:00.566Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:14:00.567Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:14:00.567Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:14:00.567Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:14:00.706Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:14:00.706Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:14:00.706Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:14:00.706Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:14:00.706Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:14:00.707Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:15:00.858Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\3.pack
+[2025-12-17T00:15:00.859Z]   Relative path: \node_modules\.cache\default-development\3.pack
+[2025-12-17T00:15:00.859Z]   Path parts (4): ["node_modules",".cache","default-development","3.pack"]
+[2025-12-17T00:15:00.859Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:15:00.859Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:15:00.859Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:15:00.860Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\4.pack
+[2025-12-17T00:15:00.860Z]   Relative path: \node_modules\.cache\default-development\4.pack
+[2025-12-17T00:15:00.860Z]   Path parts (4): ["node_modules",".cache","default-development","4.pack"]
+[2025-12-17T00:15:00.860Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:15:00.861Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:15:00.861Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:15:00.861Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack
+[2025-12-17T00:15:00.862Z]   Relative path: \node_modules\.cache\default-development\index.pack
+[2025-12-17T00:15:00.862Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack"]
+[2025-12-17T00:15:00.862Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:15:00.862Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:15:00.863Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:15:00.863Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\default-development\index.pack.old
+[2025-12-17T00:15:00.863Z]   Relative path: \node_modules\.cache\default-development\index.pack.old
+[2025-12-17T00:15:00.863Z]   Path parts (4): ["node_modules",".cache","default-development","index.pack.old"]
+[2025-12-17T00:15:00.863Z]   Instance folder: e:\Dawnstar\dawnstar-space-weather\node_modules
+[2025-12-17T00:15:00.863Z]   Settings check: _settings.json=false, settings.json=false
+[2025-12-17T00:15:00.863Z]   EXCLUDED: no settings file in instance folder
+[2025-12-17T00:16:47.511Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:16:47.511Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:16:47.511Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:16:47.512Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:16:48.593Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:16:48.593Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:16:48.594Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:16:48.594Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:16:49.701Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-17T00:16:49.701Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-17T00:16:49.701Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-17T00:16:49.702Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:16:49.702Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-17T00:16:49.702Z]   Relative path: \src\App.js.git
+[2025-12-17T00:16:49.703Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-17T00:16:49.703Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:17:51.161Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:17:51.161Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:17:51.161Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:17:51.161Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:17:51.813Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:17:51.814Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:17:51.814Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:17:51.814Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:17:51.948Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:17:51.948Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:18:05.871Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:18:05.872Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:18:05.872Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:18:05.872Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:18:06.011Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:18:06.011Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:18:06.011Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:18:06.011Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:18:06.011Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:18:06.012Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:18:49.044Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js
+[2025-12-17T00:18:49.543Z]   Relative path: \src\App.js
+[2025-12-17T00:18:49.543Z]   Path parts (2): ["src","App.js"]
+[2025-12-17T00:18:49.543Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:18:49.631Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js
+[2025-12-17T00:18:49.632Z]   Relative path: \src\App.js
+[2025-12-17T00:18:49.632Z]   Path parts (2): ["src","App.js"]
+[2025-12-17T00:18:49.632Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:18:49.771Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:18:49.771Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:19:48.432Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:19:48.433Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:19:48.433Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:19:48.433Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:19:48.803Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:19:48.803Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:19:48.804Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:19:48.804Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:19:49.144Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:19:49.145Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:19:49.145Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:19:49.145Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:19:49.145Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:19:49.145Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:19:49.872Z] File change detected: e:\Dawnstar\dawnstar-space-weather\.git\FETCH_HEAD
+[2025-12-17T00:19:49.872Z]   Relative path: \.git\FETCH_HEAD
+[2025-12-17T00:19:49.872Z]   Path parts (2): [".git","FETCH_HEAD"]
+[2025-12-17T00:19:49.872Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:19:50.981Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx.git
+[2025-12-17T00:19:50.982Z]   Relative path: \src\fetching-service.jsx.git
+[2025-12-17T00:19:50.982Z]   Path parts (2): ["src","fetching-service.jsx.git"]
+[2025-12-17T00:19:50.982Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:19:50.982Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\App.js.git
+[2025-12-17T00:19:50.983Z]   Relative path: \src\App.js.git
+[2025-12-17T00:19:50.983Z]   Path parts (2): ["src","App.js.git"]
+[2025-12-17T00:19:50.983Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:20:33.909Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:20:33.909Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:20:33.909Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:20:33.909Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:20:34.588Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:20:34.588Z]   EXCLUDED: system/hidden file (.eslintcache)
+[2025-12-17T00:20:34.588Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:20:34.589Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:20:34.589Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:20:34.589Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:20:44.249Z] File change detected: e:\Dawnstar\dawnstar-space-weather\src\fetching-service.jsx
+[2025-12-17T00:20:44.249Z]   Relative path: \src\fetching-service.jsx
+[2025-12-17T00:20:44.249Z]   Path parts (2): ["src","fetching-service.jsx"]
+[2025-12-17T00:20:44.249Z]   EXCLUDED: not deep enough (2 < 3)
+[2025-12-17T00:20:44.388Z] File change detected: e:\Dawnstar\dawnstar-space-weather\node_modules\.cache\.eslintcache
+[2025-12-17T00:20:44.388Z]   EXCLUDED: system/hidden file (.eslintcache)
