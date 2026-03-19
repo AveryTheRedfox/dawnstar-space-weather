@@ -1,7 +1,7 @@
-import FetchingApi from "./FetchingFunction";
+import useFetchingApi from "./FetchingFunction";
 
 function FlareDisplay() {
-const [, , , , Flare, LatestFlare] = FetchingApi();  
+const [, , , , Flare, LatestFlare] = useFetchingApi();  
 
 const FlareFlux = Flare?.[711]?.flux ?? null;
 const LatestFlareClass = LatestFlare ?? null;

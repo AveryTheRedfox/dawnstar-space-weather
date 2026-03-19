@@ -1,10 +1,10 @@
 // src/inner_content/CME_Predictions/useCMEPredictions.js
 import { useState, useEffect } from "react";
-import FetchingApi from "../../fetching-service/FetchingFunction";
+import useFetchingApi from "../../fetching-service/FetchingFunction";
 import IntMagDisplay from "../../fetching-service/ImfDisplay";
 
 export function useCMEPredictions() {
-  const [, , , , , , Enlil] = FetchingApi();    // only need Enlil here
+  const [, , , , , , Enlil] = useFetchingApi();    // only need Enlil here
 
   const [impacts, setImpacts] = useState([]);
 

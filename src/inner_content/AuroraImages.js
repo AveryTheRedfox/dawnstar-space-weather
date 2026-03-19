@@ -1,9 +1,9 @@
 
-import FetchingApi from "../fetching-service/FetchingFunction";
+import useFetchingApi from "../fetching-service/FetchingFunction";
 
 function AuroraDisplay() {
 
-const [, , , , , , , Ovation] = FetchingApi();
+const [, , , , , , , Ovation] = useFetchingApi();
 
     console.log(Ovation);
     return (

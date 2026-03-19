@@ -1,10 +1,10 @@
-import FetchingApi from "./FetchingFunction";
+import useFetchingApi from "./FetchingFunction";
 import Marquee from "react-fast-marquee";
 import { useCMEPredictions } from "../inner_content/CME_Predictions/useCMEPredictions";
 
 function AlertsDisplay() {
 
-const [, , , Alerts] = FetchingApi();  
+const [, , , Alerts] = useFetchingApi();  
 
 
 let CustomMessage = "";

@@ -1,13 +1,15 @@
-import FetchingApi from './FetchingFunction';
-
+import useFetchingApi from './FetchingFunction';
+import { PopOverGraphs } from '../inner_content/popover';
+import { WindSpeedGraph } from '../inner_content/Graphs';
+import { DensityGraph } from '../inner_content/Graphs';
 
 
 
 function WindSpeedCalculation() {
-const [SolarWind, IntMag, KpIndex] = FetchingApi(); //Dekonstruktion der Werte aus der FetchingApi Funktion
-let WindSpeed = SolarWind?.proton_speed ?? null;
-let Density = SolarWind?.proton_density ?? null;
-let Temperature = SolarWind?.proton_temperature ?? null; 
+const [SolarWind, IntMag, KpIndex] = useFetchingApi(); //Dekonstruktion der Werte aus der FetchingApi Funktion
+let WindSpeed = SolarWind?.[0].proton_speed ?? null;
+let Density = SolarWind?.[0].proton_density ?? null;
+let Temperature = SolarWind?.[0].proton_temperature ?? null; 
 
 let WindSpeedColor = ''; 
 if (WindSpeed < 400) {
@@ -59,7 +61,14 @@ return (
                 "marginRight": "5px",
             }}
             />
-            <div style={{"alignContent": "center",}}>Wind Speed:<br></br> <div style={{"color": WindSpeedColor}}>{WindSpeed} km/s</div></div>
+            <div style={{"alignContent": "center",}}>
+            <PopOverGraphs 
+                DisplayString={'Wind Speed:'} 
+                PopOverString={<WindSpeedGraph/>} 
+                PopOverStringStyling={{"color": "darkgray"}}
+                
+            />
+            <div style={{"color": WindSpeedColor}}>{WindSpeed} km/s</div></div>
             
         </div>
         <div style={{
@@ -74,7 +83,13 @@ return (
                     "marginRight": "5px",
             }}
             />
-            <div style={{"alignContent": "center"}}>Density:<br></br> <div style={{"color": DensityColor}}>{Density} p/cm3</div></div>
+            <div style={{"alignContent": "center"}}>           
+                <PopOverGraphs 
+                DisplayString={'Density'} 
+                PopOverString={<DensityGraph/>} 
+                PopOverStringStyling={{"color": "darkgray"}}
+                
+            /> <div style={{"color": DensityColor}}>{Density} p/cm3</div></div>
         </div>
                 <div style={{
             "display": "flex",

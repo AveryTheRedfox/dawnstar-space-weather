@@ -1,12 +1,12 @@
 
-import FetchingApi from './FetchingFunction';
+import useFetchingApi from './FetchingFunction';
 
 
 function IntMagDisplay() {
 
-const [ , IntMag] = FetchingApi(); //Dekonstruktion der Werte aus der FetchingApi Funktion
-const IMFBt = IntMag?.bt ?? null;
-const IMFBz = IntMag?.gse_bz ?? null;
+const [ , IntMag] = useFetchingApi(); //Dekonstruktion der Werte aus der FetchingApi Funktion
+const IMFBt = IntMag?.[1]?.bt ?? null;
+const IMFBz = IntMag?.[1]?.gse_bz ?? null;
 
 console.log(IntMag);
 
