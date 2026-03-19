@@ -32,8 +32,16 @@ if (Density < 10) {
 } else {
     DensityColor = '#ffffff';
 }
-
-
+let TemperatureColor = '';
+if (Temperature < 20000) {
+    TemperatureColor = '#00fd15';
+} else if (Temperature <= 100000) {
+    TemperatureColor = '#eeff00';
+} else if (Temperature <= 500000) {
+    TemperatureColor = '#ff9c00'; 
+} else {
+    TemperatureColor = '#c05904'; 
+}
 
 
 return ( 
@@ -83,7 +91,7 @@ return (
                 "align": "center"
             }}
             />
-             <div>Temperature: <br></br> {Temperature/1000} kK </div>
+             <div style={{"alignContent": "center"}}>Temperature:<br></br> <div style={{"color": TemperatureColor}}>{Temperature/1000} kK</div></div>
         </div>
        
     </div>

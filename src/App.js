@@ -6,6 +6,7 @@ import AlertsDisplay from "./fetching-service/AlertsDisplay";
 import FlareDisplay from "./fetching-service/FlareDisplay";
 import SolarImages from "./inner_content/solar_images";
 import CMEPredictions from "./inner_content/CME_Predictions/predictions";
+import AuroraDisplay from "./inner_content/AuroraImages.js";
 //import KpIndexChart from "./inner_content/Charts.js"
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -27,7 +28,7 @@ function App() {
 }}>
     <div className='TitleAndData' style={{
     "height": "97vh",
-    "width": "80vw",
+    "width": "25vw",
     "marginLeft": "0px",
     "marginRight": "0px",
     "display": "flex",
@@ -73,6 +74,7 @@ function App() {
         }}>
             <SolarImages/>
             <CMEPredictions/> 
+            <AuroraDisplay/>
         </div>  
     </div>
 </div>

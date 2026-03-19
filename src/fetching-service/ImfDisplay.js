@@ -4,10 +4,13 @@ import FetchingApi from './FetchingFunction';
 
 function IntMagDisplay() {
 
-const [SolarWind, IntMag, KpIndex] = FetchingApi(); //Dekonstruktion der Werte aus der FetchingApi Funktion
+const [ , IntMag] = FetchingApi(); //Dekonstruktion der Werte aus der FetchingApi Funktion
 const IMFBt = IntMag?.bt ?? null;
 const IMFBz = IntMag?.gse_bz ?? null;
 
+console.log(IntMag);
+
+console.log(IntMag);
 let BzDirection = '';
 let BzArrow = {};
 let BzBorderColor = '';

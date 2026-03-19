@@ -10,8 +10,8 @@ import FetchingApi from './FetchingFunction';
 
 function KpCalculation() {
   
-const [SolarWind, IntMag, KpIndex] = FetchingApi();
-const currentvalue = KpIndex?.[350]?.kp_index;
+const [, , KpIndex] = FetchingApi();
+const currentvalue = KpIndex?.[350]?.estimated_kp;
 const currentime = KpIndex?.[350]?.time_tag;
 
 //Array mit den Kp-Index Werten und den entsprechenden Winkelpositionen für die Gauge

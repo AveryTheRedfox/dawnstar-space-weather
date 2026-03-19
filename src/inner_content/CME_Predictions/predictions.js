@@ -1,15 +1,18 @@
+import { MouseHoverPopoverCME } from "../popover";
 import { useCMEPredictions } from "./useCMEPredictions";
 
-function CMEPredictions() {
-  const { impacts, maxDiff } = useCMEPredictions();
-  let CMEArrival = "";
 
+
+function CMEPredictions() {
+  const { impacts, maxDiff, CMEThreshold } = useCMEPredictions();
+  let CMEArrival = "";
   if (!impacts.length) {
      CMEArrival = <div>No CME Arrivals Expected</div>
   } else {
     CMEArrival = <div className="PredictedCMEs">
         <div>
          <div>Predicted CME arrivals</div>
+           
          <ul>
         {impacts.map((e, i) => (
           <li key={i}>
@@ -33,7 +36,12 @@ function CMEPredictions() {
     "borderRadius": "10px"
     }}>
       <div className="CMEData">
-        <div>CME Observations:</div>
+           <MouseHoverPopoverCME 
+           DisplayString='CME Observations' 
+           PopOverString={<div>The CME Observations Panel will, with data from the WSA-Enlil Model, calculate the arrival of CMEs. <br/>The time displayed is the estimated arrival time and <br/> the ΔDensity is the largest positive change in density found for that CME </div>}
+           PopOverStringStyling={{"fontSize": "42px", "textDecoration": "underline"}}
+           />
+        <div>Current Threshold: {CMEThreshold} </div>
         <div>{CMEArrival}</div>
       </div>
       <div className="CMEForecastImages" style={{

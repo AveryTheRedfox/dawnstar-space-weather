@@ -4,23 +4,31 @@ import { useCMEPredictions } from "../inner_content/CME_Predictions/useCMEPredic
 
 function AlertsDisplay() {
 
-const [SolarWind, IntMag, KpIndex, Alerts, LatestFlare] = FetchingApi();  
+const [, , , Alerts] = FetchingApi();  
 
 
-let CustomMessage = "No Significant Space Weather Detected";
+let CustomMessage = "";
 let AlertTitle = Alerts?.message ?? null;
 let CMEAlertsMessage = "";
  const {impacts} = useCMEPredictions();
- let nextArrival = impacts[0]?.time ?? "N/A";
+
+let nextArrivals = [];
+
+console.log(impacts);
+
+for (let i = 0; i < impacts.length; i++) {
+    nextArrivals.push(impacts[i]?.time);
+}
 
 
 
-    console.log(nextArrival);
+ console.log(nextArrivals);
+
 
     if (impacts.length < 1) {
         CMEAlertsMessage = "";
     } else {
-        CMEAlertsMessage = "*** Coronal Mass Ejection detected | Estimated Arrival: " + `${nextArrival}`;
+        CMEAlertsMessage = "*** Coronal Mass Ejection(s) detected | Estimated Arrival(s): " + `${nextArrivals}`;
     }
 
 
@@ -46,7 +54,7 @@ return(
         "color": "#ccc9dc",
     }}>
         <Marquee direction="left" speed="100">
-        <div>*** {line(AlertTitle)[4]} | {line(AlertTitle)[6]} | {line(AlertTitle)[7]} {CMEAlertsMessage} *** {CustomMessage}</div>
+        <div>*** {line(AlertTitle)[4]} | {line(AlertTitle)[6]} {line(AlertTitle)[7]} {CMEAlertsMessage} *** {CustomMessage}</div>
         </Marquee>
     </div>
 )
