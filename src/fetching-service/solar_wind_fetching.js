@@ -2,14 +2,15 @@ import useFetchingApi from './FetchingFunction';
 import { PopOverGraphs } from '../inner_content/popover';
 import { WindSpeedGraph } from '../inner_content/Graphs';
 import { DensityGraph } from '../inner_content/Graphs';
+import { TemperatureGraph } from '../inner_content/Graphs';
 
 
 
 function WindSpeedCalculation() {
 const [SolarWind, IntMag, KpIndex] = useFetchingApi(); //Dekonstruktion der Werte aus der FetchingApi Funktion
-let WindSpeed = SolarWind?.[0].proton_speed ?? null;
-let Density = SolarWind?.[0].proton_density ?? null;
-let Temperature = SolarWind?.[0].proton_temperature ?? null; 
+let WindSpeed = SolarWind?.[1].proton_speed ?? null;
+let Density = SolarWind?.[1].proton_density ?? null;
+let Temperature = SolarWind?.[1].proton_temperature ?? null; 
 
 let WindSpeedColor = ''; 
 if (WindSpeed < 400) {
@@ -106,7 +107,13 @@ return (
                 "align": "center"
             }}
             />
-             <div style={{"alignContent": "center"}}>Temperature:<br></br> <div style={{"color": TemperatureColor}}>{Temperature/1000} kK</div></div>
+             <div style={{"alignContent": "center"}}>
+                 <PopOverGraphs 
+                DisplayString={'Temperature'} 
+                PopOverString={<TemperatureGraph/>} 
+                PopOverStringStyling={{"color": "darkgray"}}   
+            />
+                <div style={{"color": TemperatureColor}}>{Temperature/1000} kK</div></div>
         </div>
        
     </div>

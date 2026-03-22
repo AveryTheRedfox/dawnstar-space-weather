@@ -36,7 +36,6 @@ export function useCMEPredictions() {
       }
     }
     setImpacts(events);
-    console.log(impacts);
   }, [Enlil]);
   return { impacts, CMEThreshold };
   

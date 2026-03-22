@@ -11,8 +11,10 @@ import useFetchingApi from './FetchingFunction';
 function KpCalculation() {
   
 const [, , KpIndex] = useFetchingApi();
-const currentvalue = KpIndex?.[350]?.estimated_kp;
+const currentvalue = KpIndex?.[350]?.kp_index;
 const currentime = KpIndex?.[350]?.time_tag;
+
+console.log(KpIndex);
 
 //Array mit den Kp-Index Werten und den entsprechenden Winkelpositionen für die Gauge
 let AnglePosition = [
@@ -57,9 +59,9 @@ if (currentvalue < 4) {
 } else if (currentvalue >= 5 && currentvalue < 6) {
   StormColor = '#d89c6b';
 } else if (currentvalue >= 6 && currentvalue < 7) {
-  StormColor = '#FF0000';
+  StormColor = '#ff6600';
 } else if (currentvalue >= 7 && currentvalue < 8) {
-  StormColor = '#8B0000';
+  StormColor = '#cf4d1a';
 } else if (currentvalue >= 8 && currentvalue < 9) {
   StormColor = '#6b1644';
 } else if (currentvalue >= 9) {

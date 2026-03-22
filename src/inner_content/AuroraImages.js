@@ -5,7 +5,7 @@ function AuroraDisplay() {
 
 const [, , , , , , , Ovation] = useFetchingApi();
 
-    console.log(Ovation);
+
     return (
         <div></div>
     )

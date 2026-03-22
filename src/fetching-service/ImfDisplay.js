@@ -1,16 +1,18 @@
 
 import useFetchingApi from './FetchingFunction';
-
+import { PopOverGraphs } from '../inner_content/popover';
+import { IMFBtGraph } from '../inner_content/Graphs';
+import { IMFBzGraph } from '../inner_content/Graphs';
 
 function IntMagDisplay() {
 
 const [ , IntMag] = useFetchingApi(); //Dekonstruktion der Werte aus der FetchingApi Funktion
-const IMFBt = IntMag?.[1]?.bt ?? null;
-const IMFBz = IntMag?.[1]?.gse_bz ?? null;
+const IMFBt = IntMag?.[0]?.bt;
+const IMFBz = IntMag?.[0]?.bz_gsm;
 
-console.log(IntMag);
 
-console.log(IntMag);
+
+
 let BzDirection = '';
 let BzArrow = {};
 let BzBorderColor = '';
@@ -58,8 +60,21 @@ return(
         }}
         />
         <div style={{"display": "flex", "flexDirection": "column", "alignContent": "flex-start"}}>
-        <div style={{"alignContent": "center", "display": "flex", "flexDirection": "row"}}>IMF Bt: <div style={{"color": IMFBtColor, "marginLeft": "10px"}}>{Math.round(IMFBt*100)/100}</div> nT </div> 
-        <div style={{"alignContent": "center", "right": "10px", "display": "flex", "flexDirection": "row", }}>IMF Bz: <div style={{"color": BzDirection, "marginLeft": "10px"}}>{Math.round(IMFBz*100)/100}</div> nT </div>
+        <div style={{"alignContent": "center", "display": "flex", "flexDirection": "row"}}>
+                 <PopOverGraphs 
+                            DisplayString={'IMF Bt:'} 
+                            PopOverString={<IMFBtGraph/>} 
+                            PopOverStringStyling={{color: 'darkgray'}}   
+                        />
+            <div style={{"color": IMFBtColor, "marginLeft": "10px"}}>
+                {Math.round(IMFBt*100)/100}</div> nT </div> 
+        <div style={{"alignContent": "center", "right": "10px", "display": "flex", "flexDirection": "row", }}>
+                <PopOverGraphs 
+                            DisplayString={'IMF Bz:'} 
+                            PopOverString={<IMFBzGraph/>} 
+                            PopOverStringStyling={{"color": "darkgray"}}   
+                        />
+            <div style={{"color": BzDirection, "marginLeft": "10px"}}>{Math.round(IMFBz*100)/100}</div> nT </div>
         </div>
     </div>
     )

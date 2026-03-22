@@ -14,7 +14,6 @@ let CMEAlertsMessage = "";
 
 let nextArrivals = [];
 
-console.log(impacts);
 
 for (let i = 0; i < impacts.length; i++) {
     nextArrivals.push(impacts[i]?.time);
@@ -22,7 +21,6 @@ for (let i = 0; i < impacts.length; i++) {
 
 
 
- console.log(nextArrivals);
 
 
     if (impacts.length < 1) {

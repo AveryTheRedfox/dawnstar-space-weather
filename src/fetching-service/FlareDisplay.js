@@ -9,8 +9,7 @@ const NewestFlare = ""
 let FluxArray = [];
 let twoHourMaximum = 0;
 
-console.log(FluxArray);
-console.log("Flare Flux:", FlareFlux);
+
 function LatestFlareClassToDisplay(NewestFlare) {
 if (LatestFlareClass === null) {
     return (NewestFlare = "In Progress"); 
@@ -24,7 +23,7 @@ for (let i = 1; i < Flare?.length; i++) {
 }
 twoHourMaximum = Math.max(...FluxArray);
 
-console.log(twoHourMaximum);
+;
 
 function FlarevalueToGoesClass(FlareFlux) {
     

@@ -19,7 +19,7 @@ function App() {
     "display": "flex",
     "flexDirection": "row",
     "widht": "100vw",
-    "height": "99vh",
+    "height": "100vh",
     "backgroundColor": "rgb(35, 35, 39)",
     "marginLeft": "-8px",
     "marginTop": "-8px",
@@ -27,8 +27,9 @@ function App() {
     "fontFamily": 'Roboto',
 }}>
     <div className='TitleAndData' style={{
-    "height": "97vh",
-    "width": "25vw",
+    "height": "97vh", 
+    "width": "80vw",
+    "minWidth": "380px",
     "marginLeft": "0px",
     "marginRight": "0px",
     "display": "flex",
