@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import { LineChart } from '@mui/x-charts/LineChart';
-import useFetchingApi from "../fetching-service/FetchingFunction";
-
+import useFetchingApi from "../fetching-service/FetchingFunction/FetchingFunction";
 
 function DestructInputData(SolarWind, IntMag) {
   const recentSolarWind = SolarWind?.slice(0, 512) ?? [];
@@ -20,9 +19,9 @@ function DestructInputData(SolarWind, IntMag) {
   return [WindSpeed, Density, Temperature, IMFBt, IMFBz, SolarWindTimes, IntMagTimes, IntMagSource];
 }
 
-
 function IMFDataHandling(data) {
   const [ , , , IMFBt, IMFBz, , IntMagTimes, IntMagSource] = data;
+ 
   const bt = [], bz = [], times = [];
   for (let i = 0; i < IntMagTimes.length; i ++) {
     if (IntMagTimes[i] && IMFBt[i] != null && IMFBz[i] != null && IntMagSource[i] == "ACE") {
@@ -31,8 +30,11 @@ function IMFDataHandling(data) {
       times.push(IntMagTimes[i]);
     }
   }
-  return { bt, bz, times };
+
+
+  return { bt, bz, times};
 }
+
 
 function DataHandling(InputData) {
     const windSpeedData = InputData[0];
@@ -82,14 +84,29 @@ function DataHandling(InputData) {
     return [uniqueWindSpeed, uniqueTimes, uniqueDensity, uniqueTemperature];
 }
 
+function TimeConverter(TimeTag) {
+
+    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const date = new Date(TimeTag);
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const dayOfWeek = date.getDay();
+    return `${daysOfWeek[dayOfWeek]} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+}
+
+
+
+
+
 export function IMFBzGraph() {
     const [SolarWind, IntMag] = useFetchingApi();
   const inputData = DestructInputData(SolarWind, IntMag);
   const { bz, times } = IMFDataHandling(inputData);  // uData is IMFBz, xLabels is IMF times
-    const margin = { right: 24 };
+ const margin = { right: 24 };
+const DisplayTimes = times.map(t => TimeConverter(t));
 
     return (
-    <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Solar Wind IMF Bz in nT:
+    <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Interplanetary Magnetic Field Orientation (Bz): 
         <Box sx={{ width: 1200, height: 300}}>
             
             <LineChart
@@ -105,8 +122,9 @@ export function IMFBzGraph() {
                     
                 ]}
                 xAxis={[{ scaleType: 'point', 
-                    data: times, 
+                    data: DisplayTimes, 
                     height: 28,
+                    tickLabelInterval: 10,
                 }]}  // Use IMF time tags as labels
                 yAxis={[{ 
                     width: 50,
@@ -128,9 +146,10 @@ export function IMFBtGraph() {
   const inputData = DestructInputData(SolarWind, IntMag);
   const { bt, bz, times } = IMFDataHandling(inputData); // uData is IMFBt, xLabels is IMF times
     const margin = { right: 24 };
+    const DisplayTimes = times.map(t => TimeConverter(t));
 
     return (
-    <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Solar Wind IMF Bt in nT:
+    <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Interplanetary Magnetic Field Strength (Bt) in NanoTesla:
         <Box sx={{ width: 1200, 
                    height: 300,
                 }}>
@@ -148,9 +167,9 @@ export function IMFBtGraph() {
                 ]}
                 xAxis={[{ 
                     scaleType: 'point', 
-                    data: times, 
+                    data: DisplayTimes, 
                     height: 28, 
-                    
+                    tickLabelInterval: 10,
                 }]}  // Use IMF time tags as labels
                 yAxis={[{ width: 50,
                     colorMap: {
@@ -171,6 +190,7 @@ export function WindSpeedGraph() {
     const inputData = DestructInputData(SolarWind, IntMag);
     const [uData, xLabels] = DataHandling(inputData);  // uData is speeds, xLabels is Solar Wind times
     const margin = { right: 24 };
+    const DisplayTimes = xLabels.map(t => TimeConverter(t));
 
     return (
         <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Solar Wind Speed in km/s:
@@ -181,12 +201,19 @@ export function WindSpeedGraph() {
                     { 
                         curve: "linear",
                         data: uData, 
-                        showMark: false
+                        showMark: false,
+                        area: true,
                     },
                     
                 ]}
-                xAxis={[{ scaleType: 'point', data: xLabels, height: 28 }]}  // Use Solar Wind time tags as labels
-                yAxis={[{ width: 50 }]}
+                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 28, tickLabelInterval: 10 }]}  // Use Solar Wind time tags as labels
+                yAxis={[{ width: 50, 
+                    colorMap: {
+                    type: 'piecewise',
+                     thresholds: [400, 500, 700, 900],
+                     colors: ['green', 'orange', 'red', 'darkred'],
+                },
+                }]}
                 margin={margin}
             />
         </Box>
@@ -199,6 +226,7 @@ export function DensityGraph() {
     const inputData = DestructInputData(SolarWind, IntMag);
     const [, xLabels, uData] = DataHandling(inputData);  // uData is density, xLabels is Solar Wind times
     const margin = { right: 24 };
+    const DisplayTimes = xLabels.map(t => TimeConverter(t));
 
     return (
     <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Solar Wind Density in p/cm³:
@@ -210,12 +238,19 @@ export function DensityGraph() {
                     { 
                         curve: "linear",
                         data: uData, 
-                        showMark: false
+                        showMark: false,
+                        area: true,
                     },
                     
                 ]}
-                xAxis={[{ scaleType: 'point', data: xLabels, height: 28 }]}  // Use Solar Wind time tags as labels
-                yAxis={[{ width: 50 }]}
+                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 28, tickLabelInterval: 10 }]}  // Use Solar Wind time tags as labels
+                yAxis={[{ width: 50,
+                    colorMap: {
+                    type: 'piecewise',
+                     thresholds: [10, 20, 40, 60],
+                     colors: ['green', 'orange', 'red', 'darkred'],
+                },
+                }]}
                 margin={margin}
             />
          </Box>
@@ -228,6 +263,7 @@ export function TemperatureGraph() {
     const inputData = DestructInputData(SolarWind, IntMag);
     const [, xLabels, , uData] = DataHandling(inputData);  // uData is temperature, xLabels is Solar Wind times
     const margin = { right: 24 };
+    const DisplayTimes = xLabels.map(t => TimeConverter(t));
 
     return (
     <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Solar Wind Temperature in kiloKelvin:
@@ -239,16 +275,17 @@ export function TemperatureGraph() {
                     { 
                         curve: "linear",
                         data: uData, 
-                        showMark: false
+                        showMark: false,
+                        area: true,
                     },
                     
                 ]}
-                xAxis={[{ scaleType: 'point', data: xLabels, height: 28 }]}  // Use Solar Wind time tags as labels
+                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 28, tickLabelInterval: 10, tickLabelStyle: { fontSize: 12 } }]}  // Use Solar Wind time tags as labels
                 yAxis={[{ width: 50,
                     colorMap: {
                     type: 'piecewise',
-                     thresholds: [10, 25, 50],
-                     colors: ['green', 'orange', 'red'],
+                     thresholds: [30, 200, 500, 1000],
+                     colors: ['green', 'orange', 'red', 'darkred'],
                 },
                 }]}
                 margin={margin}
@@ -257,3 +294,4 @@ export function TemperatureGraph() {
         </div>
     );
 }
+

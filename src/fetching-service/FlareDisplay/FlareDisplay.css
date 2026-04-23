@@ -1,0 +1,28 @@
+
+.FlareDisplay {
+display: flex;
+padding-top: 10px;
+border: 2px solid gray;
+border-radius: 10px;
+font-family: 'Roboto'; 
+flex-direction: column
+}
+
+.FlareTitle {
+display: flex; 
+flex-direction: row; 
+padding-left: 10px;
+}
+
+.FlareTitleText {
+align-content: center;
+}
+
+.FlareData {
+display: flex; flex-direction: column; padding-left: 10px; margin-top: 5px
+}
+
+.FlareValue {
+align-content: flex-start;
+display: flex; 
+}

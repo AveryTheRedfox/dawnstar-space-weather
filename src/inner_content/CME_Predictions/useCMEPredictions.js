@@ -1,7 +1,8 @@
 // src/inner_content/CME_Predictions/useCMEPredictions.js
 import { useState, useEffect } from "react";
-import useFetchingApi from "../../fetching-service/FetchingFunction";
-import IntMagDisplay from "../../fetching-service/ImfDisplay";
+import useFetchingApi from "../../fetching-service/FetchingFunction/FetchingFunction";
+import IntMagDisplay from "../../fetching-service/ImfDisplay/ImfDisplay";
+
 
 export function useCMEPredictions() {
   const [, , , , , , Enlil] = useFetchingApi();    // only need Enlil here

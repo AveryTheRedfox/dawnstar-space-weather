@@ -1,7 +1,8 @@
-const express = require('express');
-const cors = require('cors');
-const app = express();
 
+
+import cors from 'cors';
+import express from 'express';
+const app = express();
 app.use(cors());
 
 app.get('/api/space-weather-data', async (req, res) => {
@@ -15,7 +16,6 @@ app.get('/api/space-weather-data', async (req, res) => {
       latestFlareResponse,
       enlilResponse,
       ovationResponse,
-      kirunaResponse
     ] = await Promise.all([
       fetch('https://services.swpc.noaa.gov/json/rtsw/rtsw_wind_1m.json'),
       fetch('https://services.swpc.noaa.gov/json/rtsw/rtsw_mag_1m.json'),
@@ -25,7 +25,6 @@ app.get('/api/space-weather-data', async (req, res) => {
       fetch('https://services.swpc.noaa.gov/json/goes/primary/xray-flares-latest.json'),
       fetch('https://services.swpc.noaa.gov/json/enlil_time_series.json'),
       fetch('https://services.swpc.noaa.gov/json/ovation_aurora_latest.json'),
-      fetch('https://www2.irf.se/maggraphs/rt1hour_secondary.txt')
     ]);
 
     const [
@@ -37,7 +36,6 @@ app.get('/api/space-weather-data', async (req, res) => {
       latestFlareResult,
       enlilResult,
       ovationResult,
-      kirunaResult
     ] = await Promise.all([
       windResponse.json(),
       imfResponse.json(),
@@ -47,7 +45,6 @@ app.get('/api/space-weather-data', async (req, res) => {
       latestFlareResponse.json(),
       enlilResponse.json(),
       ovationResponse.json(),
-      kirunaResponse.text()
     ]);
 
     // Structure the response
@@ -60,7 +57,6 @@ app.get('/api/space-weather-data', async (req, res) => {
       latestFlare: latestFlareResult?.[0]?.max_class,
       enlil: enlilResult,
       ovation: ovationResult,
-      kirunaMagData: kirunaResult
     };
 
     res.json(data);
@@ -71,15 +67,6 @@ app.get('/api/space-weather-data', async (req, res) => {
 });
 
 // Keep the old endpoint for backward compatibility
-app.get('/api/mag-data', async (req, res) => {
-  try {
-    const response = await fetch('https://www2.irf.se/maggraphs/rt1hour_secondary.txt');
-    const data = await response.text();
-    res.send(data);
-  } catch (error) {
-    res.status(500).send('Error fetching data');
-  }
-});
 
 app.listen(3001, () => {
   console.log('Backend server running on port 3001');

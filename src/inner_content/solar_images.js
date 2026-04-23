@@ -1,43 +1,101 @@
 
 import 'reactjs-popup/dist/index.css'
 
+
+import * as React from 'react';
+import Popover from '@mui/material/Popover';
+import Typography from '@mui/material/Typography';
+
+function MouseHoverPopoverCME({DisplayString, PopOverString, PopOverStringStyling}) {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handlePopoverOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+
+
+
+  return (
+    <div style={{PopOverStringStyling}}>
+      <Typography
+        aria-owns={open ? 'mouse-over-popover' : undefined}
+        aria-haspopup="true"
+        onMouseEnter={handlePopoverOpen}
+        onMouseLeave={handlePopoverClose}
+        style={{"fontSize": "inherit"}}
+      >
+        {DisplayString}
+      </Typography>
+      <Popover
+        id="mouse-over-popover"
+        sx={{ pointerEvents: 'none' }}
+        open={open}
+        anchorEl={anchorEl}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+        onClose={handlePopoverClose}
+        disableRestoreFocus
+      >
+        <Typography sx={{ p: 1 }}> {PopOverString}</Typography>
+      </Popover>
+    </div>
+  );
+}
+
+
 function SolarImages() {
 
 let solarImages = [
-    'https://services.swpc.noaa.gov/images/animations/suvi/secondary/195/latest.png',
-    'https://services.swpc.noaa.gov/images/animations/suvi/secondary/304/latest.png',
-    'https://services.swpc.noaa.gov/images/animations/suvi/secondary/171/latest.png',
-    'https://services.swpc.noaa.gov/images/animations/suvi/secondary/284/latest.png',
-    'https://services.swpc.noaa.gov/images/animations/suvi/secondary/094/latest.png',
-    'https://services.swpc.noaa.gov/images/animations/suvi/secondary/131/latest.png',
+    'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0193.jpg',
+    'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0304.jpg',
+    'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0171.jpg',
+    'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0131.jpg',
+    'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0094.jpg',
+    'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0211.jpg',
+    'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_211193171.jpg',
     'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_512_HMIBC.jpg',
     'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_512_HMIIC.jpg',
 ];
 
-    
+
+
 
 
     return (
-        <div className="solar-images-container" style={{
-            "alignContent": "flex",
+      <div style={{
             "flexDirection": "row",
             "verticalAlign": "top",
             "display": "flex",
-            "padding": "10px",
-            "position":"relative",
-             "minWidth": "73vw",
-             "maxWidth": "75vw",
              "marginTop": "0px",
-             "alignContent": "space-evenly",
-             "justifyContent": "space-between",
-             "flexWrap": "wrap"
-        }}>
-            {solarImages.map((image, index) => (
-                          <img key={index} src={image}  style={{"width": "160px", "height": "160px"}}></img>
-            ))}
+             "alignContent": "space-evenly",}}>
 
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[0]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [0]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[1]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [1]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[2]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [2]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[3]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [3]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[4]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [4]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[5]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [5]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[6]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [6]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[7]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [7]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[8]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [8]}></img>}></MouseHoverPopoverCME>
         </div>
     );
+
+
+
+    
 
 }
 

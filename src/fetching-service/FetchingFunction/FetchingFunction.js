@@ -25,7 +25,7 @@ useEffect(() => {
             setSolarWind(data.solarWind);
             setIntMag(data.intMag);
             setKpIndex(data.kpIndex);
-            setAlerts(data.alerts[0], data.alerts[1]);
+            setAlerts(data.alerts?.[0], data.alerts?.[1]);
             setFlare(data.flare);
             setLatestFlare(data.latestFlare);
             setEnlil(data.enlil);
