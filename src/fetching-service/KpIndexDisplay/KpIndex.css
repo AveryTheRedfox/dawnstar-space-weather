@@ -6,12 +6,11 @@
     font-family: 'Roboto'; 
     color: #ccc9dc;
     border: 2px solid gray;
-    height: 33%;
+    height: 40vh;
     border-radius: 10px;
 }
 .StormLevel {
     position: relative; 
-    padding-bottom: 10px;
 }
 .DataSource {
     position: relative;

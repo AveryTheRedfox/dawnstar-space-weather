@@ -79,17 +79,18 @@ let solarImages = [
             "verticalAlign": "top",
             "display": "flex",
              "marginTop": "0px",
+             "maxWidth": "80vw",
              "alignContent": "space-evenly",}}>
-
-            <MouseHoverPopoverCME DisplayString={<img src={solarImages[0]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [0]}></img>}></MouseHoverPopoverCME>
-            <MouseHoverPopoverCME DisplayString={<img src={solarImages[1]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [1]}></img>}></MouseHoverPopoverCME>
-            <MouseHoverPopoverCME DisplayString={<img src={solarImages[2]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [2]}></img>}></MouseHoverPopoverCME>
-            <MouseHoverPopoverCME DisplayString={<img src={solarImages[3]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [3]}></img>}></MouseHoverPopoverCME>
-            <MouseHoverPopoverCME DisplayString={<img src={solarImages[4]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [4]}></img>}></MouseHoverPopoverCME>
-            <MouseHoverPopoverCME DisplayString={<img src={solarImages[5]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [5]}></img>}></MouseHoverPopoverCME>
-            <MouseHoverPopoverCME DisplayString={<img src={solarImages[6]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [6]}></img>}></MouseHoverPopoverCME>
-            <MouseHoverPopoverCME DisplayString={<img src={solarImages[7]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [7]}></img>}></MouseHoverPopoverCME>
-            <MouseHoverPopoverCME DisplayString={<img src={solarImages[8]}  style={{"width": "160px", "height": "160px"}}></img>} PopOverString={<img style={{"width": "1024px", "height": "1024px"}}src={solarImages [8]}></img>}></MouseHoverPopoverCME>
+              
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[0]}  style={{"width": "8.8vw", "height": "8.8vw"}}></img>} PopOverString={<img style={{"width": "70vh", "height": "70vh"}}src={solarImages [0]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[1]}  style={{"width": "8.8vw", "height": "8.8vw"}}></img>} PopOverString={<img style={{"width": "70vh", "height": "70vh"}}src={solarImages [1]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[2]}  style={{"width": "8.8vw", "height": "8.8vw"}}></img>} PopOverString={<img style={{"width": "70vh", "height": "70vh"}}src={solarImages [2]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[3]}  style={{"width": "8.8vw", "height": "8.8vw"}}></img>} PopOverString={<img style={{"width": "70vh", "height": "70vh"}}src={solarImages [3]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[4]}  style={{"width": "8.8vw", "height": "8.8vw"}}></img>} PopOverString={<img style={{"width": "70vh", "height": "70vh"}}src={solarImages [4]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[5]}  style={{"width": "8.8vw", "height": "8.8vw"}}></img>} PopOverString={<img style={{"width": "70vh", "height": "70vh"}}src={solarImages [5]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[6]}  style={{"width": "8.8vw", "height": "8.8vw"}}></img>} PopOverString={<img style={{"width": "70vh", "height": "70vh"}}src={solarImages [6]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[7]}  style={{"width": "8.8vw", "height": "8.8vw"}}></img>} PopOverString={<img style={{"width": "70vh", "height": "70vh"}}src={solarImages [7]}></img>}></MouseHoverPopoverCME>
+            <MouseHoverPopoverCME DisplayString={<img src={solarImages[8]}  style={{"width": "8.8vw", "height": "8.8vw"}}></img>} PopOverString={<img style={{"width": "70vh", "height": "70vh"}}src={solarImages [8]}></img>}></MouseHoverPopoverCME>
         </div>
     );
 

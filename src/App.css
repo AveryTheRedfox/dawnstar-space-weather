@@ -1,18 +1,19 @@
 .Content {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: inherit;
+    width: 100vw;
+    height: 100vh;
     background-color: rgb(35, 35, 39);
     margin-left: 0px;
     margin-top: 0px;
     margin-right: -20px;
     font-family: 'Roboto';
-    scale: auto;
+    font-size: 3.6vh;
 }
 .TitleAndData {
     height: 100%; 
-    max-height: fit-content;
+    max-height: 100vh;
+    max-width: 20vw;
     min-width: 350px;
     margin-left: 0px;
     margin-right: 0px;
@@ -20,21 +21,19 @@
     flex-direction: column;
     font-family: 'Roboto';
     color: #ccc9dc;
-    font-size: 36px;
-    height: inherit;
+    font-size: 3.6vh;
 }
 .InnerContent {
     float: right;
-    min-width: 50vw;
+    max-width: 80vw;
     margin-right: 0px;
     display: flex;
     align-content: flex-start;
     flex-direction: column;
     align-self: auto;
-    font-size: 32px;
 }
 .ContentCard {
     font-family: Roboto;
-    height: 20%;
+    height: 20vh;
 }
 

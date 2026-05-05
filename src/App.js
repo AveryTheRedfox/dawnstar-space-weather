@@ -6,6 +6,7 @@ import AlertsDisplay from "./fetching-service/AlertsDisplay/AlertsDisplay.js";
 import FlareDisplay from "./fetching-service/FlareDisplay/FlareDisplay.js";
 import SolarImages from "./inner_content/solar_images";
 import CMEPredictions from "./inner_content/CME_Predictions/predictions";
+import { ComponentEvents } from "./components/ComponentEvents.js";
 //import KpIndexChart from "./inner_content/Charts.js"
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -33,6 +34,7 @@ return(
         }}>
             <SolarImages/>
             <CMEPredictions/> 
+            <ComponentEvents/>
         </div>  
     </div>
 </div>

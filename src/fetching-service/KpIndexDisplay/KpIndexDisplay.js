@@ -5,15 +5,19 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import useFetchingApi from "../../fetching-service/FetchingFunction/FetchingFunction.js";
+import { KpIndexGraph } from '../../inner_content/Graphs.js';
+import { PopOverGraphs } from '../../inner_content/popover.js';
 import './KpIndex.css';
 
 
 
 function KpCalculation() {
   
+  
 const [, , KpIndex] = useFetchingApi();
-const currentvalue = KpIndex?.[349]?.kp_index;
-const currentime = KpIndex?.[350]?.time_tag;
+
+const currentvalue = KpIndex?.[59].Kp;
+const currentime = KpIndex?.[54]?.time_tag;
 
 console.log(KpIndex);
 
@@ -56,7 +60,13 @@ currentvalue >= 9 ? '#8B008B#' : 'gray';
 
 return(
     <div className="KpIndexDisplay">
-    <div style={{"fontSize": "36px",}}>Kp-Index:</div>
+    <div style={{"fontSize": "36px",}}>
+          <PopOverGraphs 
+            DisplayString={'Kp-Index:'} 
+            PopOverString={<KpIndexGraph/>} 
+            PopOverStringStyling={{color: 'darkgray'}}   
+          />
+    </div>
     <div style={{"fontSize": "12px",}}>Time: {currentime ?? 'loading...'}</div>
   <Gauge
   value={KpAngle}
@@ -66,7 +76,7 @@ return(
   outerRadius={"100%"}
   sx={{
     [`& .${gaugeClasses.valueText}`]: {
-      fontSize: 54,
+      fontSize: '5vh',
       fontFamily: 'Roboto',
       transform: 'translate(0px, -33px)',
       fill: '#8B008B#',

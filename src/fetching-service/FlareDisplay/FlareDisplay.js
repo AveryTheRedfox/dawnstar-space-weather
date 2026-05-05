@@ -4,12 +4,15 @@ import './FlareDisplay.css';
 function FlareDisplay() {
 const [, , , , Flare, LatestFlare] = useFetchingApi();  
 
+
 const FlareFlux = Flare?.[2875]?.flux ?? null;
-const LatestFlareClass = LatestFlare ?? null;
+const LatestFlareClass = LatestFlare?.[0]?.max_class ?? null;
 const NewestFlare = ""
 let FluxArray = [];
 let twoHourMaximum = 0;
 
+
+console.log(LatestFlareClass);
 
 function LatestFlareClassToDisplay(NewestFlare) {
 if (LatestFlareClass === null) {
@@ -23,8 +26,6 @@ for (let i = 1; i < Flare?.length; i++) {
     FluxArray.push(Flare?.[i]?.flux);
 }
 twoHourMaximum = Math.max(...FluxArray);
-
-;
 
 function FlarevalueToGoesClass(FlareFlux) {
     

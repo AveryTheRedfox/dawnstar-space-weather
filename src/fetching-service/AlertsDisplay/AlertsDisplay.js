@@ -31,18 +31,18 @@ function AlertsDisplay() {
 
 let CustomMessage = "";
 let AlertTitle = Alerts?.message ?? null;
- const {impacts} = useCMEPredictions();
+ const {sortedImpacts} = useCMEPredictions();
 
 let nextArrivals = [];
 
 
-for (let i = 0; i < impacts.length; i++) {
-    nextArrivals.push(impacts[i]?.time);
+for (let i = 0; i < sortedImpacts.length; i++) {
+    nextArrivals.push(sortedImpacts[i]?.time);
 }
 
 
 
-let CMEAlertsMessage = impacts.length < 1 ? "" : "*** Coronal Mass Ejection(s) detected | Estimated Arrival(s): " + `${nextArrivals}`;
+let CMEAlertsMessage = sortedImpacts.length < 1 ? "" : "*** Coronal Mass Ejection(s) detected | Estimated Arrival(s): " + `${nextArrivals}`;
 
 
 

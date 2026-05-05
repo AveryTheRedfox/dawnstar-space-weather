@@ -48,7 +48,7 @@ return (
         <div className="ContainerDisplay">
             <div className="InnerContentDisplay">           
                 <PopOverGraphs 
-                DisplayString={'Density'} 
+                DisplayString={'Density:'} 
                 PopOverString={<DensityGraph/>} 
                 PopOverStringStyling={{"color": "darkgray"}}
                 
@@ -57,7 +57,7 @@ return (
         <div className="ContainerDisplay">
              <div className="InnerContentDisplay">
                  <PopOverGraphs 
-                DisplayString={'Temperature'} 
+                DisplayString={'Temperature:'} 
                 PopOverString={<TemperatureGraph/>} 
                 PopOverStringStyling={{"color": "darkgray"}}   
             />

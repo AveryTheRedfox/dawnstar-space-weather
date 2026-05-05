@@ -1,8 +1,10 @@
 import Box from '@mui/material/Box';
 import { LineChart } from '@mui/x-charts/LineChart';
+import { BarChart } from '@mui/x-charts';
 import useFetchingApi from "../fetching-service/FetchingFunction/FetchingFunction";
+import { flex } from '@mui/system';
 
-function DestructInputData(SolarWind, IntMag) {
+function DestructInputData(SolarWind, IntMag, KpIndex) {
   const recentSolarWind = SolarWind?.slice(0, 512) ?? [];
   const recentIntMag = IntMag?.slice(0, 256) ?? [];
 
@@ -16,7 +18,9 @@ function DestructInputData(SolarWind, IntMag) {
   const IntMagTimes = recentIntMag.map(i => i?.time_tag) ?? [];
   const IntMagSource = recentIntMag.map(i => i?.source) ?? [];
 
-  return [WindSpeed, Density, Temperature, IMFBt, IMFBz, SolarWindTimes, IntMagTimes, IntMagSource];
+  const GeoMagKp = KpIndex?.slice(0, 256) ?? [];
+
+  return [WindSpeed, Density, Temperature, IMFBt, IMFBz, SolarWindTimes, IntMagTimes, IntMagSource, GeoMagKp];
 }
 
 function IMFDataHandling(data) {
@@ -28,14 +32,9 @@ function IMFDataHandling(data) {
       bt.push(IMFBt[i]);
       bz.push(IMFBz[i]);
       times.push(IntMagTimes[i]);
-    }
-  }
-
-
+    }}
   return { bt, bz, times};
 }
-
-
 function DataHandling(InputData) {
     const windSpeedData = InputData[0];
     const timeData = InputData[5];  // Solar Wind TimeTags
@@ -87,19 +86,16 @@ function DataHandling(InputData) {
 function TimeConverter(TimeTag) {
 
     const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const monthsOfYear = ['Jan', 'Feb', 'Mar', 'Apr','May', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec']
     const date = new Date(TimeTag);
     const hours = date.getHours();
     const minutes = date.getMinutes();
-    const dayOfWeek = date.getDay();
-    return `${daysOfWeek[dayOfWeek]} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+    const dayOfWeek = date.getDate();
+    const month = date.getMonth();
+    return `${monthsOfYear[month]} ${dayOfWeek} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
 }
-
-
-
-
-
 export function IMFBzGraph() {
-    const [SolarWind, IntMag] = useFetchingApi();
+  const [SolarWind, IntMag] = useFetchingApi();
   const inputData = DestructInputData(SolarWind, IntMag);
   const { bz, times } = IMFDataHandling(inputData);  // uData is IMFBz, xLabels is IMF times
  const margin = { right: 24 };
@@ -107,24 +103,23 @@ const DisplayTimes = times.map(t => TimeConverter(t));
 
     return (
     <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Interplanetary Magnetic Field Orientation (Bz): 
-        <Box sx={{ width: 1200, height: 300}}>
-            
+        <Box sx={{ width: 1600, height: 400, alignContent: flex}}>
             <LineChart
                 grid={{ vertical: false, horizontal: true }}
+                sx={{width: 1600, height: 400}}
                 series={[
                     { 
                         curve: "linear",
                         data: bz, 
                         showMark: false,
                         area: true,
-
                     },
-                    
                 ]}
                 xAxis={[{ scaleType: 'point', 
                     data: DisplayTimes, 
-                    height: 28,
-                    tickLabelInterval: 10,
+                    height: 45,
+                    tickLabelInterval: (value, index) => index % 5 === 0,
+                    tickLabelStyle: {angle: -45},
                 }]}  // Use IMF time tags as labels
                 yAxis={[{ 
                     width: 50,
@@ -134,13 +129,11 @@ const DisplayTimes = times.map(t => TimeConverter(t));
                      colors: ['red', 'green'],
                 },
                 }]}
-                margin={margin}
             />
          </Box>
         </div>
     );
 }
-
 export function IMFBtGraph() {
   const [SolarWind, IntMag] = useFetchingApi();
   const inputData = DestructInputData(SolarWind, IntMag);
@@ -150,12 +143,10 @@ export function IMFBtGraph() {
 
     return (
     <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Interplanetary Magnetic Field Strength (Bt) in NanoTesla:
-        <Box sx={{ width: 1200, 
-                   height: 300,
-                }}>
-            
+        <Box sx={{ width: 1600, height: 400, alignContent: flex}}>
             <LineChart
                 grid={{ vertical: false, horizontal: true }}
+                sx={{width: 1600, height: 400}}
                 series={[
                     { 
                         curve: "linear",
@@ -163,13 +154,13 @@ export function IMFBtGraph() {
                         showMark: false,
                         area: true,
                     },
-                    
                 ]}
                 xAxis={[{ 
                     scaleType: 'point', 
                     data: DisplayTimes, 
-                    height: 28, 
-                    tickLabelInterval: 10,
+                    height: 45, 
+                    tickLabelInterval: (value, index) => index % 5 === 0,
+                    tickLabelStyle: {angle: -45},
                 }]}  // Use IMF time tags as labels
                 yAxis={[{ width: 50,
                     colorMap: {
@@ -178,13 +169,11 @@ export function IMFBtGraph() {
                      colors: ['green', 'orange', 'red'],
                 },
                 }]}
-                margin={margin}
             />
          </Box>
         </div>
     );
 }
-
 export function WindSpeedGraph() {
     const [SolarWind, IntMag] = useFetchingApi();
     const inputData = DestructInputData(SolarWind, IntMag);
@@ -194,9 +183,10 @@ export function WindSpeedGraph() {
 
     return (
         <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Solar Wind Speed in km/s:
-        <Box sx={{ width: 1200, height: 300}}>
+        <Box sx={{ width: 1600, height: 500, alignContent: flex}}>
             <LineChart
                 grid={{ vertical: false, horizontal: true }}
+                sx={{width: 1600, height: 500}}
                 series={[
                     { 
                         curve: "linear",
@@ -206,21 +196,22 @@ export function WindSpeedGraph() {
                     },
                     
                 ]}
-                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 28, tickLabelInterval: 10 }]}  // Use Solar Wind time tags as labels
-                yAxis={[{ width: 50, 
+                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 60, tickLabelInterval: (value, index) => index % 5 === 0 , tickLabelStyle: {angle: -45}}]}  // Use Solar Wind time tags as labels
+                yAxis={[{ width: 70, 
                     colorMap: {
                     type: 'piecewise',
-                     thresholds: [400, 500, 700, 900],
-                     colors: ['green', 'orange', 'red', 'darkred'],
+                    thresholds: [400, 500, 700, 900],
+                    colors: ['green', 'orange', 'red', 'darkred'],
+                    min: 200,
+                    max: 3000,
                 },
                 }]}
-                margin={margin}
+                height={450}
             />
         </Box>
         </div>
     );
 }
-
 export function DensityGraph() {
     const [SolarWind, IntMag] = useFetchingApi();
     const inputData = DestructInputData(SolarWind, IntMag);
@@ -243,7 +234,7 @@ export function DensityGraph() {
                     },
                     
                 ]}
-                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 28, tickLabelInterval: 10 }]}  // Use Solar Wind time tags as labels
+                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 28, tickLabelInterval: (value, index) => index % 3 === 0 , tickLabelStyle: {angle: -45}}]}  // Use Solar Wind time tags as labels
                 yAxis={[{ width: 50,
                     colorMap: {
                     type: 'piecewise',
@@ -257,7 +248,6 @@ export function DensityGraph() {
         </div>
     );
 }
-
 export function TemperatureGraph() {
     const [SolarWind, IntMag] = useFetchingApi();
     const inputData = DestructInputData(SolarWind, IntMag);
@@ -280,7 +270,7 @@ export function TemperatureGraph() {
                     },
                     
                 ]}
-                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 28, tickLabelInterval: 10, tickLabelStyle: { fontSize: 12 } }]}  // Use Solar Wind time tags as labels
+                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 28, tickLabelInterval: (value, index) => index % 3 === 0, tickLabelStyle: { fontSize: 12 }, tickLabelStyle: {angle: -45} }]}  // Use Solar Wind time tags as labels
                 yAxis={[{ width: 50,
                     colorMap: {
                     type: 'piecewise',
@@ -294,4 +284,53 @@ export function TemperatureGraph() {
         </div>
     );
 }
+export function KpIndexGraph() {
+    const [SolarWind, IntMag, KpIndex] = useFetchingApi();
+    const inputData = DestructInputData(SolarWind, IntMag, KpIndex);
+    const xLabels = inputData[8].map(i => i?.time_tag) ?? [];  // KpIndex time tags
+    const uData = inputData[8].map(i => i?.Kp) ?? [];
+    const margin = { right: 24 };
+    console.log(xLabels);
+    const DailyxLabels = xLabels.slice(0, 59);
+    const DailyuData = uData.slice(0, 59);
+    const DisplayTimes = DailyxLabels.map(t => TimeConverter(t));
 
+
+function barLabel(item, context) {
+    if((item.value ?? 0) > 4) {
+        return item.value?.toString();
+    }
+    return null;
+}
+
+    return (
+    <div style={{"fontSize": "24px", "backgroundColor": "rgb(50, 50, 54)", "border": "0px", "margin": "-5px"}}>Estimated Kp-Index:
+            <BarChart
+                grid={{ vertical: false, horizontal: true }}
+                sx={{width: 1600, height: 400}}
+                series={[
+                    { 
+                        data: DailyuData, 
+                        showMark: false,
+                        barLabel,
+                        barLabelPlacement: 'outside',
+                    },
+                     
+                ]}
+                xAxis={[{ scaleType: 'band', data: DisplayTimes, height: 100, tickLabelStyle: { fontSize: 12 }, tickLabelStyle: {angle: -45} }]}  // Use Solar Wind time tags as labels
+                yAxis={[{ width: 50,
+                    colorMap: {
+                    type: 'piecewise',
+                     thresholds: [4.1, 5.1, 6.1, 7.1, 8.1 ,9.1],
+                     colors: ['green', 'yellow', 'orange', 'orangeRed', 'red', 'darkred'],
+                     min: 0,
+                     max: 9,
+                     },
+                }]}
+                borderRadius={5}
+                margin={10}
+               
+            />
+        </div>
+    );
+}
