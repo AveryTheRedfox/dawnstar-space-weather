@@ -7,7 +7,6 @@ An Internet connection is required to run this however as the data is pulled fro
 
 KNOWN ISSUE: 
 
-Latest Commit on Branch "Ver4" has non existent or incorrectly displayed x-axis labels for Solar Wind Density, Speed, and Temperature as well as the IMF Bt and Bz
-Will be fixed in the next commit but data is valid! 
+Memory leak problems when run for prolonged time. A fix will be issued in the coming days! 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
