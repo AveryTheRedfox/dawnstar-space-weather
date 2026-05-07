@@ -5,7 +5,7 @@ function FlareDisplay() {
 const [, , , , Flare, LatestFlare] = useFetchingApi();  
 
 
-const FlareFlux = Flare?.[2875]?.flux ?? null;
+const FlareFlux = Flare?.[Flare.length - 1]?.flux ?? null;
 const LatestFlareClass = LatestFlare?.[0]?.max_class ?? null;
 const NewestFlare = ""
 let FluxArray = [];

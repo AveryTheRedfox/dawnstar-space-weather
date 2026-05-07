@@ -16,8 +16,8 @@ function KpCalculation() {
   
 const [, , KpIndex] = useFetchingApi();
 
-const currentvalue = KpIndex?.[59].Kp;
-const currentime = KpIndex?.[54]?.time_tag;
+const currentvalue = KpIndex?.[KpIndex.length - 1].Kp;
+const currentime = KpIndex?.[KpIndex.length - 1]?.time_tag;
 
 console.log(KpIndex);
 

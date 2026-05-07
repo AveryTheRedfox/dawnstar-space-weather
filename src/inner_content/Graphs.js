@@ -117,8 +117,8 @@ const DisplayTimes = times.map(t => TimeConverter(t));
                 ]}
                 xAxis={[{ scaleType: 'point', 
                     data: DisplayTimes, 
-                    height: 45,
-                    tickLabelInterval: (value, index) => index % 5 === 0,
+                    height: 75,
+                    tickLabelInterval: (value, index) => index % 3 === 0,
                     tickLabelStyle: {angle: -45},
                 }]}  // Use IMF time tags as labels
                 yAxis={[{ 
@@ -158,8 +158,8 @@ export function IMFBtGraph() {
                 xAxis={[{ 
                     scaleType: 'point', 
                     data: DisplayTimes, 
-                    height: 45, 
-                    tickLabelInterval: (value, index) => index % 5 === 0,
+                    height: 75, 
+                    tickLabelInterval: (value, index) => index % 3 === 0,
                     tickLabelStyle: {angle: -45},
                 }]}  // Use IMF time tags as labels
                 yAxis={[{ width: 50,
@@ -183,10 +183,10 @@ export function WindSpeedGraph() {
 
     return (
         <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Solar Wind Speed in km/s:
-        <Box sx={{ width: 1600, height: 500, alignContent: flex}}>
+        <Box sx={{ width: 1600, height: 400, alignContent: flex}}>
             <LineChart
                 grid={{ vertical: false, horizontal: true }}
-                sx={{width: 1600, height: 500}}
+                sx={{width: 1600, height: 400}}
                 series={[
                     { 
                         curve: "linear",
@@ -196,8 +196,8 @@ export function WindSpeedGraph() {
                     },
                     
                 ]}
-                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 60, tickLabelInterval: (value, index) => index % 5 === 0 , tickLabelStyle: {angle: -45}}]}  // Use Solar Wind time tags as labels
-                yAxis={[{ width: 70, 
+                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 75, tickLabelInterval: (value, index) => index % 5 === 0 , tickLabelStyle: {angle: -45}}]}  // Use Solar Wind time tags as labels
+                yAxis={[{ width: 50, 
                     colorMap: {
                     type: 'piecewise',
                     thresholds: [400, 500, 700, 900],
@@ -206,7 +206,6 @@ export function WindSpeedGraph() {
                     max: 3000,
                 },
                 }]}
-                height={450}
             />
         </Box>
         </div>
@@ -221,10 +220,11 @@ export function DensityGraph() {
 
     return (
     <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Solar Wind Density in p/cm³:
-        <Box sx={{ width: 1200, height: 300}}>
+        <Box sx={{ width: 1600, height: 400}}>
             
             <LineChart
                 grid={{ vertical: false, horizontal: true }}
+                sx={{width: 1600, height: 400}}
                 series={[
                     { 
                         curve: "linear",
@@ -234,7 +234,7 @@ export function DensityGraph() {
                     },
                     
                 ]}
-                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 28, tickLabelInterval: (value, index) => index % 3 === 0 , tickLabelStyle: {angle: -45}}]}  // Use Solar Wind time tags as labels
+                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 75, tickLabelInterval: (value, index) => index % 5 === 0 , tickLabelStyle: {angle: -45}}]}  // Use Solar Wind time tags as labels
                 yAxis={[{ width: 50,
                     colorMap: {
                     type: 'piecewise',
@@ -257,10 +257,11 @@ export function TemperatureGraph() {
 
     return (
     <div style={{"fontSize": "24px", "backgroundColor": "#5a5858", "border": "0px"}}>Solar Wind Temperature in kiloKelvin:
-        <Box sx={{ width: 1200, height: 300}}>
+        <Box sx={{ width: 1600, height: 400}}>
             
             <LineChart
                 grid={{ vertical: false, horizontal: true }}
+                sx={{width: 1600, height: 400}}
                 series={[
                     { 
                         curve: "linear",
@@ -270,7 +271,7 @@ export function TemperatureGraph() {
                     },
                     
                 ]}
-                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 28, tickLabelInterval: (value, index) => index % 3 === 0, tickLabelStyle: { fontSize: 12 }, tickLabelStyle: {angle: -45} }]}  // Use Solar Wind time tags as labels
+                xAxis={[{ scaleType: 'point', data: DisplayTimes, height: 75, tickLabelInterval: (value, index) => index % 5 === 0, tickLabelStyle: { fontSize: 12 }, tickLabelStyle: {angle: -45} }]}  // Use Solar Wind time tags as labels
                 yAxis={[{ width: 50,
                     colorMap: {
                     type: 'piecewise',
@@ -291,8 +292,8 @@ export function KpIndexGraph() {
     const uData = inputData[8].map(i => i?.Kp) ?? [];
     const margin = { right: 24 };
     console.log(xLabels);
-    const DailyxLabels = xLabels.slice(0, 59);
-    const DailyuData = uData.slice(0, 59);
+    const DailyxLabels = xLabels.slice(0, [xLabels.length - 1]);
+    const DailyuData = uData.slice(0, [uData.length - 1]);
     const DisplayTimes = DailyxLabels.map(t => TimeConverter(t));
 
 
