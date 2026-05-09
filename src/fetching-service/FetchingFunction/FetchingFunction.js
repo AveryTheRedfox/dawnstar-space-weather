@@ -1,0 +1,63 @@
+import { useState } from "react";
+import { useEffect } from "react";
+
+function useFetchingApi() {
+  const [SolarWind, setSolarWind] = useState();
+  const [IntMag, setIntMag] = useState();
+  const [KpIndex, setKpIndex] = useState();
+  const [Alerts, setAlerts] = useState();
+  const [Flare, setFlare] = useState();
+  const [LatestFlare, setLatestFlare] = useState();
+  const [Enlil, setEnlil] = useState();
+  const [Ovation, setOvation] = useState();
+  const [KirunaMagData, setKirunaMagData] = useState();
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+
+    async function FetchAll() {
+      try {
+        const response = await fetch(
+          "http://localhost:3001/api/space-weather-data",
+          { signal }
+        );
+        const data = await response.json();
+
+        setSolarWind(data.solarWind);
+        setIntMag(data.intMag);
+        setKpIndex(data.kpIndex);
+        setAlerts(data.alerts?.[0], data.alerts?.[1]);
+        setFlare(data.flare);
+        setLatestFlare(data.latestFlare);
+        setEnlil(data.enlil);
+        setOvation(data.ovation);
+        setKirunaMagData(data.kirunaMagData);
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          console.error("Error fetching all data:", error);
+        }
+      }
+    }
+    FetchAll();
+    const interval = setInterval(FetchAll, 60000);
+    return () => {
+      clearInterval(interval);
+      controller.abort();
+    };
+  }, []);
+
+  return [
+    SolarWind,
+    IntMag,
+    KpIndex,
+    Alerts,
+    Flare,
+    LatestFlare,
+    Enlil,
+    Ovation,
+    KirunaMagData,
+  ];
+}
+
+export default useFetchingApi;
