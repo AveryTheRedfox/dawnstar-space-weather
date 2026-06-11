@@ -8,6 +8,7 @@ export function useCMEPredictions(CMEThreshold, dataKey) {
   const [impacts, setImpacts] = useState([]);
   const [sortedImpacts, setSortedImpacts] = useState([]);
 
+  console.log(dataKey?.dataKey);
 
   function TimeConverter(TimeTag) {
     const monthsOfMonth = [
@@ -27,7 +28,7 @@ export function useCMEPredictions(CMEThreshold, dataKey) {
     const date = new Date(TimeTag);
     const hours = date.getHours();
     const minutes = date.getMinutes();
-    const dayOfWeek = date.getDay();
+    const dayOfWeek = date.getDate();
     const month = date.getMonth();
     const DayAppendage =
       dayOfWeek == 1
@@ -37,9 +38,7 @@ export function useCMEPredictions(CMEThreshold, dataKey) {
         : dayOfWeek == 3
         ? "rd"
         : "th";
-    return `${monthsOfMonth[month]} ${dayOfWeek + DayAppendage} ${hours
-      .toString()
-      .padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
+    return `${monthsOfMonth[month]} ${dayOfWeek + DayAppendage} ${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
   }
 
   //Einstellen der Schwelle ab wann ein CME als CME angesehen wird. Schwelle ist definiert als:

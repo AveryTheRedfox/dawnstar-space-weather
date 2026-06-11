@@ -22,7 +22,7 @@ function MouseHoverPopoverCME({DisplayString, PopOverString, PopOverStringStylin
 
 
   return (
-    <div style={{"margin-bottom": "-19px"}}>
+    <div style={{"marginBottom": "-19px"}}>
       <Typography
         aria-owns={open ? 'mouse-over-popover' : undefined}
         aria-haspopup="true"

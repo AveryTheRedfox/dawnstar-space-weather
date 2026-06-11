@@ -6,16 +6,16 @@
     font-family: 'Roboto'; 
     color: #ccc9dc;
     border: 2px solid gray;
-    height: inherit;
+    height: 100%;
     border-radius: 10px;
     width: 20vw;
+    margin-bottom: 0px;
 }
 .StormLevel {
     position: relative; 
 }
 .DataSource {
     position: relative;
-    bottom: 10px;
     font-size: 16px;
     color: darkgray;
 }

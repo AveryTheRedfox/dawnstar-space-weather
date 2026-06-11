@@ -2,14 +2,45 @@ import { PopOverGraphs } from "../../inner_content/popover";
 import { WindSpeedGraph } from "../../inner_content/Graphs";
 import { DensityGraph } from "../../inner_content/Graphs";
 import { TemperatureGraph } from "../../inner_content/Graphs";
+import { useState } from "react";
 import "./SolarWindDisplay.css";
 
 function WindSpeedCalculation(dataKey) {
-  const WindSpeedArray = dataKey?.dataKey?.map((i) => i?.proton_speed) ?? [];
-  const DensityArray = dataKey?.dataKey?.map((i) => i?.proton_density) ?? [];
-  const TemperatureArray =
-    dataKey?.dataKey?.map((i) => i?.proton_temperature) ?? [];
-  const TimeTags = dataKey?.dataKey?.map((i) => i?.time_tag) ?? [];
+  const [dataSource, setDataSource] = useState("ACE");
+  const [activeButton, setActiveButton] = useState(null);
+
+
+  const toggleView = (view) => {
+    setActiveButton(current => current === view ? null : view);
+  };
+
+
+  let WindSpeedArray = dataKey?.dataKey?.map((i) => i?.proton_speed) ?? [];
+  let DensityArray = dataKey?.dataKey?.map((i) => i?.proton_density) ?? [];
+  let TemperatureArray = dataKey?.dataKey?.map((i) => i?.proton_temperature) ?? [];
+  let TimeTags = dataKey?.dataKey?.map((i) => i?.time_tag) ?? [];
+  let ACEDataArray = dataKey?.dataKey?.map((i) => i?.source === "ACE" ? i : null).filter(i => i !== null) ?? [];
+  let IMAPDataArray = dataKey?.dataKey?.map((i) => i?.source === "IMAP" ? i : null).filter(i => i !== null) ?? [];
+  let SOLAR1DataArray = dataKey?.dataKey?.map((i) => i?.source === "SOLAR1" ? i : null).filter(i => i !== null) ?? [];
+
+  let ACEData = {
+    Density: ACEDataArray?.map((i) => i?.proton_density) ?? [],
+    Speed: ACEDataArray?.map((i) => i?.proton_speed) ?? [],
+    Temperature: ACEDataArray?.map((i) => i?.proton_temperature) ?? [],
+    TimeTags: ACEDataArray?.map((i) => i?.time_tag) ?? [],
+  };
+  let IMAPData = {
+    Density: IMAPDataArray?.map((i) => i?.proton_density) ?? [],
+    Speed: IMAPDataArray?.map((i) => i?.proton_speed) ?? [],
+    Temperature: IMAPDataArray?.map((i) => i?.proton_temperature) ?? [],
+      TimeTags: IMAPDataArray?.map((i) => i?.time_tag) ?? [],
+  };
+  let SOLAR1Data = {
+    Density: SOLAR1DataArray?.map((i) => i?.proton_density) ?? [],
+    Speed: SOLAR1DataArray?.map((i) => i?.proton_speed) ?? [],
+    Temperature: SOLAR1DataArray?.map((i) => i?.proton_temperature) ?? [],
+    TimeTags: SOLAR1DataArray?.map((i) => i?.time_tag) ?? [],
+  };
 
   let WindSpeed = WindSpeedArray?.[0];
   let Density = DensityArray?.[0];
@@ -83,31 +114,65 @@ let TemperatureDisplay =
     ? "Very High"
     : "Unknown";
 
+
+function DisplayActiveSolarWindSource() {
+  const [dataSource, setDataSource] = useState("SOLAR1");
+
+  let activegraphs = [];
+  let activeDisplayData = [];
+  let currentlySelectedButtonStyle = {
+    backgroundColor: "#c05904",
+    color: "white",
+  };
+  let ACEstyleSelected = {};
+  let IMAPstyleSelected = {};
+  let SOLAR1styleSelected = {};
+
+  if (dataSource === "ACE") {
+    activeDisplayData = [ACEData.Speed[0], ACEData.Density[0], ACEData.Temperature[0]];
+    activegraphs = [<WindSpeedGraph dataKey={[ACEData.Speed, TimeTags]} />, <TemperatureGraph dataKey={[ACEData.Temperature, TimeTags]} />, <DensityGraph dataKey={[ACEData.Density, TimeTags]} />];
+    ACEstyleSelected = currentlySelectedButtonStyle;
+  } else if (dataSource === "IMAP") {
+    activeDisplayData = [IMAPData.Speed[0], IMAPData.Density[0], IMAPData.Temperature[0]];
+    activegraphs = [<WindSpeedGraph dataKey={[IMAPData.Speed, TimeTags]} />, <TemperatureGraph dataKey={[IMAPData.Temperature, TimeTags]} />, <DensityGraph dataKey={[IMAPData.Density, TimeTags]} />];
+    IMAPstyleSelected = currentlySelectedButtonStyle;
+  } else if (dataSource === "SOLAR1") {
+    activeDisplayData = [SOLAR1Data.Speed[0], SOLAR1Data.Density[0], SOLAR1Data.Temperature[0]];
+    activegraphs = [<WindSpeedGraph dataKey={[SOLAR1Data.Speed, TimeTags]} />, <TemperatureGraph dataKey={[SOLAR1Data.Temperature, TimeTags]} />, <DensityGraph dataKey={[SOLAR1Data.Density, TimeTags]} />];
+    SOLAR1styleSelected = currentlySelectedButtonStyle;
+  }
+
   return (
-    <div className="SolarWindDataDisplays">
-      <div className="ContainerDisplay">
-        <img src={require("./air_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
-        <div className="InnerContentDisplay">
-          <PopOverGraphs
+    <>
+      <div className="sourceButtonContainer">
+        <button className="source-button" style={ACEstyleSelected} onClick={() => setDataSource("ACE")}>ACE</button>
+        <button className="source-button" style={IMAPstyleSelected} onClick={() => setDataSource("IMAP")}>IMAP</button>
+        <button className="source-button" style={SOLAR1styleSelected} onClick={() => setDataSource("SOLAR1")}>SOLAR1</button>
+      </div>
+        <div className="SolarWindDataDisplays">
+          <div className="ContainerDisplay">
+            <img src={require("./air_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
+            <div className="InnerContentDisplay">
+            <PopOverGraphs
             DisplayString={"Wind Speed:"}
             PopOverString={
-              <WindSpeedGraph dataKey={[WindSpeedArray, TimeTags]} />
+              activegraphs[0]
             }
             PopOverStringStyling={{ color: "darkgray" }}
-          />
-          <div style={{ color: WindSpeedColor }}>{WindSpeed} km/s</div>
-          <div style={{ color: WindSpeedColor }}>{WindSpeedDisplay}</div>
-        </div>
-      </div>
+            />
+            <div style={{ color: WindSpeedColor }}>{activeDisplayData[0]} km/s</div>
+            <div style={{ color: WindSpeedColor }}>{WindSpeedDisplay}</div>
+          </div>
+          </div>
       <div className="ContainerDisplay">
         <img src={require("./rainy_snow_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
         <div className="InnerContentDisplay">
           <PopOverGraphs
             DisplayString={"Density:"}
-            PopOverString={<DensityGraph dataKey={[DensityArray, TimeTags]} />}
+            PopOverString={activegraphs[2]}
             PopOverStringStyling={{ color: "darkgray" }}
           />{" "}
-          <div style={{ color: DensityColor }}>{Density} p/cm3</div>
+          <div style={{ color: DensityColor }}>{activeDisplayData[1]} p/cm3</div>
           <div style={{ color: DensityColor }}>{DensityDisplay}</div>
         </div>
       </div>
@@ -117,14 +182,23 @@ let TemperatureDisplay =
           <PopOverGraphs
             DisplayString={"Temperature:"}
             PopOverString={
-              <TemperatureGraph dataKey={[TemperatureArray, TimeTags]} />
+              activegraphs[1]
             }
             PopOverStringStyling={{ color: "darkgray" }}
           />
-          <div style={{ color: TemperatureColor }}>{Math.round((Temperature * 100) / 1000) / 100} kK</div>
+          <div style={{ color: TemperatureColor }}>{Math.round((activeDisplayData[2] * 100) / 1000) / 100} kK</div>
           <div style={{ color: TemperatureColor }}>{TemperatureDisplay}</div>
         </div>
       </div>
+    </div>
+  </>
+  );
+}
+
+
+  return (
+    <div className="SolarWindDataDisplays">
+      <DisplayActiveSolarWindSource/>
     </div>
   );
 }

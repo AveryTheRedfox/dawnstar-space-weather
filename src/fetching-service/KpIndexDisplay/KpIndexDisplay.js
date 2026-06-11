@@ -122,7 +122,7 @@ function KpCalculation(dataKey) {
 
   return (
     <div className="KpIndexDisplay">
-      <div style={{ fontSize: "36px" }}>
+      <div style={{ fontSize: "3.6vh" }}>
         <PopOverGraphs
           DisplayString={"Kp-Index:"}
           PopOverString={<KpIndexGraph dataKey={[KpIndex, TimeTag]} />}
@@ -142,7 +142,7 @@ function KpCalculation(dataKey) {
           [`& .${gaugeClasses.valueText}`]: {
             fontSize: "3.6vh",
             fontFamily: "Roboto",
-            transform: "translate(0px, -33px)",
+            transform: "translate(0px, -30px)",
             fill: "#8B008B#",
           },
           [`& .${gaugeClasses.valueArc}`]: {

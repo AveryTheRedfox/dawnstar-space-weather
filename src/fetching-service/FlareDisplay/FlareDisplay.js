@@ -102,17 +102,16 @@ function FlareDisplay(dataKey) {
       
       <div className="FlareTitle">
         <img src={require("./bolt_boost_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} style={{ width: "56px", height: "56px", alignSelf: "center", marginRight: "10px" }} />
-        <div className="FlareTitleText"> Solar Flares:</div>
       </div>
       <div className="FlareData">
         <div className="FlareValue">
-          Current Flux: {FlarevalueToGoesClass(FlareFlux)}
+          Current X-Ray Flux: {FlarevalueToGoesClass(FlareFlux)}
         </div>
         <div className="FlareValue">
           Latest Flare: {LatestFlareClassToDisplay(NewestFlare)}
         </div>
         <div className="FlareValue">
-          24h Max.: {HighestTwoHourMaximumToGOESClass(twoHourMaximum)}
+          24h Maximum: {HighestTwoHourMaximumToGOESClass(twoHourMaximum)}
         </div>
       </div>
     </div>

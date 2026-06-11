@@ -53,10 +53,9 @@ function IntMagDisplay(dataKey) {
             PopOverString={<IMFBtGraph dataKey={[IMFDataArray]} />}
             PopOverStringStyling={{ color: "darkgray" }}
           />
-          <div style={{ color: IMFBtColor, marginLeft: "10px" }}>
-            {Math.round(IMFBt * 100) / 100}
-          </div>{" "}
-          nT
+          <div style={{ color: IMFBtColor, marginLeft: "10px", height: "100%", alignSelf: "center" }}>
+            {Math.round(IMFBt * 100) / 100}nT
+          </div>
         </div>
         <div className="IMFBz">
           <PopOverGraphs
@@ -64,10 +63,9 @@ function IntMagDisplay(dataKey) {
             PopOverString={<IMFBzGraph dataKey={[IMFDataArray]} />}
             PopOverStringStyling={{ color: "darkgray" }}
           />
-          <div style={{ color: BzDirection, marginLeft: "10px" }}>
-            {Math.round(IMFBz * 100) / 100}
-          </div>{" "}
-          nT{" "}
+          <div style={{ color: BzDirection, marginLeft: "10px", height: "100%", alignSelf: "center" }}>
+            {Math.round(IMFBz * 100) / 100}nT
+          </div>
         </div>
       </div>
     </div>

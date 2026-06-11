@@ -5,6 +5,7 @@
     border-radius: 10px;
     font-family: 'Roboto';
     color: #ccc9dc;
+    height: 10vh;
 }
 .TimeButton {
     max-height: inherit;

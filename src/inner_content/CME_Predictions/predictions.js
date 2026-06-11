@@ -39,8 +39,10 @@ function CMEPredictions(dataKey) {
     "color": "#ccc9dc",
     "border": "2px solid gray",
     "borderRadius": "10px",
-    "width": "fit-content",
+    "width": "100%",
+    "height": "100%",
     "position": "relative",
+
     }}>
 
       <div className="CMEData">

@@ -6,6 +6,7 @@ import FlareDisplay from "./fetching-service/FlareDisplay/FlareDisplay.js";
 import SolarImages from "./inner_content/solar_images";
 import CMEPredictions from "./inner_content/CME_Predictions/predictions";
 import useFetchingApi from "./fetching-service/FetchingFunction/FetchingFunction.js";
+import ContentButtons from "./inner_content/CME_Predictions/lowerContentButtons.js";
 //import KpIndexChart from "./inner_content/Charts.js"
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -36,14 +37,13 @@ function App() {
           <div className="SolarData" style={{display: "flex", flexDirection: "row"}}>
             <WindSpeedCalculation dataKey={SolarWind} className="ContentCard" />
             <IntMagDisplay dataKey={IntMag} className="ContentCard" />
-            <FlareDisplay dataKey={[Flare, LatestFlare]} className="ContentCard" />
+            <FlareDisplay dataKey={[Flare, LatestFlare]} className="ContentCard"/>
           </div>
         </div>
       </div>
-      {/* <CMEPredictions dataKey={Enlil}/>   */}
+      <ContentButtons dataKey={[Enlil]} className="LowerContent"></ContentButtons>
     </div>
   );
 }
 
 export default App;
-

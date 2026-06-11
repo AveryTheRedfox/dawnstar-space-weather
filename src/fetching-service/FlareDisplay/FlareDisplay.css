@@ -6,7 +6,8 @@ border-radius: 10px;
 font-family: 'Roboto'; 
 flex-direction: row;
 font-size: 2.5vh;
-width: 40vw;
+width: 30vw;
+height: 100%;
 }
 
 .FlareTitle {
