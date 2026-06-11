@@ -133,7 +133,7 @@ export function IMFBzGraph(dataKey) {
           sx={{
             width: 1600,
             height: 400,
-            ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+            ".MuiChartsAxis-tickLabel": { fill: "white" },
           }}
           series={[
             {
@@ -187,7 +187,7 @@ export function IMFBtGraph(dataKey) {
           sx={{
             width: 1600,
             height: 400,
-            ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+            ".MuiChartsAxis-tickLabel": { fill: "white" },
           }}
           series={[
             {
@@ -243,7 +243,7 @@ export function WindSpeedGraph(dataKey) {
           sx={{
             width: 1600,
             height: 400,
-            ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+            ".MuiChartsAxis-tickLabel": { fill: "white" },
           }}
           series={[
             {
@@ -301,7 +301,7 @@ export function DensityGraph(dataKey) {
           sx={{
             width: 1600,
             height: 400,
-            ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+            ".MuiChartsAxis-tickLabel": { fill: "white" },
           }}
           series={[
             {
@@ -359,7 +359,7 @@ export function TemperatureGraph(dataKey) {
           sx={{
             width: 1600,
             height: 400,
-            ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+            ".MuiChartsAxis-tickLabel": { fill: "white" },
           }}
           series={[
             {
@@ -424,7 +424,7 @@ export function KpIndexGraph(dataKey) {
         sx={{
           width: 1600,
           height: 400,
-          ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+          ".MuiChartsAxis-tickLabel": { fill: "white" },
         }}
         series={[
           {

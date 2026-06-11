@@ -26,7 +26,7 @@ function LocalTime(TimeTag) {
     .padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
 }
 
-function AlertsDisplay(dataKey) {
+function AlertsDisplay(dataKey, enlilData) {
   const [timeMode, setTimeMode] = useState("utc");
   const isUtc = timeMode === "utc";
   const formatTime = isUtc ? UTCTime : LocalTime;
@@ -34,6 +34,8 @@ function AlertsDisplay(dataKey) {
   let CustomMessage = "";
   let AlertTitle = dataKey?.dataKey?.message ?? null;
   const { sortedImpacts } = useCMEPredictions();
+
+  console.log(useCMEPredictions());
 
   let nextArrivals = [];
 
@@ -54,6 +56,8 @@ function AlertsDisplay(dataKey) {
       return AlertTitle.split("\n");
     }
   }
+
+  console.log(sortedImpacts);
 
   return (
     <div className="AlertsDisplay">

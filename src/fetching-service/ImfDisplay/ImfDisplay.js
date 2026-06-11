@@ -45,6 +45,7 @@ function IntMagDisplay(dataKey) {
       className="IntMagDisplay"
       style={{ border: `2px solid ${BzBorderColor}` }}
     >
+      <img src={require("./explore_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} style={{ width: "56px", height: "56px" }} />
       <div className="IntMagData">
         <div className="IMFBt">
           <PopOverGraphs

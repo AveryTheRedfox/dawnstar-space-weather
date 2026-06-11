@@ -18,7 +18,7 @@ function FlareDisplay(dataKey) {
     }
   }
 
-  for (let i = 1; i < dataKey?.dataKey?.[1]?.length; i++) {
+  for (let i = 1; i < dataKey?.dataKey?.[0]?.length; i++) {
     FluxArray.push(dataKey?.dataKey?.[0]?.[i]?.flux);
   }
   twoHourMaximum = Math.max(...FluxArray);
@@ -99,7 +99,9 @@ function FlareDisplay(dataKey) {
 
   return (
     <div className="FlareDisplay">
+      
       <div className="FlareTitle">
+        <img src={require("./bolt_boost_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} style={{ width: "56px", height: "56px", alignSelf: "center", marginRight: "10px" }} />
         <div className="FlareTitleText"> Solar Flares:</div>
       </div>
       <div className="FlareData">
@@ -110,7 +112,7 @@ function FlareDisplay(dataKey) {
           Latest Flare: {LatestFlareClassToDisplay(NewestFlare)}
         </div>
         <div className="FlareValue">
-          2h Max.: {HighestTwoHourMaximumToGOESClass(twoHourMaximum)}
+          24h Max.: {HighestTwoHourMaximumToGOESClass(twoHourMaximum)}
         </div>
       </div>
     </div>

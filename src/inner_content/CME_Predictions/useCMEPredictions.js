@@ -4,10 +4,10 @@ import useFetchingApi from "../../fetching-service/FetchingFunction/FetchingFunc
 import IntMagDisplay from "../../fetching-service/ImfDisplay/ImfDisplay";
 
 export function useCMEPredictions(CMEThreshold, dataKey) {
-  const [Enlil] = useFetchingApi(); // only need Enlil here
 
   const [impacts, setImpacts] = useState([]);
   const [sortedImpacts, setSortedImpacts] = useState([]);
+
 
   function TimeConverter(TimeTag) {
     const monthsOfMonth = [
@@ -46,8 +46,8 @@ export function useCMEPredictions(CMEThreshold, dataKey) {
   // DensityCurrent[i] / DensityNext[i - 1]
 
   useEffect(() => {
-    if (!Array.isArray(Enlil) || Enlil.length === 0) return;
-    const compressed = Enlil;
+    if (!Array.isArray(dataKey?.dataKey) || dataKey?.dataKey.length === 0) return;
+    const compressed = dataKey.dataKey;
     const everyTenth = compressed.filter((_, idx) => idx % 10 === 0);
 
     const diffs = everyTenth
@@ -60,6 +60,7 @@ export function useCMEPredictions(CMEThreshold, dataKey) {
         };
       })
       .slice(0, -1);
+
 
     let events = [];
 
@@ -83,7 +84,7 @@ export function useCMEPredictions(CMEThreshold, dataKey) {
     } else {
       setSortedImpacts(impacts);
     }
-  }, [Enlil, CMEThreshold]);
+  }, [dataKey, CMEThreshold]);
 
   return { sortedImpacts };
 }

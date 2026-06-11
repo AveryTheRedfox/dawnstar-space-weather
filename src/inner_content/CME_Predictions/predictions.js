@@ -5,9 +5,9 @@ import { useState } from "react";
 
 
 
-function CMEPredictions() {
+function CMEPredictions(dataKey) {
   const [CMEThreshold, setCMEThreshold] = useState(0.7);
-  const { sortedImpacts } = useCMEPredictions(CMEThreshold);
+  const { sortedImpacts } = useCMEPredictions(CMEThreshold, dataKey);
 
   let CMEArrival = "";
   if (!sortedImpacts.length) {
@@ -35,11 +35,11 @@ function CMEPredictions() {
       "alignContent": "flex-start",
       "flexDirection": "row",
       "justifyContent": "flex-end",
-    "marginRight": "20px",   
+     "marginRight": "20px",   
     "color": "#ccc9dc",
     "border": "2px solid gray",
     "borderRadius": "10px",
-    "minWidth": "500px",
+    "width": "fit-content",
     "position": "relative",
     }}>
 

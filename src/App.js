@@ -29,32 +29,21 @@ function App() {
   return (
     <div className="Content">
       <div className="TitleAndData">
-        <KpCalculation dataKey={KpIndex} className="ContentCard" />
-        <WindSpeedCalculation dataKey={SolarWind} className="ContentCard" />
-        <IntMagDisplay dataKey={IntMag} className="ContentCard" />
-        <FlareDisplay dataKey={[Flare, LatestFlare]} className="ContentCard" />
-      </div>
-      <div className="InnerContent">
-        <AlertsDisplay
-          dataKey={Alerts}
-          className="alertsandadvisorybar"
-          style={{
-            minHeight: "50px",
-          }}
-        />
-        <div
-          className="cmeandsun"
-          style={{
-            minHeight: "450px",
-            color: "white",
-          }}
-        >
-          <SolarImages />
-          <CMEPredictions dataKey={Enlil} />
+        <KpCalculation dataKey={KpIndex} className="ContentCard"/>
+        <div className="SunAndAlerts">
+          <AlertsDisplay dataKey={Alerts} className="alertsandadvisorybar" style={{ minHeight: "50px",}}/>
+          <SolarImages/>
+          <div className="SolarData" style={{display: "flex", flexDirection: "row"}}>
+            <WindSpeedCalculation dataKey={SolarWind} className="ContentCard" />
+            <IntMagDisplay dataKey={IntMag} className="ContentCard" />
+            <FlareDisplay dataKey={[Flare, LatestFlare]} className="ContentCard" />
+          </div>
         </div>
       </div>
+      {/* <CMEPredictions dataKey={Enlil}/>   */}
     </div>
   );
 }
 
 export default App;
+

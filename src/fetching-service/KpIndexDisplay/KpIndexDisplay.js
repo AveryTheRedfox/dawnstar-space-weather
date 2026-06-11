@@ -140,7 +140,7 @@ function KpCalculation(dataKey) {
         outerRadius={"100%"}
         sx={{
           [`& .${gaugeClasses.valueText}`]: {
-            fontSize: "5vh",
+            fontSize: "3.6vh",
             fontFamily: "Roboto",
             transform: "translate(0px, -33px)",
             fill: "#8B008B#",

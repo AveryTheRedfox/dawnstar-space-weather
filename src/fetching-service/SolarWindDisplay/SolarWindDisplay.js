@@ -50,9 +50,43 @@ function WindSpeedCalculation(dataKey) {
       ? "#c05904"
       : "gray";
 
+let WindSpeedDisplay = 
+  WindSpeed < 400
+    ? "Low"
+    : WindSpeed >= 400 && WindSpeed < 500
+    ? "Elevated"
+    : WindSpeed >= 500 && WindSpeed < 700
+    ? "High"
+    : WindSpeed >= 700
+    ? "Very High"
+    : "Unknown";
+  
+let DensityDisplay =
+  Density < 10
+    ? "Low"
+    : Density >= 10 && Density < 20
+    ? "Elevated"
+    : Density >= 20 && Density < 40
+    ? "High"
+    : Density >= 40 && Density < 60
+    ? "Very High"
+    : "Unknown";
+
+let TemperatureDisplay =
+  Temperature < 20000
+    ? "Low"
+    : Temperature >= 20000 && Temperature < 100000
+    ? "Elevated"
+    : Temperature >= 100000 && Temperature < 500000
+    ? "High"
+    : Temperature >= 500000
+    ? "Very High"
+    : "Unknown";
+
   return (
     <div className="SolarWindDataDisplays">
       <div className="ContainerDisplay">
+        <img src={require("./air_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
         <div className="InnerContentDisplay">
           <PopOverGraphs
             DisplayString={"Wind Speed:"}
@@ -62,9 +96,11 @@ function WindSpeedCalculation(dataKey) {
             PopOverStringStyling={{ color: "darkgray" }}
           />
           <div style={{ color: WindSpeedColor }}>{WindSpeed} km/s</div>
+          <div style={{ color: WindSpeedColor }}>{WindSpeedDisplay}</div>
         </div>
       </div>
       <div className="ContainerDisplay">
+        <img src={require("./rainy_snow_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
         <div className="InnerContentDisplay">
           <PopOverGraphs
             DisplayString={"Density:"}
@@ -72,9 +108,11 @@ function WindSpeedCalculation(dataKey) {
             PopOverStringStyling={{ color: "darkgray" }}
           />{" "}
           <div style={{ color: DensityColor }}>{Density} p/cm3</div>
+          <div style={{ color: DensityColor }}>{DensityDisplay}</div>
         </div>
       </div>
       <div className="ContainerDisplay">
+        <img src={require("./device_thermostat_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
         <div className="InnerContentDisplay">
           <PopOverGraphs
             DisplayString={"Temperature:"}
@@ -83,7 +121,8 @@ function WindSpeedCalculation(dataKey) {
             }
             PopOverStringStyling={{ color: "darkgray" }}
           />
-          <div style={{ color: TemperatureColor }}>{Temperature / 1000} kK</div>
+          <div style={{ color: TemperatureColor }}>{Math.round((Temperature * 100) / 1000) / 100} kK</div>
+          <div style={{ color: TemperatureColor }}>{TemperatureDisplay}</div>
         </div>
       </div>
     </div>

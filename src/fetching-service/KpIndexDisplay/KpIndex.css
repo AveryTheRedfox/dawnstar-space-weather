@@ -6,8 +6,9 @@
     font-family: 'Roboto'; 
     color: #ccc9dc;
     border: 2px solid gray;
-    height: 40vh;
+    height: inherit;
     border-radius: 10px;
+    width: 20vw;
 }
 .StormLevel {
     position: relative; 
