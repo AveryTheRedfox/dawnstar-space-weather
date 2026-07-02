@@ -1,14 +1,11 @@
 // src/inner_content/CME_Predictions/useCMEPredictions.js
 import { useState, useEffect } from "react";
-import useFetchingApi from "../../fetching-service/FetchingFunction/FetchingFunction";
-import IntMagDisplay from "../../fetching-service/ImfDisplay/ImfDisplay";
+import useFetchingApi from "../../../fetching-service/FetchingFunction/FetchingFunction";
 
 export function useCMEPredictions(CMEThreshold, dataKey) {
 
   const [impacts, setImpacts] = useState([]);
   const [sortedImpacts, setSortedImpacts] = useState([]);
-
-  console.log(dataKey?.dataKey);
 
   function TimeConverter(TimeTag) {
     const monthsOfMonth = [
@@ -40,9 +37,6 @@ export function useCMEPredictions(CMEThreshold, dataKey) {
         : "th";
     return `${monthsOfMonth[month]} ${dayOfWeek + DayAppendage} ${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
   }
-
-  //Einstellen der Schwelle ab wann ein CME als CME angesehen wird. Schwelle ist definiert als:
-  // DensityCurrent[i] / DensityNext[i - 1]
 
   useEffect(() => {
     if (!Array.isArray(dataKey?.dataKey) || dataKey?.dataKey.length === 0) return;

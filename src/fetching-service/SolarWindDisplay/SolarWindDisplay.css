@@ -1,3 +1,5 @@
+@media only screen and (max-width: 2000px) {
+
 .ContainerDisplay {
     display: flex;
     align-items: center;
@@ -6,6 +8,7 @@
     height: 100%;
     padding-left: 5px;
     flex-direction: row;
+    font-size: 90%;
     width: 12vw;
 }
 .InnerContentDisplay {
@@ -14,7 +17,7 @@
 .SolarWindDataDisplays {
     display: flex;
     flex-direction: row;
-    font-size: 2.5vh;
+    font-size: inherit;
 }
 
 .source-button {
@@ -26,7 +29,57 @@
     border-radius: 10px;
     border: 2px solid gray;
     background-color: transparent;
-    font-size: 2.3vh;
+    font-size: inherit;
     color: #ffffff;
     cursor: pointer;
+}
+.SolarDataContent {
+    display:flex;
+    flex-direction: row;
+}
+}
+
+@media only screen and (max-width: 1000px) {
+
+.ContainerDisplay {
+    display: flex;
+    border: 2px solid gray;
+    border-radius: 10px;
+    height: inherit;
+    padding-left: 5px;
+    flex-direction: row;
+    width: inherit;
+}
+.InnerContentDisplay {
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+}
+.SolarWindDataDisplays {
+    display: flex;
+    flex-direction: column;
+    font-size: inherit;
+    height: inherit;
+}
+
+.source-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-color: transparent;
+    font-size: inherit;
+    color: #ffffff;
+    cursor: pointer;
+}
+.SolarDataContent {
+    display:flex;
+    flex-direction: row;
+}
+.SolarWindContextImage {
+    display: none;
+}
 }

@@ -1,4 +1,4 @@
-import { MouseHoverPopoverCME } from "../popover";
+import { MouseHoverPopoverCME } from "../../popover";
 import { useCMEPredictions } from "./useCMEPredictions";
 import { Slider } from '@mui/material';
 import { useState } from "react";
@@ -20,7 +20,7 @@ function CMEPredictions(dataKey) {
          <ul>
         {sortedImpacts.map((e, i) => (
           <li key={i}>
-            {e.time}: Δdensity = {e.diff.toFixed(2)}
+            {e.time}
           </li>
         ))}
          </ul>
@@ -31,11 +31,11 @@ function CMEPredictions(dataKey) {
   return (
 
     <div className="CMECenter" style={{
-      "display": "flex",
-      "alignContent": "flex-start",
-      "flexDirection": "row",
-      "justifyContent": "flex-end",
-     "marginRight": "20px",   
+    "display": "flex",
+    "alignContent": "flex-start",
+    "flexDirection": "row",
+    "justifyContent": "flex-end",
+    "marginRight": "20px",   
     "color": "#ccc9dc",
     "border": "2px solid gray",
     "borderRadius": "10px",
@@ -45,11 +45,13 @@ function CMEPredictions(dataKey) {
 
     }}>
 
-      <div className="CMEData">
+      <div className="CMEData" style={{
+        "maxWidth": "20vw",
+      }}>
            <MouseHoverPopoverCME 
            DisplayString='CME Observations' 
            PopOverString={<div>The CME Observations Panel will, with data from the WSA-Enlil Model, calculate the arrival of CMEs. <br/>The time displayed is the estimated arrival time and <br/> the ΔDensity is the largest positive change in density found for that CME </div>}
-           PopOverStringStyling={{"fontSize": "42px", "textDecoration": "underline"}}
+           PopOverStringStyling={{"fontSize": "3.6vh", "textDecoration": "dashed"}}
            />
       <div style={{    "border": "2px solid gray",
     "borderRadius": "10px", "minWidth": "400px", "paddingLeft": "15px", "paddingRight": "15px"}}>
@@ -63,7 +65,11 @@ function CMEPredictions(dataKey) {
       />
       Current CME Threshold: {CMEThreshold}
       </div>
-        <div>{CMEArrival}</div>
+        <div style={{
+          "fontSize": "3.6vh",
+        }}>
+          {CMEArrival}
+          </div>
       </div>
       <div className="CMEForecastImages" style={{
         "marginLeft": "auto",

@@ -4,8 +4,7 @@ function FlareDisplay(dataKey) {
   const FlareFlux =
     dataKey?.dataKey?.[0]?.[dataKey?.dataKey?.[0].length - 1]?.flux ?? null;
   const LatestFlareClass =
-    dataKey?.dataKey?.[1]?.[dataKey?.dataKey?.[1].length - 1]?.max_class ??
-    null;
+    dataKey?.dataKey?.[1]?.[dataKey?.dataKey?.[1].length - 1]?.max_class ?? null;
   const NewestFlare = "";
   let FluxArray = [];
   let twoHourMaximum = 0;
@@ -105,13 +104,13 @@ function FlareDisplay(dataKey) {
       </div>
       <div className="FlareData">
         <div className="FlareValue">
-          Current X-Ray Flux: {FlarevalueToGoesClass(FlareFlux)}
+          Current X-Rays: {FlarevalueToGoesClass(FlareFlux)}
         </div>
         <div className="FlareValue">
           Latest Flare: {LatestFlareClassToDisplay(NewestFlare)}
         </div>
         <div className="FlareValue">
-          24h Maximum: {HighestTwoHourMaximumToGOESClass(twoHourMaximum)}
+          24h Max.: {HighestTwoHourMaximumToGOESClass(twoHourMaximum)}
         </div>
       </div>
     </div>

@@ -14,7 +14,6 @@ function KpCalculation(dataKey) {
   const KpIndex = dataKey?.dataKey?.map((i) => i.Kp);
   const TimeTag = dataKey?.dataKey?.map((i) => i?.time_tag);
 
-  //Array mit den Kp-Index Werten und den entsprechenden Winkelpositionen für die Gauge
   let AnglePosition = [
     [0, 0],
     [0.33, 3.33],
@@ -122,14 +121,14 @@ function KpCalculation(dataKey) {
 
   return (
     <div className="KpIndexDisplay">
-      <div style={{ fontSize: "3.6vh" }}>
+      <div className="KpIndexHeader">
         <PopOverGraphs
           DisplayString={"Kp-Index:"}
           PopOverString={<KpIndexGraph dataKey={[KpIndex, TimeTag]} />}
           PopOverStringStyling={{ color: "darkgray" }}
         />
       </div>
-      <div style={{ fontSize: "12px" }}>
+      <div style={{ fontSize: "1vw" }}>
         Time: {KpTimeRangeTimeConverter(currentime) ?? "loading..."} UTC
       </div>
       <Gauge
@@ -140,10 +139,10 @@ function KpCalculation(dataKey) {
         outerRadius={"100%"}
         sx={{
           [`& .${gaugeClasses.valueText}`]: {
-            fontSize: "3.6vh",
-            fontFamily: "Roboto",
-            transform: "translate(0px, -30px)",
-            fill: "#8B008B#",
+            fontSize: '2.5vw',
+            fontFamily: 'Roboto',
+            transform: 'translate(0px, -30px)',
+            fill: '#ffffff',
           },
           [`& .${gaugeClasses.valueArc}`]: {
             fill: StormColor,

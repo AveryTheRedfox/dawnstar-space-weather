@@ -1,7 +1,8 @@
 import { useState } from "react";
 import useFetchingApi from "../../fetching-service/FetchingFunction/FetchingFunction.js";
 import Marquee from "react-fast-marquee";
-import { useCMEPredictions } from "../../inner_content/CME_Predictions/useCMEPredictions";
+import { useCMEPredictions } from "../../inner_content/LowerContentComponents/CMECenter/useCMEPredictions";
+import { MouseHoverPopoverCME } from "../../inner_content/popover.js";
 import "./AlertsDisplay.css";
 
 function UTCTime(TimeTag) {
@@ -35,8 +36,6 @@ function AlertsDisplay(dataKey, enlilData) {
   let AlertTitle = dataKey?.dataKey?.message ?? null;
   const { sortedImpacts } = useCMEPredictions();
 
-  console.log(useCMEPredictions());
-
   let nextArrivals = [];
 
   for (let i = 0; i < sortedImpacts.length; i++) {
@@ -57,7 +56,6 @@ function AlertsDisplay(dataKey, enlilData) {
     }
   }
 
-  console.log(sortedImpacts);
 
   return (
     <div className="AlertsDisplay">
@@ -71,6 +69,10 @@ function AlertsDisplay(dataKey, enlilData) {
           ? UTCTime(new Date()) + " UTC"
           : LocalTime(new Date()) + " GMT+2"}
       </button>
+      <MouseHoverPopoverCME 
+      PopOverString={<div>In this Dashboard you can hover over most static text like "Wind Speed" or "Density" to get Graphs for the specified data". <br></br> Some others also feature a small description text
+      <br></br> <b>All data currently displayed is provided by the Space Weather Prediction Center, and this page is not affiliated with them in any way!</b> </div>}
+      DisplayString={<img src={require("./info_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png")} style={{"border": "2px solid gray", "borderRadius": "10px"}}/>}/>
       <Marquee direction="left" speed="100" className="Marquee">
         {line(AlertTitle)[4]} &nbsp; | &nbsp; {line(AlertTitle)[6]} &nbsp;{" "}
         {line(AlertTitle)[7]}&nbsp; *** &nbsp; {CMEAlertsMessage} &nbsp;{" "}

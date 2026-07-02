@@ -116,7 +116,7 @@ let TemperatureDisplay =
 
 
 function DisplayActiveSolarWindSource() {
-  const [dataSource, setDataSource] = useState("SOLAR1");
+  const [dataSource, setDataSource] = useState("ACE");
 
   let activegraphs = [];
   let activeDisplayData = [];
@@ -130,20 +130,20 @@ function DisplayActiveSolarWindSource() {
 
   if (dataSource === "ACE") {
     activeDisplayData = [ACEData.Speed[0], ACEData.Density[0], ACEData.Temperature[0]];
-    activegraphs = [<WindSpeedGraph dataKey={[ACEData.Speed, TimeTags]} />, <TemperatureGraph dataKey={[ACEData.Temperature, TimeTags]} />, <DensityGraph dataKey={[ACEData.Density, TimeTags]} />];
+    activegraphs = [<WindSpeedGraph dataKey={[ACEData.Speed, ACEData.TimeTags]} />, <TemperatureGraph dataKey={[ACEData.Temperature, ACEData.TimeTags]} />, <DensityGraph dataKey={[ACEData.Density, ACEData.TimeTags]} />];
     ACEstyleSelected = currentlySelectedButtonStyle;
   } else if (dataSource === "IMAP") {
     activeDisplayData = [IMAPData.Speed[0], IMAPData.Density[0], IMAPData.Temperature[0]];
-    activegraphs = [<WindSpeedGraph dataKey={[IMAPData.Speed, TimeTags]} />, <TemperatureGraph dataKey={[IMAPData.Temperature, TimeTags]} />, <DensityGraph dataKey={[IMAPData.Density, TimeTags]} />];
+    activegraphs = [<WindSpeedGraph dataKey={[IMAPData.Speed, IMAPData.TimeTags]} />, <TemperatureGraph dataKey={[IMAPData.Temperature, IMAPData.TimeTags]} />, <DensityGraph dataKey={[IMAPData.Density, IMAPData.TimeTags]} />];
     IMAPstyleSelected = currentlySelectedButtonStyle;
   } else if (dataSource === "SOLAR1") {
     activeDisplayData = [SOLAR1Data.Speed[0], SOLAR1Data.Density[0], SOLAR1Data.Temperature[0]];
-    activegraphs = [<WindSpeedGraph dataKey={[SOLAR1Data.Speed, TimeTags]} />, <TemperatureGraph dataKey={[SOLAR1Data.Temperature, TimeTags]} />, <DensityGraph dataKey={[SOLAR1Data.Density, TimeTags]} />];
+    activegraphs = [<WindSpeedGraph dataKey={[SOLAR1Data.Speed, SOLAR1Data.TimeTags]} />, <TemperatureGraph dataKey={[SOLAR1Data.Temperature, SOLAR1Data.TimeTags]} />, <DensityGraph dataKey={[SOLAR1Data.Density, SOLAR1Data.TimeTags]} />];
     SOLAR1styleSelected = currentlySelectedButtonStyle;
   }
 
   return (
-    <>
+    <div className="SolarDataContent">
       <div className="sourceButtonContainer">
         <button className="source-button" style={ACEstyleSelected} onClick={() => setDataSource("ACE")}>ACE</button>
         <button className="source-button" style={IMAPstyleSelected} onClick={() => setDataSource("IMAP")}>IMAP</button>
@@ -151,21 +151,21 @@ function DisplayActiveSolarWindSource() {
       </div>
         <div className="SolarWindDataDisplays">
           <div className="ContainerDisplay">
-            <img src={require("./air_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
+            <img className="SolarWindContextImage" src={require("./air_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
             <div className="InnerContentDisplay">
             <PopOverGraphs
             DisplayString={"Wind Speed:"}
             PopOverString={
               activegraphs[0]
             }
-            PopOverStringStyling={{ color: "darkgray" }}
+            PopOverStringStyling={{ "color": "darkgray", "textDecorationStyle": "dashed" }}
             />
             <div style={{ color: WindSpeedColor }}>{activeDisplayData[0]} km/s</div>
             <div style={{ color: WindSpeedColor }}>{WindSpeedDisplay}</div>
           </div>
           </div>
       <div className="ContainerDisplay">
-        <img src={require("./rainy_snow_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
+        <img className="SolarWindContextImage" src={require("./rainy_snow_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
         <div className="InnerContentDisplay">
           <PopOverGraphs
             DisplayString={"Density:"}
@@ -177,7 +177,7 @@ function DisplayActiveSolarWindSource() {
         </div>
       </div>
       <div className="ContainerDisplay">
-        <img src={require("./device_thermostat_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
+        <img className="SolarWindContextImage" src={require("./device_thermostat_56dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")} />
         <div className="InnerContentDisplay">
           <PopOverGraphs
             DisplayString={"Temperature:"}
@@ -191,7 +191,7 @@ function DisplayActiveSolarWindSource() {
         </div>
       </div>
     </div>
-  </>
+  </div>
   );
 }
 

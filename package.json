@@ -23,8 +23,10 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-fast-marquee": "^1.6.5",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "reactjs-popup": "^2.0.6",
+    "three": "^0.184.0",
+    "three-globe": "^2.45.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -5,10 +5,10 @@
     border-radius: 10px;
     font-family: 'Roboto';
     color: #ccc9dc;
-    height: 100%;
     padding-left: 5px;
-    font-size: 2.5vh;
-    width: 18vw;
+    height: 100%;
+    font-size: 90%;
+    width: 20vw;
 }
 .IntMagData {
     display: flex;
@@ -18,6 +18,7 @@
 .IMFBt {
     display: flex;
     flex-direction: row;
+
 }
 .IMFBz {
     display: flex; 

@@ -10,12 +10,21 @@
     border-radius: 10px;
     width: 20vw;
     margin-bottom: 0px;
+    font-size: inherit;
 }
 .StormLevel {
     position: relative; 
+    font-size: inherit;
 }
 .DataSource {
     position: relative;
     font-size: 16px;
     color: darkgray;
+    font-size: inherit;
+}
+.KpIndexHeader {
+    font-size: 2vh;
+}
+tspan {
+  fill: rgba(255, 255, 255, 0.87);
 }

@@ -5,7 +5,7 @@ border: 2px solid gray;
 border-radius: 10px;
 font-family: 'Roboto'; 
 flex-direction: row;
-font-size: 2.5vh;
+font-size: 90%;
 width: 30vw;
 height: 100%;
 }

@@ -10,7 +10,8 @@ function useFetchingApi() {
   const [LatestFlare, setLatestFlare] = useState();
   const [Enlil, setEnlil] = useState();
   const [Ovation, setOvation] = useState();
-  const [KirunaMagData, setKirunaMagData] = useState();
+  const [HPIData, setHPIData] = useState();
+  const [ForecastData, setForecastData] = useState();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -19,11 +20,11 @@ function useFetchingApi() {
     async function FetchAll() {
       try {
         const response = await fetch(
-          "http://localhost:3001/api/space-weather-data",
+          "http://192.168.2.222:3001/api/space-weather-data",
           { signal }
         );
         const data = await response.json();
-
+        console.log(response);
         setSolarWind(data.solarWind);
         setIntMag(data.intMag);
         setKpIndex(data.kpIndex);
@@ -32,7 +33,8 @@ function useFetchingApi() {
         setLatestFlare(data.latestFlare);
         setEnlil(data.enlil);
         setOvation(data.ovation);
-        setKirunaMagData(data.kirunaMagData);
+        setHPIData(data.hpi);
+        setForecastData(data.forecast);       
       } catch (error) {
         if (error.name !== "AbortError") {
           console.error("Error fetching all data:", error);
@@ -46,7 +48,6 @@ function useFetchingApi() {
       controller.abort();
     };
   }, []);
-
   return [
     SolarWind,
     IntMag,
@@ -56,7 +57,8 @@ function useFetchingApi() {
     LatestFlare,
     Enlil,
     Ovation,
-    KirunaMagData,
+    HPIData,
+    ForecastData,
   ];
 }
 

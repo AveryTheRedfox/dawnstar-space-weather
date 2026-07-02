@@ -16,19 +16,30 @@ app.get('/api/space-weather-data', async (req, res) => {
       'https://services.swpc.noaa.gov/json/goes/primary/xray-flares-latest.json',
       'https://services.swpc.noaa.gov/json/enlil_time_series.json',
       'https://services.swpc.noaa.gov/json/ovation_aurora_latest.json',
+      'https://services.swpc.noaa.gov/text/aurora-nowcast-hemi-power.txt',     
+      'https://services.swpc.noaa.gov/text/3-day-geomag-forecast.txt',     
     ];
 
-    // Fetch all URLs in parallel
-    const responses = await Promise.all(urls.map(url => fetch(url)));
-
-    // Parse JSON safely
-    const safeJson = async (response) => {
+    const fetchWithErrorLogging = async (url) => {
       try {
-        if (!response.ok) return null;
+        const response = await fetch(url);
+        if (!response.ok) {
+          console.warn(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+          return null;
+        }
         const text = await response.text();
-        if (!text) return null;
+        if (!text) {
+          console.warn(`Empty response from ${url}`);
+          return null;
+        }
+        try {
         return JSON.parse(text);
-      } catch {
+        } catch(parseError) {
+          console.warn(`${url} is not valid JSON, parsing as text instead`);
+          return text;
+        }
+      } catch (error) {
+        console.error(`Error fetching ${url}:`, error.message);
         return null;
       }
     };
@@ -42,28 +53,31 @@ app.get('/api/space-weather-data', async (req, res) => {
       latestFlareResult,
       enlilResult,
       ovationResult,
-    ] = await Promise.all(responses.map(safeJson));
+      hpiResult,             
+      forecastResult,         
+    ] = await Promise.all(urls.map(fetchWithErrorLogging));
 
     const data = {
-      solarWind: windResult,
-      intMag: imfResult,
-      kpIndex: kpResult,
-      alerts: alertsResult,
-      flare: flareResult,
-      latestFlare: latestFlareResult,
-      enlil: enlilResult,
-      ovation: ovationResult,
+      solarWind: windResult || [],
+      intMag: imfResult || [],
+      kpIndex: kpResult || [],
+      alerts: alertsResult || [],
+      flare: flareResult || [],
+      latestFlare: latestFlareResult || [],
+      enlil: enlilResult || [],
+      ovation: ovationResult || [],
+      hpi: typeof hpiResult === 'string' ? { text: hpiResult } : (hpiResult || {}),
+      forecast: typeof forecastResult === 'string' ? { text: forecastResult } : (forecastResult || {}),
     };
 
+    console.log('API response prepared with data from NOAA services');
     res.json(data);
   } catch (error) {
     console.error('Error fetching space weather data:', error);
-    res.status(500).json({ error: 'Error fetching data' });
+    res.status(500).json({ error: 'Error fetching data', details: error.message });
   }
 });
 
-// Keep the old endpoint for backward compatibility
-
-app.listen(3001, () => {
+app.listen(3001, '0.0.0.0', () => {
   console.log('Backend server running on port 3001');
 });
