@@ -25,6 +25,7 @@ function App() {
     Ovation,
     HPIData,
     ForecastData,
+    SunspotData,
   ] = useFetchingApi();
 
   return (
@@ -41,7 +42,7 @@ function App() {
           </div>
         </div>
       </div>
-      <ContentButtons dataKey={[Enlil, HPIData, ForecastData, Ovation]} className="LowerContent"></ContentButtons>
+      <ContentButtons dataKey={[Enlil, HPIData, ForecastData, Ovation, SunspotData]} className="LowerContent"></ContentButtons>
       <div className="AppName"><img src={require("./wb_twilight_62dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")}/><div >Dawnstar <br></br> Space Weather</div></div>
     </div>
   );

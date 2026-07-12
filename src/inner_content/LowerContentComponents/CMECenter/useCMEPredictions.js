@@ -2,12 +2,7 @@
 import { useState, useEffect } from "react";
 import useFetchingApi from "../../../fetching-service/FetchingFunction/FetchingFunction";
 
-export function useCMEPredictions(CMEThreshold, dataKey) {
-
-  const [impacts, setImpacts] = useState([]);
-  const [sortedImpacts, setSortedImpacts] = useState([]);
-
-  function TimeConverter(TimeTag) {
+export function TimeConverter(TimeTag) {
     const monthsOfMonth = [
       "January",
       "February",
@@ -37,6 +32,14 @@ export function useCMEPredictions(CMEThreshold, dataKey) {
         : "th";
     return `${monthsOfMonth[month]} ${dayOfWeek + DayAppendage} ${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
   }
+
+
+export function useCMEPredictions(CMEThreshold, dataKey) {
+
+  const [impacts, setImpacts] = useState([]);
+  const [sortedImpacts, setSortedImpacts] = useState([]);
+
+
 
   useEffect(() => {
     if (!Array.isArray(dataKey?.dataKey) || dataKey?.dataKey.length === 0) return;

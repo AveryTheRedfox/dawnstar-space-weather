@@ -108,7 +108,7 @@ function KpCalculation(dataKey) {
       : currentvalue >= 4 && currentvalue < 5
       ? "#eeff00"
       : currentvalue >= 5 && currentvalue < 6
-      ? "#d89c6b"
+      ? "#ca722a"
       : currentvalue >= 6 && currentvalue < 7
       ? "#ff6600"
       : currentvalue >= 7 && currentvalue < 8

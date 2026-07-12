@@ -7,6 +7,7 @@ import AuroraComponent from "./AuroraPanel/lowerContentAurora.js";
 import ProtonPanel from "./SolarProtonPanel/SolarProtons.js";
 import SunspotPanel from "./SunspotPanel/lowerContentSunspots.js";
 
+
 function ContentButtons(dataKey) {
   const [activeButton, setActiveButton] = useState(null);
   const toggleView = (view) => {
@@ -30,7 +31,7 @@ function ContentButtons(dataKey) {
             {activeButton === 1 && <CMEPredictions dataKey={dataKey?.dataKey?.[0]} className="ToggledContent"/>}
             {activeButton === 2 && <ProtonPanel className="ToggledComponent"/>}
             {activeButton === 3 && "Farside Environment Panel"}
-            {activeButton === 4 && <SunspotPanel className="ToggledContent"/>}
+            {activeButton === 4 && <SunspotPanel data={dataKey?.dataKey?.[4]} className="ToggledContent"/>}
             {activeButton === 5 && <AuroraComponent className="ToggledContent" dataKey={[dataKey?.dataKey?.[1]?.text, dataKey?.dataKey?.[3], dataKey?.dataKey?.[2]?.text]}/>}
             {activeButton === 6 && "Solar Cycle"}
         </div>

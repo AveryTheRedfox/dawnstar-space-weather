@@ -17,7 +17,8 @@ app.get('/api/space-weather-data', async (req, res) => {
       'https://services.swpc.noaa.gov/json/enlil_time_series.json',
       'https://services.swpc.noaa.gov/json/ovation_aurora_latest.json',
       'https://services.swpc.noaa.gov/text/aurora-nowcast-hemi-power.txt',     
-      'https://services.swpc.noaa.gov/text/3-day-geomag-forecast.txt',     
+      'https://services.swpc.noaa.gov/text/3-day-geomag-forecast.txt',   
+      'https://services.swpc.noaa.gov/text/srs.txt',
     ];
 
     const fetchWithErrorLogging = async (url) => {
@@ -54,7 +55,8 @@ app.get('/api/space-weather-data', async (req, res) => {
       enlilResult,
       ovationResult,
       hpiResult,             
-      forecastResult,         
+      forecastResult,   
+      sunspotResult,      
     ] = await Promise.all(urls.map(fetchWithErrorLogging));
 
     const data = {
@@ -68,6 +70,7 @@ app.get('/api/space-weather-data', async (req, res) => {
       ovation: ovationResult || [],
       hpi: typeof hpiResult === 'string' ? { text: hpiResult } : (hpiResult || {}),
       forecast: typeof forecastResult === 'string' ? { text: forecastResult } : (forecastResult || {}),
+      sunspot: typeof sunspotResult === 'string' ? { text: sunspotResult } : (sunspotResult || {}),
     };
 
     console.log('API response prepared with data from NOAA services');
