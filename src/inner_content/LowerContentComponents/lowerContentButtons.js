@@ -6,6 +6,7 @@ import CMEPredictions from "./CMECenter/predictions.js";
 import AuroraComponent from "./AuroraPanel/lowerContentAurora.js";
 import ProtonPanel from "./SolarProtonPanel/SolarProtons.js";
 import SunspotPanel from "./SunspotPanel/lowerContentSunspots.js";
+import SolarFarsidePanel from "./lowerContentFarside/lowerContentFarside.js";
 
 
 function ContentButtons(dataKey) {
@@ -30,7 +31,7 @@ function ContentButtons(dataKey) {
         <div className="ToggledContent">
             {activeButton === 1 && <CMEPredictions dataKey={dataKey?.dataKey?.[0]} className="ToggledContent"/>}
             {activeButton === 2 && <ProtonPanel className="ToggledComponent"/>}
-            {activeButton === 3 && "Farside Environment Panel"}
+            {activeButton === 3 && <SolarFarsidePanel className="ToggledContent"/>}
             {activeButton === 4 && <SunspotPanel data={dataKey?.dataKey?.[4]} className="ToggledContent"/>}
             {activeButton === 5 && <AuroraComponent className="ToggledContent" dataKey={[dataKey?.dataKey?.[1]?.text, dataKey?.dataKey?.[3], dataKey?.dataKey?.[2]?.text]}/>}
             {activeButton === 6 && "Solar Cycle"}

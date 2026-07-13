@@ -1,0 +1,35 @@
+
+.phi_image  {
+    width: 25vh;
+    height: 25vh;
+}
+.phi_imagepanel {
+    display: flex;
+    flex-direction: row;
+}
+.imagepanel {
+    display: flex;
+    flex-direction: column;
+}
+.farside-panel {
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+}
+.phi_image_popover {
+    width: 75vh;
+    height: 75vh;
+}
+.SolarOrbiter {
+    border-right: 2px solid gray;
+    height: 100%;
+    width: 50%;
+}
+.gong_image {
+    height: 35vh;
+    margin-left: 10px;
+}
+.gong-farside {
+    border-left: 2px solid gray;
+    height: max-content;
+}

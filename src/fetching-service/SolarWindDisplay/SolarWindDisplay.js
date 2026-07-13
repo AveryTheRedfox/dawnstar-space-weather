@@ -81,7 +81,7 @@ function WindSpeedCalculation(dataKey) {
       ? "#c05904"
       : "gray";
 
-let WindSpeedDisplay = 
+  let WindSpeedDisplay = 
   WindSpeed < 400
     ? "Low"
     : WindSpeed >= 400 && WindSpeed < 500
@@ -92,7 +92,7 @@ let WindSpeedDisplay =
     ? "Very High"
     : "Unknown";
   
-let DensityDisplay =
+  let DensityDisplay =
   Density < 10
     ? "Low"
     : Density >= 10 && Density < 20
