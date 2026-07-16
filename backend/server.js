@@ -21,29 +21,45 @@ app.get('/api/space-weather-data', async (req, res) => {
       'https://services.swpc.noaa.gov/text/srs.txt',
     ];
 
-    const fetchWithErrorLogging = async (url) => {
-      try {
-        const response = await fetch(url);
+const fetchWithErrorLogging = async (url) => {
+    try {
+        const response = await fetch(url, {
+            headers: {
+                // Tells NOAA's firewall that this request is coming from a real web browser
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            }
+        });
+
         if (!response.ok) {
-          console.warn(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
-          return null;
+            console.warn(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+            return null;
         }
-        const text = await response.text();
-        if (!text) {
-          console.warn(`Empty response from ${url}`);
-          return null;
+
+        // 1. DYNAMIC TYPE PARSING: Check if the file target is explicitly JSON
+        if (url.endsWith('.json')) {
+            try {
+                return await response.json();
+            } catch (jsonError) {
+                console.warn(`Failed to parse valid JSON from ${url}:`, jsonError.message);
+                return null;
+            }
         }
-        try {
-        return JSON.parse(text);
-        } catch(parseError) {
-          console.warn(`${url} is not valid JSON, parsing as text instead`);
-          return text;
+
+        // 2. TEXT TARGETS: Handle text streams and normalize line-endings for Linux/Raspberry Pi
+        let text = await response.text();
+        if (!text || text.trim() === "") {
+            console.warn(`Empty response from text endpoint ${url}`);
+            return null;
         }
-      } catch (error) {
+
+        // Strip carriage returns (\r) to guarantee matching string lengths on the Pi
+        return text.replace(/\r/g, '');
+
+    } catch (error) {
         console.error(`Error fetching ${url}:`, error.message);
         return null;
-      }
-    };
+    }
+};
 
     const [
       windResult,

@@ -1,10 +1,16 @@
 
-import {useState, useEffect} from "react";
 import "./lowerContentAurora.css";
 import { HPIGraph } from "../../Graphs";
 import { split } from "three/src/nodes/tsl/TSLCore.js";
+import  AuroraGlobe  from "./lowerContentAuroraGlobe";
+import {useState, useEffect, useRef, useMemo} from 'react';
+import Globe from 'react-globe.gl';
+import { MeshLambertMaterial, AdditiveBlending, DoubleSide } from 'three'
+
+import localEarthImage from './BlackMarble_2016_01deg.jpg';
 
 function AuroraComponent(dataKey) {
+
 
 function DestructHPIData(data) {
      data = dataKey?.dataKey?.[0];
@@ -95,7 +101,121 @@ console.log(day1Forecast);
     return(sliceDataTypes);
 }    
 
+function AuroraGlobe(dataKey) {
+const globeRef = useRef();
+const [loading, setLoading] = useState(false);
 
+console.log(dataKey?.dataKey?.coordinates);
+
+useEffect(() => {
+    if (globeRef.current) {
+        globeRef.current.controls().autoRotate = true;
+        globeRef.current.controls().autoRotateSpeed = 0.5;
+    }
+}, []);
+
+const auroraData = useMemo(() => {
+    if (!dataKey) return;
+
+const rawCoordinates = Array.isArray(dataKey?.dataKey) 
+    ? dataKey?.dataKey
+    : (dataKey?.dataKey?.coordinates || []);
+
+    const processed = [];
+    const len = rawCoordinates.length;
+
+    for (let i = 0; i < len; i++) {
+      const point = rawCoordinates[i];
+      const weight = point[2];
+
+      // Aggressive Filter: NOAA coordinates are mostly 0. 
+      // Filtering items <= 10 drops data points from 65,000 to ~5,000 items instantly!
+      if (weight > 10) {
+        const lng = point[0];
+        processed.push({
+          lng: lng > 180 ? lng - 360 : lng,
+          lat: point[1],
+          weight: weight,
+        });
+      }
+    }
+    return processed;
+
+}, [dataKey]);
+
+  const getTileColor = (d) => {
+    const alpha = d.weight;
+    if (d.weight > 70) return `rgba(255, 50, 50, ${alpha})`;    // Strong (Red)
+    if (d.weight > 30) return `rgba(50, 255, 100, ${alpha})`;   // Medium (Bright Green)
+    return `rgba(0, 200, 50, ${alpha * 0.4})`;                 // Weak (Faint Green)
+  };
+
+console.log(auroraData);
+
+  return (
+    <div style={{     display: 'inline-block',
+    width: '100%', 
+    height: '100%', 
+    background: '#000011', 
+    borderRadius: '8px', 
+    overflow: 'hidden' }}>
+      <Globe
+        ref={globeRef}
+        width={1000}
+        height={600}
+        globeImageUrl={localEarthImage}
+        atmosphereColor="rgba(0, 255, 100, 0.35)"
+        atmosphereDropoffRadius={0.15}
+        
+        hexBinPointsData={auroraData}
+        hexBinPointLat={d => d.lat}
+        hexBinPointLng={d => d.lng}
+        hexBinPointWeight={d => d.weight}
+        
+        // Resolution & Unmerging Options
+        hexBinResolution={3.5} // Try 4 for wide hex blocks, 5 for tiny honeycombs
+        hexBinMerge={false}           
+        hexRadius={3} // Closes up the remaining space gaps cleanly             
+        hexAltitude={0.05}          
+        
+        // 1. REPAIRED TOP COLOR ACCESSOR
+        hexTopColor={({ points }) => {
+          const avgWeight = points.reduce((sum, p) => sum + p.weight, 0) / points.length;
+          if (avgWeight > 70) return 'rgba(255, 0, 50, 0.8)';
+          if (avgWeight > 30) return 'rgba(229, 255, 0, 0.82)';
+          return 'rgba(0, 150, 50, 0.8)';
+        }}
+
+        // 2. REPAIRED SIDE COLOR ACCESSOR
+        hexSideColor={({ points }) => {
+          const avgWeight = points.reduce((sum, p) => sum + p.weight, 0) / points.length;
+          if (avgWeight > 70) return 'rgba(255, 0, 50, 0.3)';
+          if (avgWeight > 30) return 'rgba(0, 255, 100, 0.2)';
+          return 'rgba(0, 150, 50, 0.1)';
+        }}
+
+        // 3. REPAIRED THREE.JS MATERIAL ACCESSSOR
+        hexMaterial={({ points }) => {
+          const avgWeight = points.reduce((sum, p) => sum + p.weight, 0) / points.length;
+          const alpha = avgWeight / 100;
+          
+          let hexColor = 0x009632; 
+          if (avgWeight > 70) hexColor = 0xff0032; 
+          else if (avgWeight > 30) hexColor = 0x00ff64; 
+
+          return new MeshLambertMaterial({
+            color: hexColor,
+            transparent: true,
+            opacity: avgWeight > 70 ? alpha : alpha * 0.5,
+            blending: AdditiveBlending,
+            depthWrite: false,
+            side: DoubleSide
+          });
+        }}
+      />
+    </div>
+  );
+}
 
 function TwoDimensionalAuroraView() {
     let [
@@ -189,9 +309,13 @@ const toggleView = (view) => {
             <button onClick={() => toggleView(1)} className="AuroraButton">2D View</button>
             <button onClick={() => toggleView(2)} className="AuroraButton">3D View</button>
             </div>
-            <div>
+            <div style={{
+                maxHeight: "inherit"
+            }}>
             {activeButton === 1 && <TwoDimensionalAuroraView/>}
-            {activeButton === 2 && "Test"}
+            {activeButton === 2 && <div><AuroraGlobe dataKey={dataKey?.dataKey?.[1]} style={{
+                maxHeight: "100%",
+            }}/></div>}
             </div>
         </div>
     )

@@ -12,7 +12,6 @@
     background-color: rgb(35, 35, 39);
     font-family: 'Roboto';
     font-size: 1.5vw;
-    overflow: hidden;
 }
 .TitleAndData {
     height: 35vh;
@@ -39,6 +38,7 @@
 .LowerContent {
     width: 100vw;
     height: 69vh;
+    max-height: 69vh;
     margin-top: 0.5vh;
 }
 .AppName {

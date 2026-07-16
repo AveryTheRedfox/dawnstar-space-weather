@@ -33,7 +33,7 @@ function ContentButtons(dataKey) {
             {activeButton === 2 && <ProtonPanel className="ToggledComponent"/>}
             {activeButton === 3 && <SolarFarsidePanel className="ToggledContent"/>}
             {activeButton === 4 && <SunspotPanel data={dataKey?.dataKey?.[4]} className="ToggledContent"/>}
-            {activeButton === 5 && <AuroraComponent className="ToggledContent" dataKey={[dataKey?.dataKey?.[1]?.text, dataKey?.dataKey?.[3], dataKey?.dataKey?.[2]?.text]}/>}
+            {activeButton === 5 && <AuroraComponent className="ToggledContent" dataKey={[dataKey?.dataKey?.[1]?.text, dataKey?.dataKey?.[3], dataKey?.dataKey?.[2]?.text, dataKey?.dataKey?.[4]]}/>}
             {activeButton === 6 && "Solar Cycle"}
         </div>
     </div>
