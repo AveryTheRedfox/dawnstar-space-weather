@@ -1,6 +1,5 @@
 // src/inner_content/CME_Predictions/useCMEPredictions.js
 import { useState, useEffect } from "react";
-import useFetchingApi from "../../../fetching-service/FetchingFunction/FetchingFunction";
 
 export function TimeConverter(TimeTag) {
     const monthsOfMonth = [
@@ -38,8 +37,6 @@ export function useCMEPredictions(CMEThreshold, dataKey) {
 
   const [impacts, setImpacts] = useState([]);
   const [sortedImpacts, setSortedImpacts] = useState([]);
-
-
 
   useEffect(() => {
     if (!Array.isArray(dataKey?.dataKey) || dataKey?.dataKey.length === 0) return;
@@ -81,6 +78,6 @@ export function useCMEPredictions(CMEThreshold, dataKey) {
       setSortedImpacts(impacts);
     }
   }, [dataKey, CMEThreshold]);
-
   return { sortedImpacts };
 }
+

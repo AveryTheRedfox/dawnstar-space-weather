@@ -2,6 +2,7 @@ import { MouseHoverPopoverCME } from "../../popover";
 import { useCMEPredictions } from "./useCMEPredictions";
 import { Slider } from '@mui/material';
 import { useState } from "react";
+import { useEffect } from "react";
 
 
 

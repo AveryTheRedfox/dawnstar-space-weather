@@ -1,8 +1,8 @@
-import KpCalculation from "./fetching-service/KpIndexDisplay/KpIndexDisplay.js";
-import WindSpeedCalculation from "./fetching-service/SolarWindDisplay/SolarWindDisplay.js";
-import IntMagDisplay from "./fetching-service/ImfDisplay/ImfDisplay.js";
-import AlertsDisplay from "./fetching-service/AlertsDisplay/AlertsDisplay.js";
-import FlareDisplay from "./fetching-service/FlareDisplay/FlareDisplay.js";
+import KpCalculation from "./upperContent/KpIndexDisplay/KpIndexDisplay.js";
+import WindSpeedCalculation from "./upperContent/SolarWindDisplay/SolarWindDisplay.js";
+import IntMagDisplay from "./upperContent/ImfDisplay/ImfDisplay.js";
+import AlertsDisplay from "./upperContent/AlertsDisplay/AlertsDisplay.js";
+import FlareDisplay from "./upperContent/FlareDisplay/FlareDisplay.js";
 import SolarImages from "./inner_content/solar_images";
 import useFetchingApi from "./fetching-service/FetchingFunction/FetchingFunction.js";
 import ContentButtons from "./inner_content/LowerContentComponents/lowerContentButtons.js";
@@ -26,14 +26,14 @@ function App() {
     HPIData,
     ForecastData,
     SunspotData,
+    CMEData,
   ] = useFetchingApi();
-
   return (
     <div className="Content">
       <div className="TitleAndData">
         <KpCalculation dataKey={KpIndex} className="ContentCard"/>
         <div className="SunAndAlerts">
-          <AlertsDisplay dataKey={Alerts} className="alertsandadvisorybar" style={{ minHeight: "50px",}}/>
+          <AlertsDisplay dataKey={[Alerts, Enlil]} className="alertsandadvisorybar" style={{ minHeight: "50px",}}/>
           <SolarImages/>
           <div className="SolarData">
             <WindSpeedCalculation dataKey={SolarWind} className="ContentCard" />

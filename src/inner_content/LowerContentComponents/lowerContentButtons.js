@@ -7,6 +7,7 @@ import AuroraComponent from "./AuroraPanel/lowerContentAurora.js";
 import ProtonPanel from "./SolarProtonPanel/SolarProtons.js";
 import SunspotPanel from "./SunspotPanel/lowerContentSunspots.js";
 import SolarFarsidePanel from "./lowerContentFarside/lowerContentFarside.js";
+import { MagnetometerData } from "./lowerContentMag/lowerContentMag.js";
 
 
 function ContentButtons(dataKey) {
@@ -26,7 +27,7 @@ function ContentButtons(dataKey) {
             <button onClick={() => toggleView(3)} className="LowerContentButton">Solar Farside</button>
             <button onClick={() => toggleView(4)} className="LowerContentButton">Sunspots</button>
             <button onClick={() => toggleView(5)} className="LowerContentButton">Aurora</button>
-            <button onClick={() => toggleView(6)} className="LowerContentButton">Solar Cycle</button>
+            <button onClick={() => toggleView(6)} className="LowerContentButton">Magnetometer</button>
         </div>
         <div className="ToggledContent">
             {activeButton === 1 && <CMEPredictions dataKey={dataKey?.dataKey?.[0]} className="ToggledContent"/>}
@@ -34,7 +35,7 @@ function ContentButtons(dataKey) {
             {activeButton === 3 && <SolarFarsidePanel className="ToggledContent"/>}
             {activeButton === 4 && <SunspotPanel data={dataKey?.dataKey?.[4]} className="ToggledContent"/>}
             {activeButton === 5 && <AuroraComponent className="ToggledContent" dataKey={[dataKey?.dataKey?.[1]?.text, dataKey?.dataKey?.[3], dataKey?.dataKey?.[2]?.text, dataKey?.dataKey?.[4]]}/>}
-            {activeButton === 6 && "Solar Cycle"}
+            {activeButton === 6 && <MagnetometerData className="ToggledContent"/>}
         </div>
     </div>
   );
