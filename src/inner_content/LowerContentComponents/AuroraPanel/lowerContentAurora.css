@@ -1,0 +1,45 @@
+
+.Aurora {
+    display: flex;
+    flex-direction: row;
+    min-height: 99%;
+    max-height: 100%;
+}
+.AuroraImage {
+    width: 15vw;
+    height: 15vw;
+    
+}
+.Images {
+    display: flex;
+    flex-direction: column;
+}
+.HPIGraph {
+    margin-top: 0.5vh;
+}
+.HPINowcast {
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    border: 2px solid gray;
+}
+.HPILatest {
+    margin-left: 10vw;
+    text-align: center;
+    align-self: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    min-width: 5vw;
+    float: right;
+    color:black;
+}
+.AuroraButton {
+    min-width: 5vw;
+    height: 100%;
+    font-size: 1vw;
+    background: transparent;
+    border: 2px solid gray;
+    border-radius: 10px;
+    color:#ffffff;
+}

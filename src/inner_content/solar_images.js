@@ -22,7 +22,7 @@ function MouseHoverPopoverCME({DisplayString, PopOverString, PopOverStringStylin
 
 
   return (
-    <div style={{PopOverStringStyling}}>
+    <div style={{"marginBottom": "-19px"}}>
       <Typography
         aria-owns={open ? 'mouse-over-popover' : undefined}
         aria-haspopup="true"
@@ -80,7 +80,10 @@ let solarImages = [
             "display": "flex",
              "marginTop": "0px",
              "maxWidth": "80vw",
-             "alignContent": "space-evenly",}}>
+             "alignContent": "space-between",
+             "justifyContent": "space-between",
+             "marginBottom": "0.1vw",
+            }}>
               
             <MouseHoverPopoverCME DisplayString={<img src={solarImages[0]}  style={{"width": "8.8vw", "height": "8.8vw"}}></img>} PopOverString={<img style={{"width": "70vh", "height": "70vh"}}src={solarImages [0]}></img>}></MouseHoverPopoverCME>
             <MouseHoverPopoverCME DisplayString={<img src={solarImages[1]}  style={{"width": "8.8vw", "height": "8.8vw"}}></img>} PopOverString={<img style={{"width": "70vh", "height": "70vh"}}src={solarImages [1]}></img>}></MouseHoverPopoverCME>

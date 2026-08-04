@@ -24,7 +24,7 @@ export function MouseHoverPopoverCME({DisplayString, PopOverString, PopOverStrin
         aria-haspopup="true"
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
-        style={{"fontSize": "inherit"}}
+        style={{"fontSize": "inherit", "textDecorationStyle": "dashed"}}
       >
         {DisplayString}
       </Typography>
@@ -86,8 +86,8 @@ export function PopOverGraphs({DisplayString, PopOverString, PopOverStringStylin
           horizontal: 'left',
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
+          vertical: -100,
+          horizontal: -100,
         }}
         onClose={handlePopoverClose}
         disableRestoreFocus
