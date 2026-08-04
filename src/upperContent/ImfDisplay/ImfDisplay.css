@@ -1,0 +1,26 @@
+.IntMagDisplay {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'Roboto';
+    color: #ccc9dc;
+    padding-left: 5px;
+    height: 100%;
+    font-size: 90%;
+    width: 20vw;
+}
+.IntMagData {
+    display: flex;
+    flex-direction: column; 
+    align-content: flex-start;
+}
+.IMFBt {
+    display: flex;
+    flex-direction: row;
+
+}
+.IMFBz {
+    display: flex; 
+    flex-direction: row; 
+}

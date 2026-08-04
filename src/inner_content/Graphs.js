@@ -1,8 +1,8 @@
 import Box from "@mui/material/Box";
 import { LineChart } from "@mui/x-charts/LineChart";
 import { BarChart } from "@mui/x-charts";
-import useFetchingApi from "../fetching-service/FetchingFunction/FetchingFunction";
 import { flex } from "@mui/system";
+import { ChartsReferenceLine } from "@mui/x-charts";
 
 function IMFDataHandling(data) {
   const IMFBz = data?.dataKey?.[0]?.map((i) => i?.bz_gsm) ?? [];
@@ -133,7 +133,7 @@ export function IMFBzGraph(dataKey) {
           sx={{
             width: 1600,
             height: 400,
-            ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+            ".MuiChartsAxis-tickLabel": { fill: "white" },
           }}
           series={[
             {
@@ -187,7 +187,7 @@ export function IMFBtGraph(dataKey) {
           sx={{
             width: 1600,
             height: 400,
-            ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+            ".MuiChartsAxis-tickLabel": { fill: "white" },
           }}
           series={[
             {
@@ -243,7 +243,7 @@ export function WindSpeedGraph(dataKey) {
           sx={{
             width: 1600,
             height: 400,
-            ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+            ".MuiChartsAxis-tickLabel": { fill: "white" },
           }}
           series={[
             {
@@ -301,7 +301,7 @@ export function DensityGraph(dataKey) {
           sx={{
             width: 1600,
             height: 400,
-            ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+            ".MuiChartsAxis-tickLabel": { fill: "white" },
           }}
           series={[
             {
@@ -359,7 +359,7 @@ export function TemperatureGraph(dataKey) {
           sx={{
             width: 1600,
             height: 400,
-            ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+            ".MuiChartsAxis-tickLabel": { fill: "white" },
           }}
           series={[
             {
@@ -403,10 +403,7 @@ export function KpIndexGraph(dataKey) {
   const DisplayTimes = DailyxLabels.map((t) => KpTimeRangeTimeConverter(t));
 
   function barLabel(item, context) {
-    if ((item.value ?? 0) > 4) {
       return item.value?.toString();
-    }
-    return null;
   }
 
   return (
@@ -418,22 +415,34 @@ export function KpIndexGraph(dataKey) {
         color: "#ffffff",
       }}
     >
-      Estimated Kp-Index:
+      Estimated Planetary K-Index:
       <BarChart
         grid={{ vertical: false, horizontal: true }}
         sx={{
           width: 1600,
           height: 400,
-          ".MuiChartsAxis-tickLabel": { fill: "#ffffff" },
+          ".MuiChartsAxis-tickLabel": { fill: "white" },
+          '& .MuiBarLabel-root': {
+            fill: '#FFFFFF', 
+            fontWeight: 'bold',
+          },
         }}
         series={[
           {
             data: DailyuData,
             showMark: false,
-            barLabel,
             barLabelPlacement: "outside",
+            color: 'white',
           },
         ]}
+        barLabel={(item, context) => {
+          if(item.value !== null && item.value >= 4) {
+            return `${item.value}`;
+          }
+          return '';
+        }}
+
+
         xAxis={[
           {
             data: DisplayTimes,
@@ -456,10 +465,148 @@ export function KpIndexGraph(dataKey) {
                 "red",
                 "darkred",
               ],
-              min: 0,
-              max: 9,
             },
+              min: 0,
+              max: 10,
           },
+        ]}
+        borderRadius={5}
+        margin={10}
+        >
+        <ChartsReferenceLine 
+        y={4}
+        label="Active"
+        labelAlign="start"
+        labelStyle={{
+          fill: '#ffffff',
+          fontSize: 18,
+          fontWeight: 'bold',
+        }}
+        lineStyle={{ stroke: '#00ff08'}}
+        spacing={0}
+        />
+        <ChartsReferenceLine 
+        y={5}
+        label="Minor"
+        labelAlign="start"
+        labelStyle={{
+          fill: '#ffffff',
+          fontSize: 18,
+          fontWeight: 'bold',
+        }}
+        lineStyle={{ stroke: '#ffd000'}}
+        spacing={0}
+        />        <ChartsReferenceLine 
+        y={6}
+        label="Moderate"
+        labelAlign="start"
+        labelStyle={{
+          fill: '#ffffff',
+          fontSize: 18,
+          fontWeight: 'bold',
+        }}
+        lineStyle={{ stroke: '#ff8000'}}
+        spacing={0}
+        />        <ChartsReferenceLine 
+        y={7}
+        label="Strong"
+        labelAlign="start"
+        labelStyle={{
+          fill: '#ffffff',
+          fontSize: 18,
+          fontWeight: 'bold',
+        }}
+        lineStyle={{ stroke: '#ff3700'}}
+        spacing={0}
+        />        <ChartsReferenceLine 
+        y={8}
+        label="Severe"
+        labelAlign="start"
+        labelStyle={{
+          fill: '#ffffff',
+          fontSize: 18,
+          fontWeight: 'bold',
+        }}
+        lineStyle={{ stroke: '#6d0024'}}
+        spacing={0}
+        />        <ChartsReferenceLine 
+        y={9}
+        label="Extreme"
+        labelAlign="start"
+        labelStyle={{
+          fill: '#ffffff',
+          fontSize: 18,
+          fontWeight: 'bold',
+        }}
+        lineStyle={{ stroke: '#5e0035'}}
+        spacing={0}
+        />
+      </BarChart>
+      
+    </div>
+  );
+}
+
+export function HPIGraph(dataKey) {
+  const xLabels = dataKey?.dataKey?.[0];
+  const uData = dataKey?.dataKey?.[1];
+  const pData = dataKey?.dataKey?.[2];
+  const margin = { right: 24 };
+
+
+
+  return (
+    <div
+      style={{
+        fontSize: "24px",
+        backgroundColor: "rgb(50, 50, 54)",
+        border: "0px",
+        color: "#ffffff",
+      }}
+    >
+      Hemispheric Power Index in GW:
+      <BarChart
+        grid={{ vertical: false, horizontal: true }}
+        sx={{
+          width: 1000,
+          height: 400,
+          ".MuiChartsAxis-tickLabel": { fill: "white" },
+        }}
+        series={[
+            {data: uData, stack: 'stack', yAxisId: 'north', label: 'Northern hemisphere'},
+            {data: pData, stack: 'stack', yAxisId: 'south', label: 'Southern hemisphere'},
+        ]}
+        hideLegend={'isHidden'}
+        xAxis={[
+          {
+            data: xLabels,
+            height: 150,
+            tickLabelStyle: { fontSize: 12, color: "white", angle: -45 },
+            tickLabelInterval: (value, index) => index % 5 === 0,
+          },
+        ]}
+        yAxis={[
+          {id: 'north', min: -200, max: 200, 
+            colorMap: {
+              type: "piecewise",
+              thresholds: [20, 50, 100, 200, 300],
+              colors: [
+                "green",
+                "yellow",
+                "orange",
+                "red",
+                "darkred",
+              ]}},
+          {id: 'south', min: -200, max: 200, colorMap: {
+              type: "piecewise",
+              thresholds: [-200, -100, -50, -20, 0],
+              colors: [
+                "darkred",
+                "red",
+                "orange",
+                "yellow",
+                "green",
+              ]}},
         ]}
         borderRadius={5}
         margin={10}
