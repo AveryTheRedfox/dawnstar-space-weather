@@ -12,6 +12,7 @@
     background-color: rgb(35, 35, 39);
     font-family: 'Roboto';
     font-size: 1.5vw;
+    overflow: hidden;
 }
 .TitleAndData {
     height: 35vh;
@@ -34,6 +35,7 @@
     flex-direction: row;
     width: 80vw;
     margin-top: 10px;
+    height: 100%;
 }
 .LowerContent {
     width: 100vw;

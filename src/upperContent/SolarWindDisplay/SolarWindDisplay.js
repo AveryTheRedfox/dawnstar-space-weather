@@ -71,9 +71,9 @@ function WindSpeedCalculation(dataKey) {
       : "gray";
 
   let TemperatureColor =
-    Temperature < 20000
+    Temperature < 30000
       ? "#00fd15"
-      : Temperature >= 20000 && Temperature < 100000
+      : Temperature >= 30000 && Temperature < 100000
       ? "#eeff00"
       : Temperature >= 100000 && Temperature < 500000
       ? "#ff9c00"
@@ -104,9 +104,9 @@ function WindSpeedCalculation(dataKey) {
     : "Unknown";
 
 let TemperatureDisplay =
-  Temperature < 20000
+  Temperature < 30000
     ? "Low"
-    : Temperature >= 20000 && Temperature < 100000
+    : Temperature >= 30000 && Temperature < 100000
     ? "Elevated"
     : Temperature >= 100000 && Temperature < 500000
     ? "High"

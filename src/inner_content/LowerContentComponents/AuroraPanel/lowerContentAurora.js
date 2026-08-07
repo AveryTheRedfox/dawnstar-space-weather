@@ -46,7 +46,6 @@ let day1Forecast = threeDayGeomagneticForecastDataByDay.map((i) => i[1]);
 let day2Forecast = threeDayGeomagneticForecastDataByDay.map((i) => i[2]);
 let day3Forecast = threeDayGeomagneticForecastDataByDay.map((i) => i[3]);
 
-console.log(day1Forecast);
         
     let threeDayForecastDates = dataKey?.dataKey?.[2]
     .split("\n")
@@ -128,9 +127,8 @@ const rawCoordinates = Array.isArray(dataKey?.dataKey)
       const point = rawCoordinates[i];
       const weight = point[2];
 
-      // Aggressive Filter: NOAA coordinates are mostly 0. 
-      // Filtering items <= 10 drops data points from 65,000 to ~5,000 items instantly!
-      if (weight > 10) {
+
+      if (weight > 5) {
         const lng = point[0];
         processed.push({
           lng: lng > 180 ? lng - 360 : lng,
@@ -173,10 +171,10 @@ console.log(auroraData);
         hexBinPointWeight={d => d.weight}
         
         // Resolution & Unmerging Options
-        hexBinResolution={3.5} // Try 4 for wide hex blocks, 5 for tiny honeycombs
-        hexBinMerge={false}           
-        hexRadius={3} // Closes up the remaining space gaps cleanly             
-        hexAltitude={0.05}          
+        hexBinResolution={3} // Try 4 for wide hex blocks, 5 for tiny honeycombs
+        hexBinMerge={true}           
+        hexRadius={5} // Closes up the remaining space gaps cleanly             
+        hexAltitude={0.03}          
         
         // 1. REPAIRED TOP COLOR ACCESSOR
         hexTopColor={({ points }) => {
@@ -272,6 +270,27 @@ console.log(day1Forecast.length);
       : South[South.length - 1] > -200
       ? "red"
       : "#ffffff";
+
+function forecastColor(value) {
+
+  let StormColor =
+    value < 4
+      ? "#10871a"
+      : value >= 4 && value < 5
+      ? "#eeff00"
+      : value >= 5 && value < 6
+      ? "#ca722a"
+      : value >= 6 && value < 7
+      ? "#ff6600"
+      : value >= 7 && value < 8
+      ? "#cf4d1a"
+      : value >= 8 && value < 9
+      ? "#6b1644"
+      : value >= 9
+      ? "#8B008B#"
+      : "gray";
+      return StormColor;
+}
 console.log(day1Forecast);
 return (
         <div className="Aurora">
@@ -284,11 +303,11 @@ return (
                 <div className="HPINowcast"> Northern Hemisphere: <div className="HPILatest" style={{background: NorthBackgroundColor}}>{North[North.length -1]}GW</div></div>
                 <div className="HPINowcast"> Southern Hemisphere: <div className="HPILatest" style={{background: SouthBackgroundColor}}>{South[South.length -1]}GW</div></div>
             </div>
-            <div style={{"display": "flex", "flexDirection": "column", "color": "#ffffff"}}> 3-Day Forecast:
+            <div style={{"display": "flex", "flexDirection": "column", "color": "#ffffff", "border": "2px solid gray", "maxHeight": "30vh", "padding": "10px", "minWidth": "inherit"}}> 3-Day Forecast:
                 <div style={{"display": "flex", "flexDirection": "column"}}>
-                    <div style={{"marginRight": "10px"}}>{ThreeDayForecastDates[0]} {ThreeDayForecastDates[1]} {Math.max(...day1Forecast)} {convertKpValuetoClass(Math.max(...day1Forecast))}</div>
-                    <div style={{"marginRight": "10px"}}>{ThreeDayForecastDates[2]} {ThreeDayForecastDates[3]} {Math.max(...day2Forecast)} {convertKpValuetoClass(Math.max(...day2Forecast))}</div>
-                    <div style={{"marginRight": "10px"}}>{ThreeDayForecastDates[4]} {ThreeDayForecastDates[5]} {Math.max(...day3Forecast)} {convertKpValuetoClass(Math.max(...day3Forecast))}</div>
+                    <div style={{"marginTop": "20px", display: "flex", flexDirection: "row"}}>{ThreeDayForecastDates[0]} {ThreeDayForecastDates[1]}: <div style={{background: forecastColor(Math.max(...day1Forecast)), color: "#000000", maxWidth: "5vw", textAlign: "center", border: "1px solid #000000", borderRadius: "5px", marginLeft: "10px"}}>{Math.max(...day1Forecast)}</div> {convertKpValuetoClass(Math.max(...day1Forecast))}</div>
+                    <div style={{"marginTop": "20px", display: "flex", flexDirection: "row"}}>{ThreeDayForecastDates[2]} {ThreeDayForecastDates[3]}: <div style={{background: forecastColor(Math.max(...day2Forecast)), color: "#000000", maxWidth: "5vw", textAlign: "center", border: "1px solid #000000", borderRadius: "5px", marginLeft: "10px"}}>{Math.max(...day2Forecast)}</div> {convertKpValuetoClass(Math.max(...day2Forecast))}</div>
+                    <div style={{"marginTop": "20px", display: "flex", flexDirection: "row"}}>{ThreeDayForecastDates[4]} {ThreeDayForecastDates[5]}: <div style={{background: forecastColor(Math.max(...day3Forecast)), color: "#000000", maxWidth: "5vw", textAlign: "center", border: "1px solid #000000", borderRadius: "5px", marginLeft: "10px"}}>{Math.max(...day3Forecast)}</div> {convertKpValuetoClass(Math.max(...day3Forecast))}</div>
                 </div>
                  <div>
                     </div>

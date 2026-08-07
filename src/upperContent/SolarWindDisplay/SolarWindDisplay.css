@@ -36,6 +36,7 @@
 .SolarDataContent {
     display:flex;
     flex-direction: row;
+    max-height: inherit;
 }
 }
 
