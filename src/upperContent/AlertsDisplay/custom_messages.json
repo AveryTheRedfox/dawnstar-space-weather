@@ -1,0 +1,8 @@
+{
+    "solarDataUnavailable": "INFO: Solar Wind Data currently unavailable. Please check back later for updates.",
+    "solarDataAvailable": "",
+    "imfDataUnavailable": "INFO: IMF Data currently unavailable. Please check back later for updates.",
+    "imfDataAvailable": "",
+    "flareDataUnavailable": "INFO: Flare Data currently unavailable. Please check back later for updates.",
+    "flareDataAvailable": ""
+}

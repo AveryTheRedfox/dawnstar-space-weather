@@ -76,7 +76,7 @@ function CMEPredictions(dataKey) {
         "marginLeft": "auto",
       }}>
         <div style= {{"alignContent": "end", "top": "0px", "right": "0px", "display": "flex", "flexDirection": "row"}}>
-        <div className="LascoCoronagraphs" style={{"alignContent": "flex-start", "display": "flex", "flexDirection": "column"}}>
+        <div className="LascoCoronagraphs" style={{"alignContent": "flex-start", "display": "flex", "flexDirection": "column", "marginBottom": "0px"}}>
         <MouseHoverPopoverCME 
           DisplayString={<img style={{"width": "120px", "height": "120px"}} src={'https://services.swpc.noaa.gov/images/animations/lasco-c2/latest.jpg'}/>} 
           PopOverString={<img src={'https://services.swpc.noaa.gov/images/animations/lasco-c2/latest.jpg'}/>}/>
@@ -93,7 +93,7 @@ function CMEPredictions(dataKey) {
           PopOverString={<img style={{"width": "640px", "height": "640px"}} src={'https://services.swpc.noaa.gov/images/animations/ccor1/latest.jpg'}/>}/>
             </div>
         <MouseHoverPopoverCME 
-          DisplayString={<img style={{"width": "384px", "height": "240px"}} src={'https://services.swpc.noaa.gov/images/animations/enlil/latest.jpg'}/>} 
+          DisplayString={<img style={{"width": "384px", "height": "250px"}} src={'https://services.swpc.noaa.gov/images/animations/enlil/latest.jpg'}/>} 
           PopOverString={<img style={{}} src={'https://services.swpc.noaa.gov/images/animations/enlil/latest.jpg'}/>}/>
             </div>
         <div></div>

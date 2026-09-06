@@ -6,13 +6,16 @@ import "@fontsource/roboto/700.css";
 import { KpIndexGraph } from "../../inner_content/Graphs.js";
 import { PopOverGraphs } from "../../inner_content/popover.js";
 import "./KpIndex.css";
+import { useSpaceWeather } from "../../fetching-service/FetchingFunction/FetchingDataLogic.js";
 
 function KpCalculation(dataKey) {
-  const currentvalue = dataKey?.dataKey?.[dataKey?.dataKey?.length - 1]?.Kp;
-  const currentime = dataKey?.dataKey?.[dataKey?.dataKey?.length - 1]?.time_tag;
+  const [, ,KpIndexContext] = useSpaceWeather();
 
-  const KpIndex = dataKey?.dataKey?.map((i) => i.Kp);
-  const TimeTag = dataKey?.dataKey?.map((i) => i?.time_tag);
+  const currentvalue = KpIndexContext?.[KpIndexContext.length - 1]?.Kp ?? "loading...";
+  const currentime = KpIndexContext?.[KpIndexContext.length - 1]?.time_tag ?? "loading...";
+
+  const KpIndex = KpIndexContext?.map((i) => i.Kp);
+  const TimeTag = KpIndexContext?.map((i) => i?.time_tag);
 
   let AnglePosition = [
     [0, 0],
@@ -44,7 +47,7 @@ function KpCalculation(dataKey) {
     [8.66, 86.66],
     [9, 100],
   ];
-  //Bestimmung der Winkelposition für die aktuelle Kp-Index Wert, um die Gauge entsprechend zu positionieren
+
   let KpAngle = 0;
   for (let i = 0; i < AnglePosition.length; i++) {
     if (
@@ -55,7 +58,6 @@ function KpCalculation(dataKey) {
       break;
     }
   }
-  //Bestimmung der aktuellen geomagnetischen Sturmstärke und entsprechende Farbcodierung für die Gauge
 
   function KpTimeRangeTimeConverter(TimeTag) {
     const monthsOfYear = [

@@ -4,47 +4,47 @@ import { DensityGraph } from "../../inner_content/Graphs";
 import { TemperatureGraph } from "../../inner_content/Graphs";
 import { useState } from "react";
 import "./SolarWindDisplay.css";
+import { useSpaceWeather } from "../../fetching-service/FetchingFunction/FetchingDataLogic.js";
 
 function WindSpeedCalculation(dataKey) {
-  const [dataSource, setDataSource] = useState("ACE");
+  const [dataSource, setDataSource] = useState("SOLAR1");
   const [activeButton, setActiveButton] = useState(null);
 
+  const [SolarWind] = useSpaceWeather();
 
   const toggleView = (view) => {
     setActiveButton(current => current === view ? null : view);
   };
 
+let WindSpeed = SolarWind?.[0]?.proton_speed ?? "loading...";
+let Density = SolarWind?.[0]?.proton_density ?? "loading...";
+let Temperature = SolarWind?.[0]?.proton_temperature ?? "loading...";
 
-  let WindSpeedArray = dataKey?.dataKey?.map((i) => i?.proton_speed) ?? [];
-  let DensityArray = dataKey?.dataKey?.map((i) => i?.proton_density) ?? [];
-  let TemperatureArray = dataKey?.dataKey?.map((i) => i?.proton_temperature) ?? [];
-  let TimeTags = dataKey?.dataKey?.map((i) => i?.time_tag) ?? [];
-  let ACEDataArray = dataKey?.dataKey?.map((i) => i?.source === "ACE" ? i : null).filter(i => i !== null) ?? [];
-  let IMAPDataArray = dataKey?.dataKey?.map((i) => i?.source === "IMAP" ? i : null).filter(i => i !== null) ?? [];
-  let SOLAR1DataArray = dataKey?.dataKey?.map((i) => i?.source === "SOLAR1" ? i : null).filter(i => i !== null) ?? [];
+  let SolarWindData = {
+    ACEData: SolarWind?.filter((i) => i?.source === "ACE") ?? [],
+    IMAPData: SolarWind?.filter((i) => i?.source === "IMAP") ?? [],
+    SOLAR1Data: SolarWind?.filter((i) => i?.source === "SOLAR1") ?? [],
+  }
 
   let ACEData = {
-    Density: ACEDataArray?.map((i) => i?.proton_density) ?? [],
-    Speed: ACEDataArray?.map((i) => i?.proton_speed) ?? [],
-    Temperature: ACEDataArray?.map((i) => i?.proton_temperature) ?? [],
-    TimeTags: ACEDataArray?.map((i) => i?.time_tag) ?? [],
+    Density: SolarWindData.ACEData?.map((i) => i?.proton_density) ?? [],
+    Speed: SolarWindData.ACEData?.map((i) => i?.proton_speed) ?? [],
+    Temperature: SolarWindData.ACEData?.map((i) => i?.proton_temperature) ?? [],
+    TimeTags: SolarWindData.ACEData?.map((i) => i?.time_tag) ?? [],
   };
   let IMAPData = {
-    Density: IMAPDataArray?.map((i) => i?.proton_density) ?? [],
-    Speed: IMAPDataArray?.map((i) => i?.proton_speed) ?? [],
-    Temperature: IMAPDataArray?.map((i) => i?.proton_temperature) ?? [],
-      TimeTags: IMAPDataArray?.map((i) => i?.time_tag) ?? [],
+    Density: SolarWindData.IMAPData?.map((i) => i?.proton_density) ?? [],
+    Speed: SolarWindData.IMAPData?.map((i) => i?.proton_speed) ?? [],
+    Temperature: SolarWindData.IMAPData?.map((i) => i?.proton_temperature) ?? [],
+      TimeTags: SolarWindData.IMAPData?.map((i) => i?.time_tag) ?? [],
   };
   let SOLAR1Data = {
-    Density: SOLAR1DataArray?.map((i) => i?.proton_density) ?? [],
-    Speed: SOLAR1DataArray?.map((i) => i?.proton_speed) ?? [],
-    Temperature: SOLAR1DataArray?.map((i) => i?.proton_temperature) ?? [],
-    TimeTags: SOLAR1DataArray?.map((i) => i?.time_tag) ?? [],
+    Density: SolarWindData.SOLAR1Data?.map((i) => i?.proton_density) ?? [],
+    Speed: SolarWindData.SOLAR1Data?.map((i) => i?.proton_speed) ?? [],
+    Temperature: SolarWindData.SOLAR1Data?.map((i) => i?.proton_temperature) ?? [],
+    TimeTags: SolarWindData.SOLAR1Data?.map((i) => i?.time_tag) ?? [],
   };
 
-  let WindSpeed = WindSpeedArray?.[0];
-  let Density = DensityArray?.[0];
-  let Temperature = TemperatureArray?.[0];
 
   let WindSpeedColor =
     WindSpeed < 400
@@ -161,7 +161,7 @@ function DisplayActiveSolarWindSource() {
             PopOverStringStyling={{ "color": "darkgray", "textDecorationStyle": "dashed" }}
             />
             <div style={{ color: WindSpeedColor }}>{activeDisplayData[0]} km/s</div>
-            <div style={{ color: WindSpeedColor }}>{WindSpeedDisplay}</div>
+            <div className="WindSpeedDisplay" style={{ color: WindSpeedColor }}>{WindSpeedDisplay}</div>
           </div>
           </div>
       <div className="ContainerDisplay">
@@ -173,7 +173,7 @@ function DisplayActiveSolarWindSource() {
             PopOverStringStyling={{ color: "darkgray" }}
           />{" "}
           <div style={{ color: DensityColor }}>{activeDisplayData[1]} p/cm3</div>
-          <div style={{ color: DensityColor }}>{DensityDisplay}</div>
+          <div className="DensityDisplay" style={{ color: DensityColor }}>{DensityDisplay}</div>
         </div>
       </div>
       <div className="ContainerDisplay">
@@ -187,7 +187,7 @@ function DisplayActiveSolarWindSource() {
             PopOverStringStyling={{ color: "darkgray" }}
           />
           <div style={{ color: TemperatureColor }}>{Math.round((activeDisplayData[2] * 100) / 1000) / 100} kK</div>
-          <div style={{ color: TemperatureColor }}>{TemperatureDisplay}</div>
+          <div className="TemperatureDisplay" style={{ color: TemperatureColor }}>{TemperatureDisplay}</div>
         </div>
       </div>
     </div>

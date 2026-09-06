@@ -4,8 +4,8 @@ import Marquee from "react-fast-marquee";
 import { useCMEPredictions } from "../../inner_content/LowerContentComponents/CMECenter/useCMEPredictions.js";
 import { MouseHoverPopoverCME } from "../../inner_content/popover.js";
 import "./AlertsDisplay.css";
-
-
+import custom_messages from "./custom_messages.json";
+import { useSpaceWeather } from "../../fetching-service/FetchingFunction/FetchingDataLogic.js";
 
 function UTCTime(TimeTag) {
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -66,23 +66,13 @@ function TimeConverter(TimeTag) {
   }
 
 
-  let CustomMessage = "";
-  let AlertTitle = dataKey?.dataKey?.[0]?.message ?? null;
-  const { sortedImpacts } = useCMEPredictions(0.7, dataKey.dataKey[1]);
+  const [, , , alerts] = useSpaceWeather();
 
-console.log(dataKey?.dataKey?.[1]);
+const [AlertsContext, SecondAlertsContext] = alerts || [];
 
-  let nextArrivals = [];
+let AlertTitle = AlertsContext?.message ?? "Loading...";
 
-  for (let i = 0; i < sortedImpacts.length; i++) {
-    nextArrivals.push(sortedImpacts[i]);
-  }
 
-  let CMEAlertsMessage =
-    sortedImpacts.length < 1
-      ? ""
-      : "*** Coronal Mass Ejection(s) detected | Estimated Arrival(s): " +
-        `${nextArrivals}`;
 
   function line() {
     if (AlertTitle === null) {
@@ -92,7 +82,16 @@ console.log(dataKey?.dataKey?.[1]);
     }
   }
 
-
+function AlertMessageForDowntime() {
+  try {
+    if (document.getElementsByClassName("TemperatureDisplay")[0].textContent === "Unknown") {
+      return( custom_messages["solarDataUnavailable"]);
+    }
+  } catch (error) {
+  } finally {
+    return null;
+  }
+}
   return (
     <div className="AlertsDisplay">
       <button
@@ -111,8 +110,7 @@ console.log(dataKey?.dataKey?.[1]);
       DisplayString={<img src={require("./info_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png")} style={{"border": "2px solid gray", "borderRadius": "10px"}}/>}/>
       <Marquee direction="left" speed="100" className="Marquee">
         {line(AlertTitle)[4]} &nbsp; | &nbsp; {line(AlertTitle)[6]} &nbsp;{" "}
-        {line(AlertTitle)[7]}&nbsp; *** &nbsp; {CMEAlertsMessage} &nbsp;{" "}
-        {CustomMessage}
+        {line(AlertTitle)[7]} <b>{AlertMessageForDowntime()}</b> {" *** "} 
       </Marquee>
     </div>
   );

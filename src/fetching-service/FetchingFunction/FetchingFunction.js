@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { createContext } from "react";
 
-function useFetchingApi() {
+
+export default function useFetchingApi() {
   const [SolarWind, setSolarWind] = useState();
   const [IntMag, setIntMag] = useState();
   const [KpIndex, setKpIndex] = useState();
@@ -26,7 +28,7 @@ function useFetchingApi() {
         setSolarWind(data.solarWind);
         setIntMag(data.intMag);
         setKpIndex(data.kpIndex);
-        setAlerts(data.alerts?.[0], data.alerts?.[1]);
+        setAlerts([data.alerts?.[0], data.alerts?.[1]]);
         setFlare(data.flare);
         setLatestFlare(data.latestFlare);
         setEnlil(data.enlil);
@@ -48,21 +50,11 @@ function useFetchingApi() {
       controller.abort();
     };
   }, []);
-  return [
-    SolarWind,
-    IntMag,
-    KpIndex,
-    Alerts,
-    Flare,
-    LatestFlare,
-    Enlil,
-    Ovation,
-    HPIData,
-    ForecastData,
-    SunspotData,
-    CMEData,
-  ];
+  return [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData];
 }
 
 
-export default useFetchingApi;
+
+
+
+

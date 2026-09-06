@@ -1,16 +1,18 @@
 import "./FlareDisplay.css";
 import {PopOverGraphs} from "../../inner_content/popover.js";
 import { TimeConverter } from "../../inner_content/LowerContentComponents/CMECenter/useCMEPredictions.js";
+import {useSpaceWeather} from "../../fetching-service/FetchingFunction/FetchingDataLogic.js";
 
 
-function FlareDisplay(dataKey) {
+function FlareDisplay() {
+  const [,,,, FlareData, LatestFlareData] = useSpaceWeather();
     const FlareFlux =
-    dataKey?.dataKey?.[0]?.[dataKey?.dataKey?.[0].length - 1]?.flux ?? null;
+    FlareData?.[FlareData?.length - 1]?.flux ?? null;
     const LatestFlareClass =
-    dataKey?.dataKey?.[1]?.[dataKey?.dataKey?.[1].length - 1]?.max_class ?? null;
+    LatestFlareData?.[LatestFlareData.length - 1]?.max_class ?? null;
     let twentyFourHourMaxFlux;
     try {
-      twentyFourHourMaxFlux = dataKey?.dataKey?.[0]?.reduce((max, item) => (item.flux > max ? item.flux : max), 0) ?? "";
+      twentyFourHourMaxFlux = FlareData?.reduce((max, item) => (item.flux > max ? item.flux : max), 0) ?? "";
     } catch (error) {
             twentyFourHourMaxFlux = 1e-8; 
     }

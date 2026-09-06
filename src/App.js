@@ -6,6 +6,7 @@ import FlareDisplay from "./upperContent/FlareDisplay/FlareDisplay.js";
 import SolarImages from "./inner_content/solar_images";
 import useFetchingApi from "./fetching-service/FetchingFunction/FetchingFunction.js";
 import ContentButtons from "./inner_content/LowerContentComponents/lowerContentButtons.js";
+import { SpaceWeatherProvider } from "./fetching-service/FetchingFunction/FetchingDataLogic.js";
 //import KpIndexChart from "./inner_content/Charts.js"
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -29,22 +30,24 @@ function App() {
     CMEData,
   ] = useFetchingApi();
   return (
+  <SpaceWeatherProvider>
     <div className="Content">
       <div className="TitleAndData">
-        <KpCalculation dataKey={KpIndex} className="ContentCard"/>
+        <KpCalculation className="ContentCard"/>
         <div className="SunAndAlerts">
-          <AlertsDisplay dataKey={[Alerts, Enlil]} className="alertsandadvisorybar" style={{ minHeight: "50px",}}/>
+          <AlertsDisplay className="alertsandadvisorybar" style={{ minHeight: "50px",}}/>
           <SolarImages/>
           <div className="SolarData">
-            <WindSpeedCalculation dataKey={SolarWind} className="ContentCard" />
-            <IntMagDisplay dataKey={IntMag} className="ContentCard" />
-            <FlareDisplay dataKey={[Flare, LatestFlare]} className="ContentCard"/>
+            <WindSpeedCalculation className="ContentCard" />
+            <IntMagDisplay className="ContentCard" />
+            <FlareDisplay className="ContentCard"/>
           </div>
         </div>
       </div>
       <ContentButtons dataKey={[Enlil, HPIData, ForecastData, Ovation, SunspotData]} className="LowerContent"></ContentButtons>
       <div className="AppName"><img src={require("./wb_twilight_62dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")}/><div >Dawnstar <br></br> Space Weather</div></div>
     </div>
+    </SpaceWeatherProvider>
   );
 }
 

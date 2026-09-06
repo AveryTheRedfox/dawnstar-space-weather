@@ -1,0 +1,19 @@
+
+
+
+/* Size ONLY the parent div box holding the widget */
+#main-container {
+  height: 50vh;
+  position: relative; /* Essential: keeps HTML label absolute tracking inside bounds */
+  overflow: hidden;   /* Shaves off overlapping background rendering artifacts */
+}
+
+/* Strip any hardcoded width or height properties off the canvas element itself */
+#main-container {
+  display: block;
+}
+
+.spacekit__object-label {
+  padding: 10px;
+  width:auto;
+}
