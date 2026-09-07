@@ -10,6 +10,7 @@
     "@fontsource/roboto": "^5.2.10",
     "@mui/material": "^7.3.8",
     "@mui/x-charts": "^8.27.0",
+    "@react-three/csg": "^4.0.0",
     "@react-three/drei": "^10.7.8",
     "@react-three/fiber": "^9.7.0",
     "@testing-library/dom": "^10.4.1",

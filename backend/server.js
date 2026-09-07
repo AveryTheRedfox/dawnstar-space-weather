@@ -19,7 +19,7 @@ app.get('/api/space-weather-data', async (req, res) => {
       'https://services.swpc.noaa.gov/text/aurora-nowcast-hemi-power.txt',     
       'https://services.swpc.noaa.gov/text/3-day-geomag-forecast.txt',   
       'https://services.swpc.noaa.gov/text/srs.txt',
-      'https://www.sidc.be/cactus/out/cmecat.txt',
+      'https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/CME?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd',
     ];
 
 const fetchWithErrorLogging = async (url) => {
@@ -89,7 +89,7 @@ const fetchWithErrorLogging = async (url) => {
       hpi: typeof hpiResult === 'string' ? { text: hpiResult } : (hpiResult || {}),
       forecast: typeof forecastResult === 'string' ? { text: forecastResult } : (forecastResult || {}),
       sunspot: typeof sunspotResult === 'string' ? { text: sunspotResult } : (sunspotResult || {}),
-      cme: typeof cmeResult === 'string' ? {text: cmeResult} : (cmeResult || {}), 
+      cme: cmeResult || [], 
     };
 
     console.log('API response prepared with data from NOAA services');

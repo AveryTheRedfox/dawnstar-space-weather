@@ -8,7 +8,6 @@ import ProtonPanel from "./SolarProtonPanel/SolarProtons.js";
 import SunspotPanel from "./SunspotPanel/lowerContentSunspots.js";
 import SolarFarsidePanel from "./lowerContentFarside/lowerContentFarside.js";
 import { MagnetometerData } from "./lowerContentMag/lowerContentMag.js";
-import  SpaceGlobeVisualization from "./lowerContent3dView/lowerContent3dView.js";
 
 
 function ContentButtons(dataKey) {

@@ -152,8 +152,6 @@ function KpCalculation(dataKey) {
         }}
         text={() => "Kp" + `${currentvalue !== undefined ? currentvalue : "-"}`}
       />
-      <div className="StormLevel">{StormLevel}</div>
-      <div className="DataSource">Data Source: NOAA SWPC</div>
     </div>
   );
 }

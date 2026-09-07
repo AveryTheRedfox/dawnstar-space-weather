@@ -23,7 +23,7 @@ export default function useFetchingApi() {
 
     async function FetchAll() {
       try {
-        const response = await fetch("http://192.168.2.233:3001/api/space-weather-data", { signal });
+        const response = await fetch("http://localhost:3001/api/space-weather-data", { signal });
         const data = await response.json();
         setSolarWind(data.solarWind);
         setIntMag(data.intMag);

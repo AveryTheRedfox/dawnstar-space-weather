@@ -23,8 +23,9 @@
     font-size: inherit;
 }
 .KpIndexHeader {
-    font-size: 2vh;
+    font-size: 1vw;
 }
 tspan {
   fill: rgba(255, 255, 255, 0.87);
+  font-size: 1.8vw;
 }
