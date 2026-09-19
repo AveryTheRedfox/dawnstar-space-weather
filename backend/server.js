@@ -37,7 +37,7 @@ const fetchWithErrorLogging = async (url) => {
         }
 
         // 1. DYNAMIC TYPE PARSING: Check if the file target is explicitly JSON
-        if (url.endsWith('.json')) {
+        if (url.endsWith('.json') || url.endsWith('startDate=yyyy-MM-dd&endDate=yyyy-MM-dd')) {
             try {
                 return await response.json();
             } catch (jsonError) {

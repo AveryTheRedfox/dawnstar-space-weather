@@ -7,8 +7,7 @@ import SolarImages from "./inner_content/solar_images";
 import useFetchingApi from "./fetching-service/FetchingFunction/FetchingFunction.js";
 import ContentButtons from "./inner_content/LowerContentComponents/lowerContentButtons.js";
 import { SpaceWeatherProvider } from "./fetching-service/FetchingFunction/FetchingDataLogic.js";
-import App3DBackground from "./App3DBackground.js";
-//import KpIndexChart from "./inner_content/Charts.js"
+import App3DBackground from "./App3D-Background/App3DBackground.js";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -30,6 +29,9 @@ function App() {
     SunspotData,
     CMEData,
   ] = useFetchingApi();
+
+
+
   return (
   <SpaceWeatherProvider>
       <div className="TitleAndData">
