@@ -11,12 +11,12 @@ import hpifallbackdata from "./hpifallbackdata.txt";
 import localEarthImage from './BlackMarble_2016_01deg.jpg';
 
 
-export function createAuroraGlobeInstance(rawCoordinates = []) {
+export function createAuroraGlobeInstance(rawCoordinates) {
   const processedData = [];
-  const len = rawCoordinates.length;
+  const len = rawCoordinates.coordinates.length;
 
   for (let i = 0; i < len; i++) {
-    const point = rawCoordinates[i];
+    const point = rawCoordinates.coordinates[i];
     
     if (point && point[2] !== undefined) {
       const weight = point[2];
@@ -32,6 +32,7 @@ export function createAuroraGlobeInstance(rawCoordinates = []) {
     }
   }
 
+
   const globe = new ThreeGlobe()
     .globeImageUrl(localEarthImage)
     .atmosphereColor('rgba(0, 255, 100, 0.35)')
@@ -41,12 +42,13 @@ export function createAuroraGlobeInstance(rawCoordinates = []) {
     .hexBinPointLat(d => d.lat)
     .hexBinPointLng(d => d.lng)
     .hexBinPointWeight(d => d.weight)
-    .hexBinResolution(3)
+    .hexBinResolution(2)
     .hexMargin(0.2)
+    .hexBinMerge(true)
     
     .hexAltitude(({ points }) => {
       const avgWeight = points.reduce((sum, p) => sum + p.weight, 0) / points.length;
-      return avgWeight * 0.002; // Tweaked scale multiplier for visual pop
+      return avgWeight * 0.005; // Tweaked scale multiplier for visual pop
     })
     
     .hexTopColor(({ points }) => {
@@ -68,54 +70,18 @@ export function createAuroraGlobeInstance(rawCoordinates = []) {
 
 
 
-function AuroraComponent(dataKey) {
+function AuroraComponent() {
 
-    const [,,,,,,,Ovation, HPIData, ForecastData] = useSpaceWeather();
+    const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, loading] = useSpaceWeather();
+    const [activeButton, setActiveButton] = useState(1);
+    console.log(HPIData);
+    if(loading) {
+    return <div>Aurora Data Loading...</div>
+} else {
 
-function DestructHPIData(data) {
+    function DestructHPIData() {
 
-
-     data = dataKey?.dataKey?.[0];
-     let threeDayForecastData = dataKey?.dataKey?.[2]
-     .split("\n")
-     .slice(16)
-     .splice(1)
-     .toString()
-     .split(" ")
-     .filter((i) => i != "")
-     .splice(0, 32);
-
-const perChunk = 4 // items per chunk    
-
-const inputArray = threeDayForecastData;
-
-const result = inputArray.reduce((resultArray, item, index) => { 
-  const chunkIndex = Math.floor(index/perChunk)
-
-  if(!resultArray[chunkIndex]) {
-    resultArray[chunkIndex] = [] // start a new chunk
-  }
-
-  resultArray[chunkIndex].push(item)
-
-  return resultArray
-}, [])
-
-let threeDayGeomagneticForecastDataByDay = result;
-let day1Forecast = threeDayGeomagneticForecastDataByDay.map((i) => i[1]);
-let day2Forecast = threeDayGeomagneticForecastDataByDay.map((i) => i[2]);
-let day3Forecast = threeDayGeomagneticForecastDataByDay.map((i) => i[3]);
-
-        
-    let threeDayForecastDates = dataKey?.dataKey?.[2]
-    .split("\n")
-    .slice(16)
-    .splice(0, 1)
-    .toString()
-    .split(" ")
-    .filter((i) => i != "")
-
-    let splitHPIDataString = data.split("\n");
+    let splitHPIDataString = HPIData.text.split("\n");
     let dataArray = splitHPIDataString.slice(16);
 
     let seperatedData = [];
@@ -133,11 +99,6 @@ let day3Forecast = threeDayGeomagneticForecastDataByDay.map((i) => i[3]);
         slicedForecast,
         slicedNorthHPI,
         sliceSouthHPI,
-        threeDayForecastData,
-        threeDayForecastDates,
-        day1Forecast,
-        day2Forecast,
-        day3Forecast,
     ];
     for (let i = 0; i < dataArray.length; i++) {
         seperatedData.push(dataArray[i].split(" "));
@@ -168,11 +129,6 @@ function TwoDimensionalAuroraView() {
         Forecast,
         North,
         South,
-        ThreeDayForecastData,
-        ThreeDayForecastDates,
-        day1Forecast,
-        day2Forecast,
-        day3Forecast,
     ] = DestructHPIData();
 
 
@@ -249,39 +205,22 @@ return (
                 <div className="HPINowcast"> Northern Hemisphere: <div className="HPILatest" style={{background: NorthBackgroundColor}}>{North[North.length -1]}GW</div></div>
                 <div className="HPINowcast"> Southern Hemisphere: <div className="HPILatest" style={{background: SouthBackgroundColor}}>{South[South.length -1]}GW</div></div>
             </div>
-            <div style={{"display": "flex", "flexDirection": "column", "color": "#ffffff", "border": "2px solid gray", "maxHeight": "30vh", "padding": "10px", "minWidth": "inherit"}}> 3-Day Forecast:
-                <div style={{"display": "flex", "flexDirection": "column"}}>
-                    <div style={{"marginTop": "20px", display: "flex", flexDirection: "row"}}>{ThreeDayForecastDates[0]} {ThreeDayForecastDates[1]}: <div style={{background: forecastColor(Math.max(...day1Forecast)), color: "#000000", maxWidth: "5vw", textAlign: "center", border: "1px solid #000000", borderRadius: "5px", marginLeft: "10px"}}>{Math.max(...day1Forecast)}</div> {convertKpValuetoClass(Math.max(...day1Forecast))}</div>
-                    <div style={{"marginTop": "20px", display: "flex", flexDirection: "row"}}>{ThreeDayForecastDates[2]} {ThreeDayForecastDates[3]}: <div style={{background: forecastColor(Math.max(...day2Forecast)), color: "#000000", maxWidth: "5vw", textAlign: "center", border: "1px solid #000000", borderRadius: "5px", marginLeft: "10px"}}>{Math.max(...day2Forecast)}</div> {convertKpValuetoClass(Math.max(...day2Forecast))}</div>
-                    <div style={{"marginTop": "20px", display: "flex", flexDirection: "row"}}>{ThreeDayForecastDates[4]} {ThreeDayForecastDates[5]}: <div style={{background: forecastColor(Math.max(...day3Forecast)), color: "#000000", maxWidth: "5vw", textAlign: "center", border: "1px solid #000000", borderRadius: "5px", marginLeft: "10px"}}>{Math.max(...day3Forecast)}</div> {convertKpValuetoClass(Math.max(...day3Forecast))}</div>
-                </div>
-                 <div>
-                    </div>
-            </div>
         </div>
     )
 }
 
 
-const [activeButton, setActiveButton] = useState(1);
+
 const toggleView = (view) => {
     setActiveButton(current => current === view ? null : view);
   };
 
     return (
         <div className="Aurora">
-            <div style={{"display": "flex", "flexDirection": "column"}}>
-            <button onClick={() => toggleView(1)} className="AuroraButton">2D View</button>
-            <button onClick={() => toggleView(2)} className="AuroraButton">3D View</button>
-            </div>
-            <div style={{
-                maxHeight: "inherit"
-            }}>
-            {activeButton === 1 && <TwoDimensionalAuroraView/>}
-            {activeButton === 2 && <div></div>}
-            </div>
+            <TwoDimensionalAuroraView/>
         </div>
     )
+}
 }
 
 export default AuroraComponent;

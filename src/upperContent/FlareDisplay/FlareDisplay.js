@@ -1,6 +1,5 @@
 import "./FlareDisplay.css";
 import {PopOverGraphs} from "../../inner_content/popover.js";
-import { TimeConverter } from "../../inner_content/LowerContentComponents/CMECenter/useCMEPredictions.js";
 import {useSpaceWeather} from "../../fetching-service/FetchingFunction/FetchingDataLogic.js";
 
 

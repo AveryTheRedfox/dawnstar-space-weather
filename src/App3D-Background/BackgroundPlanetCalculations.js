@@ -1,6 +1,8 @@
 
 import { useRef, useMemo } from 'react';
 import { TextureLoader } from 'three';
+import * as THREE from 'three';
+import { useThree } from '@react-three/fiber';
 import { useLoader, useFrame } from '@react-three/fiber';
 import { convertToRadians } from './App3DBackgroundHelperFunctions';
 import { eccentricAnomalyCalculation } from './App3DBackgroundHelperFunctions';
@@ -38,7 +40,9 @@ export function getLivePlanetElements(planetBaseData) {
     };
 }
 
-export function ComputePlanetPosition({ planet }) {
+
+
+export function ComputePlanetPosition({ planet, zoomToView, children }) {
     const planetRef = useRef();
     const textureMap = useLoader(TextureLoader, planet.map);
     const base_omega = convertToRadians(planet.omega_base);
@@ -82,6 +86,7 @@ export function ComputePlanetPosition({ planet }) {
                     <mesh ref={planetRef}>
                         <sphereGeometry args={[0.04, 16, 16]} />
                         <meshStandardMaterial color={planet.color} map={textureMap}/>
+                        {children}
                     </mesh>
                 </group>
             </group>

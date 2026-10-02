@@ -19,7 +19,7 @@ app.get('/api/space-weather-data', async (req, res) => {
       'https://services.swpc.noaa.gov/text/aurora-nowcast-hemi-power.txt',     
       'https://services.swpc.noaa.gov/text/3-day-geomag-forecast.txt',   
       'https://services.swpc.noaa.gov/text/srs.txt',
-      'https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/CME?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd',
+      'https://ccmc.gsfc.nasa.gov/DONKI-API/get/CME?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd.json',
     ];
 
 const fetchWithErrorLogging = async (url) => {

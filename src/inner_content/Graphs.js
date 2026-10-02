@@ -121,7 +121,7 @@ export function IMFBzGraph(dataKey) {
   return (
     <div
       style={{
-        fontSize: "24px",
+        fontSize: "12px",
         backgroundColor: "rgb(50, 50, 54)",
         border: "0px",
       }}
@@ -149,7 +149,7 @@ export function IMFBzGraph(dataKey) {
               data: DisplayTimes,
               height: 75,
               tickLabelInterval: (value, index) => index % 5 === 0,
-              tickLabelStyle: { angle: -45 },
+              tickLabelStyle: { angle: -45, fontSize: 12 },
             },
           ]} // Use IMF time tags as labels
           yAxis={[

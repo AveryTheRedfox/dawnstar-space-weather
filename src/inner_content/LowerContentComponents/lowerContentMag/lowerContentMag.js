@@ -8,9 +8,12 @@ export function MagnetometerData({src, alt, fallbackSrc = fallback.src}) {
             "maxWidth": "20vw",
         }}>
             <img
-            src={'./mag_graphs/mag_chart_latest.png'}
+            src={'http://192.168.2.233/graphs/h_component_latest.png'}
             alt={alt}
             onError={(e) => (e.currentTarget.src = fallbackSrc)}
+            style={{
+                height: '50vh'
+            }}
             />
             </div>
     )

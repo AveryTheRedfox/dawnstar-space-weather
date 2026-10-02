@@ -4,6 +4,7 @@
     flex-direction: row;
     min-height: 99%;
     max-height: 100%;
+    font-family: 'Roboto'; 
 }
 .AuroraImage {
     width: 18vw;
@@ -23,6 +24,7 @@
     flex-direction: row;
     align-content: center;
     border: 2px solid gray;
+    font-size: 3vh;
 }
 .HPILatest {
     margin-left: 10vw;

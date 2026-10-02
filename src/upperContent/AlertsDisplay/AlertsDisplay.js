@@ -1,7 +1,6 @@
 import { useState } from "react";
 import useFetchingApi from "../../fetching-service/FetchingFunction/FetchingFunction.js";
 import Marquee from "react-fast-marquee";
-import { useCMEPredictions } from "../../inner_content/LowerContentComponents/CMECenter/useCMEPredictions.js";
 import { MouseHoverPopoverCME } from "../../inner_content/popover.js";
 import "./AlertsDisplay.css";
 import custom_messages from "./custom_messages.json";
@@ -66,9 +65,9 @@ function TimeConverter(TimeTag) {
   }
 
 
-  const [, , , alerts] = useSpaceWeather();
+  const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, loading] = useSpaceWeather();
 
-const [AlertsContext, SecondAlertsContext] = alerts || [];
+const [AlertsContext, SecondAlertsContext] = Alerts || [];
 
 let AlertTitle = AlertsContext?.message ?? "Loading...";
 

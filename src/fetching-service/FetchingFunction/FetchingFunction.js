@@ -17,6 +17,8 @@ export default function useFetchingApi() {
   const [SunspotData, setSunspotData] = useState();
   const [CMEData, setCMEData] = useState();
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
@@ -37,6 +39,7 @@ export default function useFetchingApi() {
         setForecastData(data.forecast);       
         setSunspotData(data.sunspot);
         setCMEData(data.cme);
+        setLoading(false);
       } catch (error) {
         if (error.name !== "AbortError") {
           console.error("Error fetching all data:", error);
@@ -50,7 +53,7 @@ export default function useFetchingApi() {
       controller.abort();
     };
   }, []);
-  return [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData];
+  return [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, loading];
 }
 
 
