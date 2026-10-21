@@ -68,12 +68,11 @@ export function ComputePlanetPosition({ planet, zoomToView, children }) {
         if (!planetRef.current) return;
 
         // Dynamic planet data injection fixed here:
-        const liveElements = getLivePlanetElements(planet);
-        
+        const liveElements = getLivePlanetElements(planet);        
         const E = eccentricAnomalyCalculation(liveElements.meanAnomalyRadians, liveElements.e);
         
         const x_orbital = liveElements.a * (Math.cos(E) - liveElements.e);
-        const y_orbital = liveElements.a * Math.sqrt(1 - liveElements.e * liveElements.e) * Math.sin(E);    
+        const y_orbital = liveElements.a * Math.sqrt(1 - liveElements.e * liveElements.e) * Math.sin(E);   
     if (planet.L_base ? planet.L_base === 100.46435 : planet.L === 100.5) { // Isolates Earth only to prevent spam
     }
         planetRef.current.position.set(x_orbital, 0, y_orbital);

@@ -18,6 +18,7 @@ import AuroraComponent from "./inner_content/LowerContentComponents/AuroraPanel/
 import ProtonPanel from "./inner_content/LowerContentComponents/SolarProtonPanel/SolarProtons.js";
 import SolarFarsidePanel from "./inner_content/LowerContentComponents/lowerContentFarside/lowerContentFarside.js";
 import SunspotPanel from "./inner_content/LowerContentComponents/SunspotPanel/lowerContentSunspots.js";
+import LowerContentMagnetosphere from "./inner_content/LowerContentComponents/lowerContentMagnetosphere/lowerContentMagnetosphere.js";
 
 import { MagnetometerData } from "./inner_content/LowerContentComponents/lowerContentMag/lowerContentMag.js";
 import "@fontsource/roboto/300.css";
@@ -53,7 +54,7 @@ function LowerContentSelectionMenu() {
             {activeButton === 4 && <SunspotPanel data={SunspotData} className="ToggledContent"/>}
             {activeButton === 5 && <AuroraComponent className="ToggledContent" dataKey={[HPIData, Ovation, ForecastData, KpIndex]}/>}
             {activeButton === 6 && <MagnetometerData className="ToggledContent"/>}
-            {activeButton === 7 && <div className="ToggledContent">Work in Progress Panel to display the current state of the Magnetosphere</div>}
+            {activeButton === 7 && <LowerContentMagnetosphere/>}
         </div>
     </div>
   );

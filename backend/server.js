@@ -20,13 +20,13 @@ app.get('/api/space-weather-data', async (req, res) => {
       'https://services.swpc.noaa.gov/text/3-day-geomag-forecast.txt',   
       'https://services.swpc.noaa.gov/text/srs.txt',
       'https://ccmc.gsfc.nasa.gov/DONKI-API/get/CME?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd.json',
+      'https://iswa.ccmc.gsfc.nasa.gov/api/redirect?dataID=2645'
     ];
 
 const fetchWithErrorLogging = async (url) => {
     try {
         const response = await fetch(url, {
             headers: {
-                // Tells NOAA's firewall that this request is coming from a real web browser
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
             }
         });
@@ -74,7 +74,8 @@ const fetchWithErrorLogging = async (url) => {
       hpiResult,             
       forecastResult,   
       sunspotResult,
-      cmeResult      
+      cmeResult,
+      magnetopauseResult
     ] = await Promise.all(urls.map(fetchWithErrorLogging));
 
     const data = {
@@ -90,6 +91,7 @@ const fetchWithErrorLogging = async (url) => {
       forecast: typeof forecastResult === 'string' ? { text: forecastResult } : (forecastResult || {}),
       sunspot: typeof sunspotResult === 'string' ? { text: sunspotResult } : (sunspotResult || {}),
       cme: cmeResult || [], 
+      magnetopause: typeof magnetopauseResult === 'string' ? { text: magnetopauseResult } : (magnetopauseResult || {})
     };
 
     console.log('API response prepared with data from NOAA services');

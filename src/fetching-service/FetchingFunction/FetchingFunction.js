@@ -16,6 +16,7 @@ export default function useFetchingApi() {
   const [ForecastData, setForecastData] = useState();
   const [SunspotData, setSunspotData] = useState();
   const [CMEData, setCMEData] = useState();
+  const [MagnetopauseData, setMagnetopauseData] = useState();
 
   const [loading, setLoading] = useState(true);
 
@@ -39,6 +40,7 @@ export default function useFetchingApi() {
         setForecastData(data.forecast);       
         setSunspotData(data.sunspot);
         setCMEData(data.cme);
+        setMagnetopauseData(data.magnetopause);
         setLoading(false);
       } catch (error) {
         if (error.name !== "AbortError") {
@@ -53,7 +55,7 @@ export default function useFetchingApi() {
       controller.abort();
     };
   }, []);
-  return [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, loading];
+  return [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, MagnetopauseData, loading];
 }
 
 

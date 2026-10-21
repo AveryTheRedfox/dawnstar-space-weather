@@ -29,7 +29,7 @@ const degToRad = (deg) => (deg * Math.PI) / 180;
 
 
 function SolarSystemMapper() {
-const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, loading] = useSpaceWeather();
+const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, MagnetopauseData, loading] = useSpaceWeather();
 
 
 const {CME_Count, isEarthDirected, useDBM} = useControls({CME_Count: 100, isEarthDirected: false})
@@ -110,7 +110,7 @@ const AuroraGlobe = ( auroraCoordinates ) => {
     const RenderCMEPositions = () => {
         return (
             <>
-                {cmeData.slice((CMEData.length - 1) - CME_Count).filter(i => i.cmeAnalyses[0].longitude || [] !== null).map((item, index) => {
+                {cmeData.slice((CMEData.length - 1) - CME_Count).filter(i => i.cmeAnalyses[0].longitude !== null).map((item, index) => {
                     return <ComputeCMEPosition
                     key={item.id || index}
                     speed={cmeData[index].cmeAnalyses[0].speed} 
@@ -165,18 +165,19 @@ function SelectToZoom({children}) {
                 <OrbitControls makeDefault/>
                 <Bounds fit clip observe margin={1.2} key={isEarthDirected ? true : false}>
                 <SelectToZoom>
-                    
+                <group rotation={[Math.PI, 0, 0]}>   
                 <mesh>
                     <meshStandardMaterial color="#dbc609" map={textureMap}/>
                     <sphereGeometry args={[0.05, 32, 32]}/>
                     <ambientLight intensity={0.5} color={"#cac300"}/>
                 </mesh>
                 
-                    <AuroraGlobe coordinates={auroraCoordinates}/>
+                <AuroraGlobe coordinates={auroraCoordinates}/>
                 <ComputePlanetPosition planet={EPHEMERIS_DATA.MARS}/>
                 <ComputePlanetPosition planet={EPHEMERIS_DATA.VENUS}/>
                 <ComputePlanetPosition planet={EPHEMERIS_DATA.MERCURY}/>
                 <ComputePlanetPosition planet={EPHEMERIS_DATA.JUPITER}/>
+                </group> 
                 {isEarthDirected === false ? <RenderCMEPositions useDBM={useDBM}/> : <RenderEarthDirectedCMEs useDBM={useDBM}/>}
                 </SelectToZoom>
                 </Bounds>
