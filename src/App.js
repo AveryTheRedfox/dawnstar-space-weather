@@ -19,6 +19,8 @@ import ProtonPanel from "./inner_content/LowerContentComponents/SolarProtonPanel
 import SolarFarsidePanel from "./inner_content/LowerContentComponents/lowerContentFarside/lowerContentFarside.js";
 import SunspotPanel from "./inner_content/LowerContentComponents/SunspotPanel/lowerContentSunspots.js";
 import LowerContentMagnetosphere from "./inner_content/LowerContentComponents/lowerContentMagnetosphere/lowerContentMagnetosphere.js";
+import { LegalDisclosure, PrivacyPolicy } from "./legaldisclosure.js";
+
 
 import { MagnetometerData } from "./inner_content/LowerContentComponents/lowerContentMag/lowerContentMag.js";
 import "@fontsource/roboto/300.css";
@@ -47,6 +49,8 @@ function LowerContentSelectionMenu() {
             <button onClick={() => toggleView(5)} className="LowerContentButton">Aurora</button>
             <button onClick={() => toggleView(6)} className="LowerContentButton">Magnetometer</button>
             <button onClick={() => toggleView(7)} className="LowerContentButton">Magnetosphere</button>
+            <button onClick={() => toggleView(8)} className="LowerContentButton">Legal Disclosure</button>
+            <button onClick={() => toggleView(9)} className="LowerContentButton">Privacy Policy</button>
         </div>
         <div className="ToggledContent">
             {activeButton === 2 && <ProtonPanel className="ToggledComponent"/>}
@@ -55,10 +59,13 @@ function LowerContentSelectionMenu() {
             {activeButton === 5 && <AuroraComponent className="ToggledContent" dataKey={[HPIData, Ovation, ForecastData, KpIndex]}/>}
             {activeButton === 6 && <MagnetometerData className="ToggledContent"/>}
             {activeButton === 7 && <LowerContentMagnetosphere/>}
+            {activeButton === 8 && <LegalDisclosure />}
+            {activeButton === 9 && <PrivacyPolicy />}
         </div>
     </div>
   );
 }
+
 
 function App() {
   return (
@@ -76,14 +83,15 @@ function App() {
           </div>
         </div>
       </div>
-      <LowerContentSelectionMenu/>
-      <div className="AppName" style={{"fontFamily": "Roboto"}}><img className="cannot_select" src={require("./wb_twilight_62dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")}>
+
+      <LowerContentSelectionMenu/> 
+        <div className="AppName" style={{"fontFamily": "Roboto"}}><img className="cannot_select" src={require("./wb_twilight_62dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png")}>
       </img>
       <div className="cannot_select">
         <div style={{fontSize: '75%'}}>Dawnstar Space Weather</div>
           <div>ATHENA-Sv1.1</div>
       </div>
-          </div>
+        </div>
       <App3DBackground/>
     </SpaceWeatherProvider>
   );

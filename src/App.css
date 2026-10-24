@@ -48,7 +48,7 @@
 }
 .LowerContent {
     width: 100vw;
-    height: 69vh;
+    height: fit-content;
     max-height: 69vh;
     margin-top: 0.5vh;
 }

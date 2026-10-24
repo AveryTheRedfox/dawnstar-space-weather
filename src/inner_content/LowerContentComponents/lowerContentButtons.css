@@ -11,7 +11,7 @@
     flex-direction: row;
     font-size: inherit;
     max-width: max-content;
-    max-height: max-content;
+    height: auto;
 }
 .LowerContentButton {
     height: 100%;
