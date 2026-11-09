@@ -5,6 +5,16 @@ import express from 'express';
 const app = express();
 app.use(cors());
 
+const d = new Date();
+d.setDate(d.getDate() - 5);
+const today = new Date().toISOString().split('.')[0]+'Z';
+const threeDaysAgo = d.toISOString().split('.')[0]+'Z';
+
+
+const hp30Url = 'https://kp.gfz.de/app/json/?start=' + threeDaysAgo + '&end=' + today + '&index=Hp30&';
+const hp60Url = 'https://kp.gfz.de/app/json/?start=' + threeDaysAgo + '&end=' + today + '&index=Hp60&';
+
+
 app.get('/api/space-weather-data', async (req, res) => {
   try {
     const urls = [
@@ -20,7 +30,9 @@ app.get('/api/space-weather-data', async (req, res) => {
       'https://services.swpc.noaa.gov/text/3-day-geomag-forecast.txt',   
       'https://services.swpc.noaa.gov/text/srs.txt',
       'https://ccmc.gsfc.nasa.gov/DONKI-API/get/CME?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd.json',
-      'https://iswa.ccmc.gsfc.nasa.gov/api/redirect?dataID=2645'
+      'https://iswa.ccmc.gsfc.nasa.gov/api/redirect?dataID=2645',
+      hp30Url,
+      hp60Url,
     ];
 
 const fetchWithErrorLogging = async (url) => {
@@ -75,7 +87,9 @@ const fetchWithErrorLogging = async (url) => {
       forecastResult,   
       sunspotResult,
       cmeResult,
-      magnetopauseResult
+      magnetopauseResult,
+      hp30Result,
+      hp60Result,
     ] = await Promise.all(urls.map(fetchWithErrorLogging));
 
     const data = {
@@ -91,7 +105,9 @@ const fetchWithErrorLogging = async (url) => {
       forecast: typeof forecastResult === 'string' ? { text: forecastResult } : (forecastResult || {}),
       sunspot: typeof sunspotResult === 'string' ? { text: sunspotResult } : (sunspotResult || {}),
       cme: cmeResult || [], 
-      magnetopause: typeof magnetopauseResult === 'string' ? { text: magnetopauseResult } : (magnetopauseResult || {})
+      magnetopause: typeof magnetopauseResult === 'string' ? { text: magnetopauseResult } : (magnetopauseResult || {}),
+      hp30: hp30Result || [],
+      hp60: hp60Result || [],
     };
 
     console.log('API response prepared with data from NOAA services');

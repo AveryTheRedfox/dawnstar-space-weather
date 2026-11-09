@@ -8,7 +8,7 @@ import ThreeGlobe from "three-globe";
 import { MeshLambertMaterial, AdditiveBlending, DoubleSide, BoxGeometry, Mesh } from 'three';
 import { useSpaceWeather } from "../../../fetching-service/FetchingFunction/FetchingDataLogic.js";
 import hpifallbackdata from "./hpifallbackdata.txt";
-import localEarthImage from './BlackMarble_2016_01deg.jpg';
+import localEarthImage from '../../../resources/Earthmap1000x500.jpg';
 
 
 export function createAuroraGlobeInstance(rawCoordinates) {

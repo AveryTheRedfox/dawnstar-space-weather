@@ -12,6 +12,9 @@ export const EPHEMERIS_DATA = {
         omega_base: 48.33167, omega_dot: -0.12532,
         color: "#525252",
         map: require('../resources/merkury_highres.jpg'),
+        rings_map: require('../resources/1x1.png'),
+        name: "Mercury",
+        hasRings: false,
     },
     "VENUS": {
         a_base: 0.72333199, a_dot: 0.00000000,
@@ -22,6 +25,9 @@ export const EPHEMERIS_DATA = {
         omega_base: 76.68069, omega_dot: -0.27769,
         color: "#a58721",
         map: require('../resources/Venus_map_NASA_JPL_Magellan-Venera-Pioneer.jpg'),
+        rings_map: require('../resources/1x1.png'),
+        name: "Venus",
+        hasRings: false,
     },
     "EARTH": {
         a_base: 1.00000011, a_dot: -0.00000005,
@@ -32,6 +38,9 @@ export const EPHEMERIS_DATA = {
         omega_base: -11.26064, omega_dot: -0.41321,
         color: "#0d98d9",
         map: require('../resources/Earthmap1000x500.jpg'), 
+        rings_map: require('../resources/1x1.png'),
+        name: "Earth",
+        hasRings: false,
     },
     "MARS": {
         a_base: 1.52366231, a_dot: -0.00000072,
@@ -42,6 +51,9 @@ export const EPHEMERIS_DATA = {
         omega_base: 49.57854, omega_dot: -0.29257,
         color: "#a14b09",
         map: require('../resources/marsmap.jpg'),
+        rings_map: require('../resources/1x1.png'),
+        name: "Mars",
+        hasRings: false,
     },
     "JUPITER": {
         a_base: 5.20336301, a_dot: 0.00060737,
@@ -53,5 +65,22 @@ export const EPHEMERIS_DATA = {
         color: "#9f670e",
         map: require('../resources/STScI-01EVT28HQ6C7YPMSRCA9GTTTPM.jpeg'),
         rings_map: require('../resources/dg5tai3-38ef3d34-6a38-4978-a0b4-918c4ba06612.png'),
-    }
+        name: "Jupiter",
+        scale: 5,
+        hasRings: false,
+    },
+    "SATURN": {
+        a_base: 9.53707032, a_dot: -0.00301530,
+        e_base: 0.05415060, e_dot: -0.00036762,
+        i_base: 2.48446,    i_dot: 0.002519,
+        L_base: 49.94432,   L_dot: 1222.49362,
+        w_base: 92.43194,   w_dot: -0.41803,
+        omega_base: 113.71504, omega_dot: -0.28877,
+        color: "#d9c27f",
+        map: require('../resources/Solarsystemscope_texture_2k_saturn.jpg'),
+        rings_map: require('../resources/dg5tai3-38ef3d34-6a38-4978-a0b4-918c4ba06612.png'),
+        name: "Saturn",
+        scale: 6,
+        hasRings: true,
+    },
 };

@@ -398,9 +398,10 @@ export function KpIndexGraph(dataKey) {
   const xLabels = dataKey?.dataKey?.[1];
   const uData = dataKey?.dataKey?.[0];
   const margin = { right: 24 };
-  const DailyxLabels = xLabels.slice([xLabels.length - 31], [xLabels.length]);
-  const DailyuData = uData.slice([xLabels.length - 31], [uData.length]);
-  const DisplayTimes = DailyxLabels.map((t) => KpTimeRangeTimeConverter(t));
+  const slicingLength = dataKey?.dataKey?.[3] || 31;
+  const DailyxLabels = xLabels.slice([xLabels.length - slicingLength], [xLabels.length]);
+  const DailyuData = uData.slice([xLabels.length - slicingLength], [uData.length]);
+  const DisplayTimes = DailyxLabels;
 
   function barLabel(item, context) {
       return item.value?.toString();
@@ -415,7 +416,7 @@ export function KpIndexGraph(dataKey) {
         color: "#ffffff",
       }}
     >
-      Estimated Planetary K-Index:
+      Estimated Planetary {dataKey?.dataKey?.[2]}:
       <BarChart
         grid={{ vertical: false, horizontal: true }}
         sx={{

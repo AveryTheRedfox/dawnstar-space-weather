@@ -25,6 +25,7 @@
     cursor: pointer;
     background-color: transparent;
     font-size: inherit;
+    text-decoration: underline;
 }
 .ToggledContent {
     font-size: inherit;

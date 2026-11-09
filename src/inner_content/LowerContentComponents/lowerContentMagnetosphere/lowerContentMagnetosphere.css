@@ -5,6 +5,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    max-width: 60vw;
     background-color: #1a1a1a;
     color: #fff;
     box-sizing: border-box;
@@ -24,4 +25,52 @@
 }
 .magnetopause-data-values {
     margin-left: 10px;
+}
+
+.magnetopause-data-graphics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+.magnetopause-data-graphics div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.earth {
+    position: absolute;
+    bottom: 0;
+    background-color: blue;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    margin-left: 2.5vw;
+}
+.magnetosphere {
+    transform: rotate(-135deg);
+    position: absolute;
+    bottom: 0;
+    width: 15vh;
+    height: 15vh;
+    border: 4px solid green;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    overflow: hidden;
+}
+.bow-shock {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+    border: 4px solid red;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(-135deg);
+    overflow: hidden;
 }

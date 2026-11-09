@@ -32,8 +32,7 @@ import "./App.css";
 
 
 function LowerContentSelectionMenu() {
-  const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData] = useSpaceWeather();
-  
+  const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, MagnetopauseData, hp30] = useSpaceWeather();
    const [activeButton, setActiveButton] = useState(null);
   const toggleView = (view) => {
     setActiveButton(current => current === view ? null : view);

@@ -55,8 +55,8 @@ if (magnetopauseDataArray[0] > 9) {
 }
 }
 
-
-
+var magnetopauseDistance = magnetopauseDataArray[0];
+var bowShockDistance = calculateBowShockDistance({temperature: Temperature, density: Density, windSpeed: WindSpeed, intMag: IntMag?.[0]?.bt ?? "loading...", mp_standoff: magnetopauseDataArray[0]}) - magnetopauseDistance;
 return (
     <div className="lower-content-magnetosphere">
         <div className="magnetopause-data-title">Magnetopause and Bow Shock Distances (in Earth Radii):</div>
@@ -79,6 +79,25 @@ return (
             <div className="magnetopause-warning">
                 {magnetoPauseWarning()}
             </div>
+        <div className="magnetopause-data-graphics">
+            <div className="magnetopause-graphics-container">
+                <div>
+                <div className="bow-shock"
+                style={{
+                    marginRight: `${bowShockDistance}vw`,
+                }}
+                ></div>
+                <div className="magnetosphere"
+                style={{
+                    marginRight: `${magnetopauseDistance}vw`,
+                }}
+                ></div>
+                </div>
+                <div className="earth"
+                
+                >Earth</div>
+            </div>
+        </div>
     </div>
 )}
 

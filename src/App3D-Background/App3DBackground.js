@@ -14,7 +14,7 @@ import { useControls } from 'leva';
 import "./App3DBackground.css";
 import { EPHEMERIS_DATA } from './Ephemeris-Data';
 import  {getJulianCenturiesSinceJ2000}  from './App3DBackgroundHelperFunctions';
-import { getLivePlanetElements, ComputePlanetPosition } from './BackgroundPlanetCalculations.js';
+import { getLivePlanetElements, ComputePlanetPosition, DistanceRings } from './BackgroundPlanetCalculations.js';
 import { createAuroraGlobeInstance } from '../inner_content/LowerContentComponents/AuroraPanel/lowerContentAurora.js';
 import ComputeCMEPosition from './CMECalculations.js';
 import ThreeGlobe from 'three-globe';
@@ -29,10 +29,10 @@ const degToRad = (deg) => (deg * Math.PI) / 180;
 
 
 function SolarSystemMapper() {
-const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, MagnetopauseData, loading] = useSpaceWeather();
+const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, MagnetopauseData, hp30, hp60, loading] = useSpaceWeather();
 
 
-const {CME_Count, isEarthDirected, useDBM} = useControls({CME_Count: 100, isEarthDirected: false})
+const {CME_Count, isEarthDirected, showAURings, innerSystemOnly} = useControls({CME_Count: 100, isEarthDirected: false, showAURings: true, innerSystemOnly: false});
 
 
     const textureMap = useLoader(TextureLoader, require('../resources/euvi_aia304_2012_carrington_print.jpg'));
@@ -41,9 +41,6 @@ const {CME_Count, isEarthDirected, useDBM} = useControls({CME_Count: 100, isEart
         console.log(CMEData);
 
 const cmeData = CMEData.filter((i) => i.cmeAnalyses?.[0]?.longitude != null);
-const cmeDataLength = CMEData?.length;
-
-
 
 const auroraCoordinates = Ovation?.coordinates;
 const AuroraGlobe = ( auroraCoordinates ) => {
@@ -64,8 +61,8 @@ const AuroraGlobe = ( auroraCoordinates ) => {
 
   return (
     <ComputePlanetPosition planet={EPHEMERIS_DATA.EARTH}>
-      <group scale={[0.0008, 0.0008, 0.0008]}>
-        <primitive ref={globeRef} object={globeInstance} />
+      <group scale={[0.0008, 0.0008, 0.0008]} rotateX={Math.PI}>
+        <primitive ref={globeRef} object={globeInstance}/>
       </group>
     </ComputePlanetPosition>
   );
@@ -92,7 +89,6 @@ const AuroraGlobe = ( auroraCoordinates ) => {
             .map((item, index) => {
                 const validAnalysis = item.cmeAnalyses[0]
                 return <ComputeCMEPosition 
-                useDBM={useDBM}
                 key={item.activityID || index}
                 speed={validAnalysis?.speed}
                 latitude={validAnalysis?.latitude}
@@ -118,7 +114,6 @@ const AuroraGlobe = ( auroraCoordinates ) => {
                     longitude={cmeData[index].cmeAnalyses[0].longitude}
                     halfAngle={cmeData[index].cmeAnalyses[0].halfAngle}
                     eruptionDate={cmeData[index].cmeAnalyses[0].time21_5}
-                    isDBMused={useDBM}
                     ambientSolarWind={300}
                     />
                 })}
@@ -152,18 +147,19 @@ function LoadingScreen() {
 function SelectToZoom({children}) {
     const api = useBounds()
     return (
-        <group onClick={(e) => (e.stopPropagation(), e.delta <= 1 && api.refresh(e.object).fit())}>{children}</group>
+        <group onClick={(e) => (e.stopPropagation(), e.delta <= 2 && api.refresh(e.object).fit())} onPointerMissed={(e) => e.button === 0 && api.refresh().fit()}>{children}</group>
     )
 }
 
+
     return (
-        <Canvas>
+        <Canvas camera={{near: 0.001, far: 100, fov: 65, makeDefault: true, position: [0, 0, 0]}} style={{top: 0, left: 0, width: '100%', height: '100%' }}>
             <Suspense fallback={<LoadingScreen/>}>
             <color attach="background" args={['#020205']} />
+                <OrbitControls makeDefault maxDistance={15}/>
                 <ambientLight intensity={2}/>
                 <pointLight position={[0, 0, 0]} intensity={1.5} />
-                <OrbitControls makeDefault/>
-                <Bounds fit clip observe margin={1.2} key={isEarthDirected ? true : false}>
+                <Bounds observe margin={2} key={isEarthDirected ? true : false}>
                 <SelectToZoom>
                 <group rotation={[Math.PI, 0, 0]}>   
                 <mesh>
@@ -171,14 +167,29 @@ function SelectToZoom({children}) {
                     <sphereGeometry args={[0.05, 32, 32]}/>
                     <ambientLight intensity={0.5} color={"#cac300"}/>
                 </mesh>
-                
+                <group>
                 <AuroraGlobe coordinates={auroraCoordinates}/>
                 <ComputePlanetPosition planet={EPHEMERIS_DATA.MARS}/>
                 <ComputePlanetPosition planet={EPHEMERIS_DATA.VENUS}/>
                 <ComputePlanetPosition planet={EPHEMERIS_DATA.MERCURY}/>
+                {innerSystemOnly ? null : (
+                <>
                 <ComputePlanetPosition planet={EPHEMERIS_DATA.JUPITER}/>
+                <ComputePlanetPosition planet={EPHEMERIS_DATA.JUPITER} scale={[5, 5, 5]}/>
+                <ComputePlanetPosition planet={EPHEMERIS_DATA.SATURN} scale={[4, 4, 4]}/>
+                </>
+            )}
+                {showAURings && (
+                    <>
+                        <DistanceRings radius={1} color={"#ffffff83"} />
+                        <DistanceRings radius={0.5} color={"#ffffff83"} />
+                        <DistanceRings radius={2} color={"#ffffff83"} />
+                        <DistanceRings radius={5} color={"#ffffff83"} />
+                    </>
+                )}
+                    </group>
                 </group> 
-                {isEarthDirected === false ? <RenderCMEPositions useDBM={useDBM}/> : <RenderEarthDirectedCMEs useDBM={useDBM}/>}
+                {isEarthDirected === false ? <RenderCMEPositions/> : <RenderEarthDirectedCMEs/>}
                 </SelectToZoom>
                 </Bounds>
             </Suspense>

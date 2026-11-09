@@ -50,7 +50,7 @@ export function MouseHoverPopoverCME({DisplayString, PopOverString, PopOverStrin
   );
 }
 
-export function PopOverGraphs({DisplayString, PopOverString, PopOverStringStyling}) {
+export function PopOverGraphs({DisplayString, PopOverString, PopOverStringStyling, DisplayStringStyling}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handlePopoverOpen = (event) => {
@@ -67,15 +67,15 @@ export function PopOverGraphs({DisplayString, PopOverString, PopOverStringStylin
 
   return (
     <div style={{PopOverStringStyling}}>
-      <Typography
+      <div
         aria-owns={open ? 'mouse-over-popover' : undefined}
         aria-haspopup="true"
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
-        style={{"fontSize": "inherit"}}
+        style={DisplayStringStyling}
       >
         {DisplayString}
-      </Typography>
+      </div>
       <Popover
         id="mouse-over-popover"
         sx={{ pointerEvents: 'none' }}

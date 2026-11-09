@@ -121,22 +121,29 @@ export default function ComputeCMEPosition({speed, latitude, longitude, halfAngl
             [localTarget.x, localTarget.y, localTarget.z]
         ])
     });
-
+const [isFocused, setIsFocused] = useState(false);
 if(CoronalMassEjection.getPosition().x_pos < 6 && CoronalMassEjection.getPosition().y_pos < 6 && CoronalMassEjection.getPosition().z_pos < 6) {
     return (
         <group ref={icmeref}>
             {/* HTML label sits safely on the root container, isolated from cone rotations */}
-            <Html distanceFactor={1.2}>
-                <div className="unselectable">
-                    {"Vrad: " + CoronalMassEjection.calculateSpeed(CoronalMassEjection.speed, CoronalMassEjection.ambientSolarWind, new Date(CoronalMassEjection.eruptionDate))}
+            <mesh ref={geoRef} onClick={(e) => {
+                setIsFocused(true);
+            }} onPointerMissed={(e) => {
+                setIsFocused(false);
+            }}>
+                {isFocused && (
+                <Html distanceFactor={2}>
+                <div className="unselectable" style={{backgroundColor: "#3f3b5180", border: "2px solid gray", borderRadius: "5px"}}>
+                    {"Vrad: " + Math.round(CoronalMassEjection.calculateSpeed(CoronalMassEjection.speed, CoronalMassEjection.ambientSolarWind, new Date(CoronalMassEjection.eruptionDate)) * 100) / 100 + " km/s"}
                     <br></br>
-                    {"StartTime: " + new Date(CoronalMassEjection.eruptionDate)}
-                    {"EruptionVrad: " + CoronalMassEjection.speed}
+                    {"StartTime: " + new Date(CoronalMassEjection.eruptionDate).toLocaleString() + " (UTC)"}
+                    <br></br>
+                    {"EruptionVrad: " + CoronalMassEjection.speed + " km/s"}
                     <br></br>
                     {"Lat: " + CoronalMassEjection.latitude + "Lon: " + CoronalMassEjection.longitude}
                 </div>
             </Html>
-            <mesh ref={geoRef}>
+                )}
                 <coneGeometry args={[halfAngle * (Math.PI / 180), 0.05, 32]} rotateX={Math.PI}/>
                 <meshBasicMaterial color={CoronalMassEjection.colorBasedonCMESpeed()} transparent opacity={0.5} />
             </mesh>

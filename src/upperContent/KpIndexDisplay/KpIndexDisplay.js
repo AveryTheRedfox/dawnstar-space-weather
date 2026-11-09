@@ -7,15 +7,46 @@ import { KpIndexGraph } from "../../inner_content/Graphs.js";
 import { PopOverGraphs } from "../../inner_content/popover.js";
 import "./KpIndex.css";
 import { useSpaceWeather } from "../../fetching-service/FetchingFunction/FetchingDataLogic.js";
+import { useState } from "react";
 
-function KpCalculation(dataKey) {
-  const [, ,KpIndexContext] = useSpaceWeather();
+function KpCalculation() {
+  const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, MagnetopauseData, hp30, hp60, loading] = useSpaceWeather();
+  const [dataSource, setDataSource] = useState("Kp-Index");
 
-  const currentvalue = KpIndexContext?.[KpIndexContext.length - 1]?.Kp ?? "loading...";
-  const currentime = KpIndexContext?.[KpIndexContext.length - 1]?.time_tag ?? "loading...";
+  if(!loading) {
 
-  const KpIndex = KpIndexContext?.map((i) => i.Kp);
-  const TimeTag = KpIndexContext?.map((i) => i?.time_tag);
+
+  const KpIndexValues = KpIndex?.map((i) => i.Kp);
+  const TimeTag = KpIndex?.map((i) => i?.time_tag);
+  const hp30Values = JSON.parse(hp30);
+  const hp30IndexValues = hp30Values.Hp30;
+  const hp30TimeTag = hp30Values.datetime;
+  const hp60Values = JSON.parse(hp60);
+  const hp60IndexValues = hp60Values.Hp60;
+  const hp60TimeTag = hp60Values.datetime;
+const values = {
+  "Kp-Index": {
+    dataSource: "Kp-Index",
+    values: KpIndexValues,
+    timeTag: TimeTag,
+    slicingLength: 31,
+  },
+  "Hp30-Index": {
+    dataSource: "Hp30-Index",
+    values: hp30IndexValues,
+    timeTag: hp30TimeTag,
+    slicingLength: 3 * 31,
+  },
+  "Hp60-Index": {
+    dataSource: "Hp60-Index",
+    values: hp60IndexValues,
+    timeTag: hp60TimeTag,
+    slicingLength: 3 * 31,
+  }
+};
+
+  const currentvalue = values[dataSource]?.values?.[values[dataSource].values.length - 1] ?? "loading...";
+  const currentime = values[dataSource]?.timeTag?.[values[dataSource].timeTag.length - 1] ?? "loading...";
 
   let AnglePosition = [
     [0, 0],
@@ -121,17 +152,21 @@ function KpCalculation(dataKey) {
       ? "#8B008B#"
       : "gray";
 
+
+
   return (
     <div className="KpIndexDisplay">
       <div className="KpIndexHeader">
-        <PopOverGraphs
-          DisplayString={"Kp-Index:"}
-          PopOverString={<KpIndexGraph dataKey={[KpIndex, TimeTag]} />}
-          PopOverStringStyling={{ color: "darkgray" }}
-        />
+      <div className="indexSelector">
+        <button className="index-selector" onClick={() => setDataSource("Kp-Index")}>  <div class="index-label">Kp-Index</div></button>
+        <button className="index-selector" onClick={() => setDataSource("Hp60-Index")}> <div class="index-label">Hp60-Index</div></button>
+        <button className="index-selector" onClick={() => setDataSource("Hp30-Index")}> <div class="index-label">Hp30-Index</div></button>
       </div>
-      <div style={{ fontSize: "1vw" }}>
-        Time: {KpTimeRangeTimeConverter(currentime) ?? "loading..."} UTC
+        <PopOverGraphs
+          DisplayString={dataSource}
+          PopOverString={<KpIndexGraph dataKey={[values[dataSource].values, values[dataSource].timeTag, values[dataSource].dataSource, values[dataSource].slicingLength]} />}
+          DisplayStringStyling={{ color: "darkgray", textDecorationStyle: "solid", alignItems: "center", justifyContent: "center", textAlign: "center", fontSize: "1.5vw"}}
+        />
       </div>
       <Gauge
         value={KpAngle}
@@ -152,8 +187,12 @@ function KpCalculation(dataKey) {
         }}
         text={() => "Kp" + `${currentvalue !== undefined ? currentvalue : "-"}`}
       />
+      <div style={{ fontSize: "0.7vw" }}>
+        Time: {currentime ?? "loading..."} UTC
+      </div>
     </div>
   );
+  }
 }
 
 export default KpCalculation; //Export der Komponente

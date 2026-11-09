@@ -2,14 +2,13 @@
     position: relative; 
     display: flex; 
     flex-direction: column; 
+    height: 100%;
     align-items: center; 
     font-family: 'Roboto'; 
     color: #ccc9dc;
     border: 2px solid gray;
-    height: 100%;
     border-radius: 10px;
     width: 20vw;
-    margin-bottom: 0px;
     font-size: inherit;
 }
 .StormLevel {
@@ -27,4 +26,23 @@
 }
 tspan {
   fill: rgba(255, 255, 255, 0.87);
+}
+.indexSelector {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5vh;
+    font-size: inherit;
+}
+.index-selector {
+    border: 2px solid gray;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ccc9dc;
+    font-size: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-style: dashed;
 }
