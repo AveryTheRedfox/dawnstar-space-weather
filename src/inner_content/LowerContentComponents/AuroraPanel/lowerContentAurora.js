@@ -21,7 +21,7 @@ export function createAuroraGlobeInstance(rawCoordinates) {
     if (point && point[2] !== undefined) {
       const weight = point[2];
 
-      if (weight > 5) {
+      if (weight > 7) {
         const lng = point[0];
         processedData.push({
           lng: lng > 180 ? lng - 360 : lng,
@@ -42,14 +42,11 @@ export function createAuroraGlobeInstance(rawCoordinates) {
     .hexBinPointLat(d => d.lat)
     .hexBinPointLng(d => d.lng)
     .hexBinPointWeight(d => d.weight)
-    .hexBinResolution(2)
-    .hexMargin(0.2)
+    .hexBinResolution(3)
+    .hexMargin(0.05)
     .hexBinMerge(true)
     
-    .hexAltitude(({ points }) => {
-      const avgWeight = points.reduce((sum, p) => sum + p.weight, 0) / points.length;
-      return avgWeight * 0.005; // Tweaked scale multiplier for visual pop
-    })
+    .hexAltitude(0.05)
     
     .hexTopColor(({ points }) => {
       const avgWeight = points.reduce((sum, p) => sum + p.weight, 0) / points.length;

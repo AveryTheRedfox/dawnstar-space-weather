@@ -32,7 +32,7 @@ function SolarSystemMapper() {
 const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, MagnetopauseData, hp30, hp60, loading] = useSpaceWeather();
 
 
-const {CME_Count, isEarthDirected, showAURings, innerSystemOnly} = useControls({CME_Count: 100, isEarthDirected: false, showAURings: true, innerSystemOnly: false});
+const {CME_Count, isEarthDirected, showAURings, innerSystemOnly} = useControls({CME_Count: 100, isEarthDirected: false, showAURings: false, innerSystemOnly: false});
 
 
     const textureMap = useLoader(TextureLoader, require('../resources/euvi_aia304_2012_carrington_print.jpg'));
@@ -153,11 +153,11 @@ function SelectToZoom({children}) {
 
 
     return (
-        <Canvas camera={{near: 0.001, far: 100, fov: 65, makeDefault: true, position: [0, 0, 0]}} style={{top: 0, left: 0, width: '100%', height: '100%' }}>
+        <Canvas camera={{near: 0.001, far: 100, fov: 65, makeDefault: true, position: [2, 1, 0]}} style={{top: 0, left: 0, width: '100%', height: '100%' }}>
             <Suspense fallback={<LoadingScreen/>}>
             <color attach="background" args={['#020205']} />
                 <OrbitControls makeDefault maxDistance={15}/>
-                <ambientLight intensity={2}/>
+                <ambientLight intensity={0.5}/>
                 <pointLight position={[0, 0, 0]} intensity={1.5} />
                 <Bounds observe margin={2} key={isEarthDirected ? true : false}>
                 <SelectToZoom>
