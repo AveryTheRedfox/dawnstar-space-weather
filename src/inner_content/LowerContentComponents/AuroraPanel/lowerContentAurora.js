@@ -72,7 +72,7 @@ export function createAuroraGlobeInstance(rawCoordinates) {
 
 function AuroraComponent() {
 
-    const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, , loading] = useSpaceWeather();
+    const [SolarWind, IntMag, KpIndex, Alerts, Flare, LatestFlare, Enlil, Ovation, HPIData, ForecastData, SunspotData, CMEData, MagnetopauseData, hp30, hp60, loading] = useSpaceWeather();
     const [activeButton, setActiveButton] = useState(1);
     console.log(loading);
     if(loading) {
