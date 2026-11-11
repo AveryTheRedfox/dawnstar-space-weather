@@ -5,18 +5,20 @@ import express from 'express';
 const app = express();
 app.use(cors());
 
-const d = new Date();
-d.setDate(d.getDate() - 5);
-const today = new Date().toISOString().split('.')[0]+'Z';
-const threeDaysAgo = d.toISOString().split('.')[0]+'Z';
 
 
-const hp30Url = 'https://kp.gfz.de/app/json/?start=' + threeDaysAgo + '&end=' + today + '&index=Hp30&';
-const hp60Url = 'https://kp.gfz.de/app/json/?start=' + threeDaysAgo + '&end=' + today + '&index=Hp60&';
 
 
 app.get('/api/space-weather-data', async (req, res) => {
   try {
+
+    const d = new Date();
+    d.setDate(d.getDate() - 5);
+    const today = new Date().toISOString().split('.')[0]+'Z';
+    const threeDaysAgo = d.toISOString().split('.')[0]+'Z';
+const hp30Url = 'https://kp.gfz.de/app/json/?start=' + threeDaysAgo + '&end=' + today + '&index=Hp30&';
+const hp60Url = 'https://kp.gfz.de/app/json/?start=' + threeDaysAgo + '&end=' + today + '&index=Hp60&';
+
     const urls = [
       'https://services.swpc.noaa.gov/json/rtsw/rtsw_wind_1m.json',
       'https://services.swpc.noaa.gov/json/rtsw/rtsw_mag_1m.json',
